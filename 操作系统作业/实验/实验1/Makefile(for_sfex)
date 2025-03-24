@@ -1,0 +1,10 @@
+﻿srcs = sfex.c
+objs = sfex.o
+opts = -g -c
+all:pctl
+pctl:$(objs)
+	gcc $(objs) -o sfex
+pctl.o:$(srcs)
+	gcc $(opts) $(srcs)
+clean:
+	rm sfex *.o

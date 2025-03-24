@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DMAMethod">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DMAMethod|controller:inst333212|ram_2a16x2a6:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hvj1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DMAMethod|stack_2-12x2-16:inst21|ram_2-16x2-16:inst|ram_65536x65535:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjh1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

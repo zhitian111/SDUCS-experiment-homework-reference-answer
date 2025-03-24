@@ -1,0 +1,87 @@
+Info: Changing the current directory to output directory F:/FPGA Tools/experiment12/simulation/modelsim ..
+Info: Using Path F:/FPGA Tools/modeltech/win64 that was set in EDA Simulation Library Compiler Options
+Info: Generating commands to compile library cycloneive_ver ...
+Info: Executing command file containing library compilation commands
+Info: Reading pref.tcl
+Info: # 2020.4
+Info: # do temp_simlib_comp.tmp
+Info: # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Info: # Start time: 17:04:05 on Nov 27,2024
+Info: # vlog -work cycloneive_ver -vlog01compat f:/fpga tools/quartus ii/quartus/eda/sim_lib/cycloneive_atoms.v 
+Info: # -- Compiling UDP CYCLONEIVE_PRIM_DFFE
+Info: # -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS
+Info: # -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS_HIGH
+Info: # -- Compiling module cycloneive_dffe
+Info: # -- Compiling module cycloneive_mux21
+Info: # -- Compiling module cycloneive_mux41
+Info: # -- Compiling module cycloneive_and1
+Info: # -- Compiling module cycloneive_and16
+Info: # -- Compiling module cycloneive_bmux21
+Info: # -- Compiling module cycloneive_b17mux21
+Info: # -- Compiling module cycloneive_nmux21
+Info: # -- Compiling module cycloneive_b5mux21
+Info: # -- Compiling module cycloneive_latch
+Info: # -- Compiling module cycloneive_routing_wire
+Info: # -- Compiling module cycloneive_m_cntr
+Info: # -- Compiling module cycloneive_n_cntr
+Info: # -- Compiling module cycloneive_scale_cntr
+Info: # -- Compiling module cycloneive_pll_reg
+Info: # -- Compiling module cycloneive_pll
+Info: # -- Compiling module cycloneive_lcell_comb
+Info: # -- Compiling module cycloneive_ff
+Info: # -- Compiling module cycloneive_ram_pulse_generator
+Info: # -- Compiling module cycloneive_ram_register
+Info: # -- Compiling module cycloneive_ram_block
+Info: # -- Compiling module cycloneive_mac_data_reg
+Info: # -- Compiling module cycloneive_mac_sign_reg
+Info: # -- Compiling module cycloneive_mac_mult_internal
+Info: # -- Compiling module cycloneive_mac_mult
+Info: # -- Compiling module cycloneive_mac_out
+Info: # -- Compiling module cycloneive_io_ibuf
+Info: # -- Compiling module cycloneive_io_obuf
+Info: # -- Compiling module cycloneive_ddio_out
+Info: # -- Compiling module cycloneive_ddio_oe
+Info: # -- Compiling module cycloneive_pseudo_diff_out
+Info: # -- Compiling module cycloneive_io_pad
+Info: # -- Compiling module cycloneive_ena_reg
+Info: # -- Compiling module cycloneive_clkctrl
+Info: # -- Compiling module cycloneive_rublock
+Info: # -- Compiling module cycloneive_apfcontroller
+Info: # -- Compiling module cycloneive_termination_ctrl
+Info: # -- Compiling module cycloneive_termination_rupdn
+Info: # -- Compiling module cycloneive_termination
+Info: # -- Compiling module cycloneive_jtag
+Info: # -- Compiling module cycloneive_crcblock
+Info: # -- Compiling module cycloneive_oscillator
+Info: # 
+Info: # Top level modules:
+Info: # 	cycloneive_dffe
+Info: # 	cycloneive_and1
+Info: # 	cycloneive_and16
+Info: # 	cycloneive_bmux21
+Info: # 	cycloneive_b17mux21
+Info: # 	cycloneive_nmux21
+Info: # 	cycloneive_b5mux21
+Info: # 	cycloneive_pll_reg
+Info: # 	cycloneive_pll
+Info: # 	cycloneive_lcell_comb
+Info: # 	cycloneive_ff
+Info: # 	cycloneive_ram_block
+Info: # 	cycloneive_mac_mult
+Info: # 	cycloneive_mac_out
+Info: # 	cycloneive_io_ibuf
+Info: # 	cycloneive_io_obuf
+Info: # 	cycloneive_ddio_out
+Info: # 	cycloneive_ddio_oe
+Info: # 	cycloneive_pseudo_diff_out
+Info: # 	cycloneive_io_pad
+Info: # 	cycloneive_clkctrl
+Info: # 	cycloneive_rublock
+Info: # 	cycloneive_apfcontroller
+Info: # 	cycloneive_termination
+Info: # 	cycloneive_jtag
+Info: # 	cycloneive_crcblock
+Info: # 	cycloneive_oscillator
+Info: # End time: 17:04:05 on Nov 27,2024, Elapsed time: 0:00:00
+Info: # Errors: 0, Warnings: 0
+Info: Successfully compiled the libraries

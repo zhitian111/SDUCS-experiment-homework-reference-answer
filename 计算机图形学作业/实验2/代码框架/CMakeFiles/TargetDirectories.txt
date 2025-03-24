@@ -1,0 +1,3 @@
+/home/cs18/games101/实验2/代码框架/CMakeFiles/rebuild_cache.dir
+/home/cs18/games101/实验2/代码框架/CMakeFiles/Rasterizer.dir
+/home/cs18/games101/实验2/代码框架/CMakeFiles/edit_cache.dir

@@ -1,0 +1,10 @@
+﻿scr = tpipe.c
+obj = tpipe.o
+opt = -g -c
+all: tpipe
+tpipe: $(obj)
+	gcc $(obj) -l pthread -o tpipe
+tpipe.o: $(scr)
+	gcc $(opt) $(scr)
+clean:
+	rm tpipe *.o

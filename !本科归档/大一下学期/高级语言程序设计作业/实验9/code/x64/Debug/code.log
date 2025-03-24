@@ -1,0 +1,3 @@
+﻿  lab9_4.cpp
+F:\Homework\高级语言程序设计作业\实验9\code\lab9_4.cpp(200): warning C4715: “Array<int>::seqSearch”: 不是所有的控件路径都返回值
+  code.vcxproj -> F:\Homework\高级语言程序设计作业\实验9\code\x64\Debug\code.exe

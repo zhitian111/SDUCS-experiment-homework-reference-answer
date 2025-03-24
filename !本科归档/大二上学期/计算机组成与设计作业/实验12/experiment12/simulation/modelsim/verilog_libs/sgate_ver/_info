@@ -1,0 +1,448 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/FPGA Tools/experiment12/simulation/modelsim
+vio_buf_opdrn
+Z1 !s110 1732698239
+!i10b 1
+!s100 o>nz1>Xc50eF;H7j8]Lef2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXGRUI92bN;FH7jL`OCbQ[1
+R0
+Z3 w1371121227
+Z4 8f:/fpga tools/quartus ii/quartus/eda/sim_lib/sgate.v
+Z5 Ff:/fpga tools/quartus ii/quartus/eda/sim_lib/sgate.v
+!i122 0
+L0 248 22
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1732698239.000000
+!s107 f:/fpga tools/quartus ii/quartus/eda/sim_lib/sgate.v|
+Z9 !s90 -work|sgate_ver|-vlog01compat|f:/fpga tools/quartus ii/quartus/eda/sim_lib/sgate.v|
+!i113 0
+Z10 o-work sgate_ver -vlog01compat -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vio_buf_tri
+R1
+!i10b 1
+!s100 KbnJ]XS`fzAKMffi76V<53
+R2
+Iml=jAM`e3PNRAAGb0Jlg@2
+R0
+R3
+R4
+R5
+!i122 0
+L0 220 23
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 f:/fpga tools/quartus ii/quartus/eda/sim_lib/sgate.v|
+R9
+!i113 0
+R10
+R11
+vmux21
+R1
+!i10b 1
+!s100 JAPO5QO^`lclHbe2_PZBg1
+R2
+IlhGeZoLlm95BfYHF[P7lT2
+R0
+R3
+R4
+R5
+!i122 0
+L0 190 26
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_add
+R1
+!i10b 1
+!s100 P7a_Y;12FIQXi4IcFPNTl3
+R2
+I0`zFUa`K?iG:b^l7fh]Ha0
+R0
+R3
+R4
+R5
+!i122 0
+L0 18 74
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_addsub
+R1
+!i10b 1
+!s100 I5mXGoaMlLSoCPH@QWeA]1
+R2
+Io6LZE^?VSmP;elOh0^P[B1
+R0
+R3
+R4
+R5
+!i122 0
+L0 95 91
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_bus_mux
+R1
+!i10b 1
+!s100 >kzIP0WV[LKGEJ_9h3MWl2
+R2
+IK;?7hmo>XB;Vg3ND[FY@71
+R0
+R3
+R4
+R5
+!i122 0
+L0 1072 59
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_decoder
+R1
+!i10b 1
+!s100 28XB[C_VG`SWQ?inbNZf81
+R2
+I0lBlHE]afVf]LWAS7MRoB2
+R0
+R3
+R4
+R5
+!i122 0
+L0 1036 32
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_div
+R1
+!i10b 1
+!s100 cZ>6mCRkY4lHdZ`3W2ZaB3
+R2
+I]G96F]zPhSd;b1B;I6eMd0
+R0
+R3
+R4
+R5
+!i122 0
+L0 394 85
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_latch
+R1
+!i10b 1
+!s100 >Fecfn4z5A012K8JM8cA41
+R2
+IYWg@j0;aOK@:`l0f[EmbL1
+R0
+R3
+R4
+R5
+!i122 0
+L0 1135 17
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_left_shift
+R1
+!i10b 1
+!s100 6J3ZzI8V[Pc:dh9OSFH0o2
+R2
+IO9@ki^<F<<6m1fE4oR;`@0
+R0
+R3
+R4
+R5
+!i122 0
+L0 572 72
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_less_than
+R1
+!i10b 1
+!s100 b<d__J0cl]Jag9MLMER;o0
+R2
+IbnfX_L4BZWA:6U?zin?j>0
+R0
+R3
+R4
+R5
+!i122 0
+L0 853 88
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_mod
+R1
+!i10b 1
+!s100 `EneCa;OnbgS^S_9QRW2<0
+R2
+Ie?R2a=WQl1EkD0TYZiTm^2
+R0
+R3
+R4
+R5
+!i122 0
+L0 483 85
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_mult
+R1
+!i10b 1
+!s100 ^;o97hXdDDQP^iDV5ffFY3
+R2
+I>XHXBKXaPMMzi@Kj4lmZ11
+R0
+R3
+R4
+R5
+!i122 0
+L0 274 68
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_mux
+R1
+!i10b 1
+!s100 Jlj`K^VNIQK7o@ljkBaXl1
+R2
+I<NKDO3@i9AK3:oC5LJCNl3
+R0
+R3
+R4
+R5
+!i122 0
+L0 945 42
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_right_shift
+R1
+!i10b 1
+!s100 eCdmCn<7=:2:dMJPZkOgL3
+R2
+I;8`;k@a5C;K6TYh<bi]U[3
+R0
+R3
+R4
+R5
+!i122 0
+L0 649 79
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_rotate_left
+R1
+!i10b 1
+!s100 c9Z4]YYBTR^MF3zQ^6Znh2
+R2
+IGMYNbKQOoS?Uko8W8fb]c3
+R0
+R3
+R4
+R5
+!i122 0
+L0 732 57
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_rotate_right
+R1
+!i10b 1
+!s100 dRe[[aFUHBT2><4iG9To_0
+R2
+I]G59MQkMd^G_>M2A>7h_91
+R0
+R3
+R4
+R5
+!i122 0
+L0 793 56
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+voper_selector
+R1
+!i10b 1
+!s100 S;P79TzjMHZX?lbCbWA=]1
+R2
+Ih8F[9VObVED=mz`jiD_762
+R0
+R3
+R4
+R5
+!i122 0
+L0 991 41
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vtri_bus
+R1
+!i10b 1
+!s100 GN088HjY^3kVmjmFZI8i32
+R2
+IH6S8`_;B7KL89IG7]^b532
+R0
+R3
+R4
+R5
+!i122 0
+L0 347 43
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11

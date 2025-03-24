@@ -1,0 +1,3 @@
+/home/zhitian/LearningResource/Graphics/experiment/ex3/build/CMakeFiles/BezierCurve.dir
+/home/zhitian/LearningResource/Graphics/experiment/ex3/build/CMakeFiles/edit_cache.dir
+/home/zhitian/LearningResource/Graphics/experiment/ex3/build/CMakeFiles/rebuild_cache.dir

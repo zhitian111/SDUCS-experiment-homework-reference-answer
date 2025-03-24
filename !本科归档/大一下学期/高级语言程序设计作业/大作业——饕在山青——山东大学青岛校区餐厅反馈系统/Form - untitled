@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>969</width>
+    <height>773</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>843</width>
+    <height>773</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLineEdit" name="search_what">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>291</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="fired_dish_table">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>90</y>
+     <width>811</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>菜品名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>食材</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>餐厅</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>楼层</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>窗口</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>价格</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>菜系</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>荤素</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="flour_dish_table">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>310</y>
+     <width>811</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>菜品名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>食材</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>餐厅</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>楼层</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>窗口</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>价格</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>口味</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>加料</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="halal_dish_table">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>540</y>
+     <width>811</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>菜品名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>食材</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>餐厅</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>楼层</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>窗口</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>价格</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>菜系</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>荤素</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="search_push_button">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>30</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
