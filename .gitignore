@@ -18,6 +18,8 @@
 !*.xml
 !*.log
 !*.md
+!*.m
+!*.dat
 *.ppt
 *.pptx
 *.zip
