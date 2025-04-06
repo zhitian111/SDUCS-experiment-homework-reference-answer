@@ -1,0 +1,34 @@
+
+
+
+[2024-6-3-14-52-15] SYSTEM operation : Start running
+[2024-6-3-14-52-16] SYSTEM operation : Open the main window
+[2024-6-3-14-52-23] SYSTEM operation : Open the registration window
+[2024-6-3-14-52-25] username : 1 operation : Tried to regist,successed
+[2024-6-3-14-52-25] SYSTEM operation : Add a new user, username: 1
+[2024-6-3-14-52-26] SYSTEM operation : Close the registration window
+[2024-6-3-14-52-27] username : 1 operation : Tried to login,successed
+[2024-6-3-14-52-33] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-3-14-52-33] SYSTEM operation : Open the show_table window
+[2024-6-3-14-52-35] username : 1 operation : Stop checking out the dishes
+[2024-6-3-14-52-35] SYSTEM operation : Close the show_table window
+[2024-6-3-14-52-38] SYSTEM operation : Close the main window
+[2024-6-3-14-52-38] SYSTEM operation : Refresh the users file
+[2024-6-3-14-52-38] SYSTEM operation : Stop running
+
+
+[2024-6-3-15-41-8] SYSTEM operation : Start running
+[2024-6-3-15-41-9] SYSTEM operation : Open the main window
+[2024-6-3-15-41-11] username : 1 operation : Tried to login,successed
+[2024-6-3-15-41-12] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-3-15-41-12] SYSTEM operation : Open the show_table window
+[2024-6-3-15-41-14] username : 1 operation : Stop checking out the dishes
+[2024-6-3-15-41-14] SYSTEM operation : Close the show_table window
+[2024-6-3-15-41-16] SYSTEM operation : Close the main window
+[2024-6-3-15-41-16] SYSTEM operation : Stop running
+
+
+[2024-6-3-15-42-54] SYSTEM operation : Start running
+[2024-6-3-15-42-55] SYSTEM operation : Open the main window
+[2024-6-3-15-42-56] SYSTEM operation : Close the main window
+[2024-6-3-15-42-56] SYSTEM operation : Stop running

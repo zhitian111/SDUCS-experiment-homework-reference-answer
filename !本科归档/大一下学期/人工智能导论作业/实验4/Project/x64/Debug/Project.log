@@ -1,0 +1,3 @@
+﻿  A星算法解八数码问题.cpp
+F:\Homework\人工智能导论作业\实验4\Project\A星算法解八数码问题.cpp(400,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Project.vcxproj -> F:\Homework\人工智能导论作业\实验4\Project\x64\Debug\Project.exe

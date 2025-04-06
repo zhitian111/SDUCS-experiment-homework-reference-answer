@@ -1,0 +1,8 @@
+﻿  7_9.cpp
+7_9.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl LinearEqu::LinearEqu(int)" (??0LinearEqu@@QEAA@H@Z)，函数 main 中引用了该符号
+7_9.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl LinearEqu::~LinearEqu(void)" (??1LinearEqu@@QEAA@XZ)，函数 main 中引用了该符号
+7_9.obj : error LNK2019: 无法解析的外部符号 "public: void __cdecl LinearEqu::setLinearEqu(double const *,double const *)" (?setLinearEqu@LinearEqu@@QEAAXPEBN0@Z)，函数 main 中引用了该符号
+7_9.obj : error LNK2019: 无法解析的外部符号 "public: bool __cdecl LinearEqu::solve(void)" (?solve@LinearEqu@@QEAA_NXZ)，函数 main 中引用了该符号
+7_9.obj : error LNK2019: 无法解析的外部符号 "public: void __cdecl LinearEqu::printLinearEqu(void)const " (?printLinearEqu@LinearEqu@@QEBAXXZ)，函数 main 中引用了该符号
+7_9.obj : error LNK2019: 无法解析的外部符号 "public: void __cdecl LinearEqu::printSolution(void)const " (?printSolution@LinearEqu@@QEBAXXZ)，函数 main 中引用了该符号
+F:\Homework\高程作业\实验6\code\x64\Debug\code.exe : fatal error LNK1120: 6 个无法解析的外部命令

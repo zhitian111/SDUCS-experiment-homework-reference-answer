@@ -1,0 +1,798 @@
+﻿#include <algorithm>
+#include <cstddef>
+#include <iostream>
+#include <iterator>
+#include <map>
+#include <string>
+#include <vector>
+using namespace std;
+
+class Folder;
+class File;
+size_t MAX_SIZE = ~(size_t)0;
+
+class Folder
+{ // 文件夹类
+public:
+  string path;             // 文件路径
+  string name;             // 文件名
+  Folder* parent;          // 父文件夹
+  size_t used;             // 已使用空间
+  size_t used_recursion;   // 已使用空间（递归）
+  vector<File*> files;     // 文件列表
+  vector<Folder*> folders; // 文件夹列表
+  size_t quota_l;          // 配额LD大小
+  size_t quota_r;          // 配额RD大小
+  Folder(string path, string name, Folder* parent)
+      : path(path), name(name), parent(parent), used(0), used_recursion(0),
+        quota_l(MAX_SIZE), quota_r(MAX_SIZE)
+  {
+    // cout << "Folder " << path << " created." << endl;
+    if (parent != nullptr)
+    {
+      parent->folders.push_back(this);
+    }
+  }
+  bool setQuota(size_t quota_l, size_t quota_r)
+  {
+    // cout << path << " setQuota " << quota_l << " " << quota_r << endl;
+    if (quota_l < used || quota_r < used_recursion)
+    {
+      return false;
+    }
+    else
+    {
+      this->quota_l = quota_l;
+      this->quota_r = quota_r;
+      return true;
+    }
+  }
+  ~Folder();
+  size_t getUsed();
+  size_t getUsedRecursion();
+  void coculateUsed();
+  void coculateUsedRecursion();
+};
+class File
+{ // 文件类
+public:
+  string path;    // 文件路径
+  string name;    // 文件名
+  Folder* parent; // 父文件夹
+  size_t size;    // 文件大小
+  File(string path, string name, Folder* parent, size_t size)
+      : path(path), name(name), parent(parent), size(size)
+  {
+    // cout << "File " << path << " created." << endl;
+    if (parent != nullptr)
+    {
+      parent->files.push_back(this);
+    }
+    if (parent != nullptr)
+    {
+      auto temp = parent;
+
+      temp->used += size;
+      while (temp != nullptr)
+      {
+        temp->used_recursion += size;
+        temp = temp->parent;
+      }
+    }
+    // cout << "size add to parent folder." << endl;
+  }
+  ~File()
+  {
+    // cout << "File " << path << " deleted." << endl;
+    if (parent != nullptr)
+    {
+      parent->used -= size;
+      while (parent != nullptr)
+      {
+        parent->used_recursion -= size;
+        parent = parent->parent;
+      }
+    }
+  }
+};
+Folder::~Folder()
+{
+  // cout << "Folder " << path << " deleted." << endl;
+  for (auto& file : files)
+  {
+    delete file;
+  }
+  for (auto& folder : folders)
+  {
+    delete folder;
+  }
+}
+
+Folder root("/", "root", nullptr);
+map<string, Folder*> folder_map;
+map<string, File*> file_map;
+
+size_t Folder::getUsed() { return used; }
+
+size_t Folder::getUsedRecursion() { return used_recursion; }
+
+void Folder::coculateUsed()
+{
+  used = 0;
+  for (auto& file : files)
+  {
+    used += file->size;
+  }
+}
+
+size_t coculateFolderUsedRecursion(Folder* folder)
+{
+  size_t used = 0;
+  for (auto& file : folder->files)
+  {
+    used += file->size;
+  }
+  for (auto& subfolder : folder->folders)
+  {
+    used += coculateFolderUsedRecursion(subfolder);
+  }
+  return used;
+}
+
+void Folder::coculateUsedRecursion()
+{
+  used_recursion = coculateFolderUsedRecursion(this);
+}
+
+bool is_valid_format(string path)
+{
+  if (path == "/")
+  {
+    return true;
+  }
+  if (path[0] != '/')
+  {
+    return false;
+  }
+
+  if (path[path.size() - 1] == '/')
+  {
+    return false;
+  }
+
+  if (path.find("//") != string::npos)
+  {
+    return false;
+  }
+  for (auto& c : path)
+  {
+    if (c != '/' &&
+        ((c > '9' || c < '0') && (c > 'Z' || c < 'A') && (c > 'z' || c < 'a')))
+    {
+      return false;
+    }
+  }
+  return true;
+}
+
+bool is_file_in_path(string path)
+{
+  if (path == "/")
+  {
+    return false;
+  }
+  string file_name = path.substr(path.rfind('/') + 1); // 解析文件名
+  path = path.substr(0, path.rfind('/'));              // 解析路径
+  // cout << "path: " << path << endl;
+  // cout << "file_name: " << file_name << endl;
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+
+  if (path == "/" || path == "")
+  {
+    return false;
+  }
+
+  Folder* current = &root;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    string name = string(left, right);
+    // cout << name << endl;
+
+    for (auto& file : current->files)
+    {
+      if (file->name == name)
+      {
+        return true;
+      }
+    }
+    bool mark = false;
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        mark = true;
+        break;
+      }
+    }
+    if (!mark)
+    {
+      return false;
+    }
+
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+
+  return false;
+}
+bool is_valid_path(string path)
+{
+  if (!is_valid_format(path))
+  {
+    // cout << "fomat error" << endl;
+    return false;
+  }
+  if (is_file_in_path(path))
+  {
+    // cout << "path error" << endl;
+    return false;
+  }
+
+  return true;
+}
+
+bool is_exits_file(string path)
+{
+  if (!is_valid_path(path))
+  {
+    return false;
+  }
+
+  if (path == "/")
+  {
+    return false;
+  }
+  string file_name = path.substr(path.rfind('/') + 1); // 解析文件名
+  path = path.substr(0, path.rfind('/'));              // 解析路径
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+  Folder* current = &root;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    string name = string(left, right);
+
+    for (auto& file : current->files)
+    {
+      if (file->name == name)
+      {
+        return false;
+      }
+    }
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        break;
+      }
+    }
+    if (right == path.end())
+    {
+      break;
+    }
+
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  for (auto& file : current->files)
+  {
+    if (file->name == file_name)
+    {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+bool create_folder(string path)
+{
+  if (!is_valid_path(path))
+  {
+    return false;
+  }
+  // cout << "path: " << path << endl;
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+  string name;
+
+  // cout << string(left, right) << endl;
+
+  Folder* current = &root;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    name = string(left, right);
+    // cout << "name: " << name << endl;
+    // cout << "current: " << current->path << endl;
+    bool mark = false;
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        mark = true;
+        break;
+      }
+    }
+    if (!mark)
+    {
+      break;
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    name = string(left, right);
+    // cout << "name: " << name << endl;
+    // cout << "parent: " << current->name << endl;
+    Folder* new_folder;
+    if (current == &root)
+    {
+      new_folder = new Folder(current->path + name, name, current);
+    }
+    else
+    {
+
+      new_folder = new Folder(current->path + "/" + name, name, current);
+    }
+    folder_map[new_folder->path] = new_folder;
+    if (right == path.end())
+    {
+      break;
+    }
+    current = new_folder;
+
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  return true;
+}
+bool is_exits_path(string path)
+{
+  string name;
+  Folder* current = &root;
+  auto dir_name = path.substr(path.rfind('/') + 1);
+  path = path.substr(0, path.rfind('/'));
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+  // cout << "path: " << path << endl;
+  // cout << "dir_name: " << dir_name << endl;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    name = string(left, right);
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        break;
+      }
+    }
+    if (right >= path.end())
+    {
+      break;
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  for (auto& dir : current->folders)
+  {
+    if (dir->name == dir_name)
+    {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool remove_file(string path)
+{
+  if (!is_valid_path(path))
+  {
+    return false;
+  }
+  if (path == "/")
+  {
+    return false;
+  }
+  string file_name = path.substr(path.rfind('/') + 1); // 解析文件名
+  path = path.substr(0, path.rfind('/'));              // 解析路径
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+  Folder* current = &root;
+  // cout << "remove file: " << file_name << endl;
+  // cout << "path: " << path << endl;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    string name = string(left, right);
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        break;
+      }
+    }
+    if (right >= path.end())
+    {
+      break;
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  // cout << current->path << endl;
+  for (auto& file : current->files)
+  {
+    auto it =
+        find(file->parent->files.begin(), file->parent->files.end(), file);
+    delete (*it);
+    current->files.erase(it);
+    return true;
+  }
+  return false;
+}
+
+bool create_file(string path, size_t size)
+{
+  if (!is_valid_format(path))
+  {
+    return false;
+  }
+  if (is_file_in_path(path))
+  {
+    return false;
+  }
+  if (is_exits_path(path))
+  {
+    return false;
+  }
+  // cout << "valid path" << endl;
+  string file_name = path.substr(path.rfind('/') + 1); // 解析文件名
+  auto tem_path = path;
+  path = path.substr(0, path.rfind('/')); // 解析路径
+  auto left = path.begin();
+  auto right = find(left, path.end(), '/');
+  Folder* current = &root;
+  string name;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    name = string(left, right);
+    if (current->quota_r < current->used_recursion + size)
+    {
+      return false;
+    }
+    bool mark = false;
+    for (auto dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        mark = true;
+        break;
+      }
+    }
+    if (!mark)
+    {
+      break;
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  create_folder(tem_path.substr(0, tem_path.rfind('/')));
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    name = string(left, right);
+    if (current->quota_r < current->used_recursion + size)
+    {
+      return false;
+    }
+    for (auto dir : current->folders)
+    {
+      if (dir->name == name)
+      {
+        current = dir;
+        break;
+      }
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  if (current != &root)
+  {
+    auto it =
+        find_if(current->files.begin(), current->files.end(),
+                [file_name](File* file) { return file->name == file_name; });
+    if (it == current->files.end())
+    {
+
+      if (current->used + size > current->quota_l)
+      {
+        return false;
+      }
+      if (current->used_recursion + size > current->quota_r)
+      {
+        return false;
+      }
+      File* new_file =
+          new File(current->path + "/" + file_name, file_name, current, size);
+    }
+    else
+    {
+      if (current->used + size - (*it)->size > current->quota_l)
+      {
+        return false;
+      }
+      auto tem = current;
+      while (tem != nullptr)
+      {
+        tem->used_recursion += size - (*it)->size;
+        tem = tem->parent;
+      }
+      current->used += size - (*it)->size;
+      (*it)->size = size;
+    }
+  }
+  else
+  {
+    auto it =
+        find_if(current->files.begin(), current->files.end(),
+                [file_name](File* file) { return file->name == file_name; });
+    if (it == current->files.end())
+    {
+
+      if (root.used + size > root.quota_l)
+      {
+        return false;
+      }
+      if (root.used_recursion + size > root.quota_r)
+      {
+        return false;
+      }
+      File* new_file = new File("/", file_name, current, size);
+    }
+    else
+    {
+      if (current->used + size - (*it)->size > current->quota_l)
+      {
+        return false;
+      }
+      auto tem = current;
+      while (tem != nullptr)
+      {
+        tem->used_recursion += size - (*it)->size;
+        tem = tem->parent;
+      }
+      current->used += size - (*it)->size;
+      (*it)->size = size;
+    }
+  }
+  return true;
+}
+bool set_quota(string path, size_t LD, size_t RD)
+{
+  // cout << path << " setQuota " << LD << " " << RD << endl;
+  if (!is_valid_path(path))
+  {
+    return false;
+  }
+  if (path == "/")
+  {
+    return root.setQuota(LD, RD);
+  }
+
+  string name = path.substr(path.rfind('/') + 1); // 解析文件夹名
+  path = path.substr(0, path.rfind('/'));         // 解析路径
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+  Folder* current = &root;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    string dir_name = string(left, right);
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == dir_name)
+      {
+        current = dir;
+        break;
+      }
+    }
+    if (right >= path.end())
+    {
+      break;
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  for (auto& dir : current->folders)
+  {
+    if (dir->name == name)
+    {
+      return dir->setQuota(LD, RD);
+    }
+  }
+  return false;
+}
+
+void tree_all(Folder* folder)
+{
+  cout << "used size: " << folder->used << "/" << folder->quota_l << endl;
+  cout << "used size recursion: " << folder->used_recursion << "/"
+       << folder->quota_r << endl;
+  for (auto& file : folder->files)
+  {
+    cout << file->path << " " << file->name << " " << file->size << endl;
+  }
+  for (auto& subfolder : folder->folders)
+  {
+    cout << subfolder->path << endl;
+    tree_all(subfolder);
+  }
+}
+bool remove_folder(string path)
+{
+  if (!is_valid_path(path))
+  {
+    return false;
+  }
+  if (path == "/")
+  {
+    root.files.clear();
+    root.folders.clear();
+    return true;
+  }
+  string name = path.substr(path.rfind('/') + 1); // 解析文件夹名
+  path = path.substr(0, path.rfind('/'));         // 解析路径
+  auto left = path.begin() + 1;
+  auto right = find(left, path.end(), '/');
+  Folder* current = &root;
+  while (true)
+  {
+    if (left >= path.end())
+    {
+      break;
+    }
+    string dir_name = string(left, right);
+    for (auto& dir : current->folders)
+    {
+      if (dir->name == dir_name)
+      {
+        current = dir;
+        break;
+      }
+    }
+    if (right >= path.end())
+    {
+      break;
+    }
+    left = right + 1;
+    right = find(left, path.end(), '/');
+  }
+  for (auto& dir : current->folders)
+  {
+    if (dir->name == name)
+    {
+      auto it = find(current->folders.begin(), current->folders.end(), dir);
+      delete (*it);
+      current->folders.erase(it);
+      return true;
+    }
+  }
+  return true;
+}
+void solve()
+{
+  int n;
+  cin >> n;
+  for (int i = 0; i < n; i++)
+  {
+    char op;
+    cin >> op;
+    if (op == 'C')
+    {
+      string path;
+      size_t size;
+      cin >> path >> size;
+      if (create_file(path, size))
+      {
+        cout << "Y" << endl;
+      }
+      else
+      {
+        cout << "N" << endl;
+      }
+    }
+    if (op == 'R')
+    {
+      string path;
+      cin >> path;
+      remove_file(path);
+      remove_folder(path);
+
+      cout << "Y" << endl;
+    }
+    if (op == 'Q')
+    {
+      string path;
+      cin >> path;
+      size_t LD, LR;
+      cin >> LD >> LR;
+      LD = LD == 0 ? MAX_SIZE : LD;
+      LR = LR == 0 ? MAX_SIZE : LR;
+      if (set_quota(path, LD, LR))
+      {
+        cout << "Y" << endl;
+      }
+      else
+      {
+        cout << "N" << endl;
+      }
+    }
+    // tree_all(&root);
+  }
+}
+
+void test()
+{
+  create_file("/a/b/e/i.txt", 16384);
+  remove_file("/a/b/e/i.txt");
+  create_file("/a.txt", 111);
+  tree_all(&root);
+  remove_file("/a.txt");
+  tree_all(&root);
+}
+
+int main()
+{
+  solve();
+  // test();
+  return 0;
+}
