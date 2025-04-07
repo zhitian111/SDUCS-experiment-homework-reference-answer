@@ -298,8 +298,8 @@ void catmull_clark()
       auto point = std::find_if(face_points.begin(), face_points.end(),
                                 [face_1](const my_point& p)
                                 { return p.v_id == face_1->face_id; });
-      std::cout << "面的中点" << face_1->face_id << "(" << point->x << ","
-                << point->y << ")" << std::endl;
+      // std::cout << "面的中点" << face_1->face_id << "(" << point->x << ","
+      //           << point->y << ")" << std::endl;
       sum.x = point->x;
       sum.y = point->y;
       cnt++;
@@ -309,8 +309,8 @@ void catmull_clark()
       auto point = std::find_if(face_points.begin(), face_points.end(),
                                 [face_2](const my_point& p)
                                 { return p.v_id == face_2->face_id; });
-      std::cout << "面的中点" << face_2->face_id << "(" << point->x << ","
-                << point->y << ")" << std::endl;
+      // std::cout << "面的中点" << face_2->face_id << "(" << point->x << ","
+      //           << point->y << ")" << std::endl;
       sum.x += point->x;
       sum.y += point->y;
       cnt++;
@@ -332,54 +332,500 @@ void catmull_clark()
     sum.v_id = i.edge_id;
     edge_points.push_back(sum);
   }
-  // while (start != all_faces.end())
-  // {
-  //   auto face = std::find_if(
-  //       start, all_faces.end(),
-  //       [i](const my_face& f)
-  //       {
-  //         return find_if(f.edges.begin(), f.edges.end(), [i](const size_t& e)
-  //                        { return e == i.edge_id; }) != f.edges.end();
-  //       });
-  //   if (face != all_faces.end())
-  //   {
-  //     auto point = std::find_if(face_points.begin(), face_points.end(),
-  //                               [face](const my_point& p)
-  //                               { return p.v_id == face->face_id; });
-  //     sum.x += point->x;
-  //     sum.y += point->y;
-  //     cnt++;
-  //     start = face;
-  //   }
-  //   else
-  //   {
-  //     break;
-  //   }
-  // }
-
-  Mat img = Mat::zeros(Size(800, 800), CV_8UC3);
-  img.setTo(255); // 设置屏幕为白色
-  display_points(img, face_points);
-  display_points(img, edge_avg_points);
-  display_points(img, edge_points);
-  draw_all(img);
-  imshow("画板", img);
-  waitKey(0);
-  // 更新点
+  // 更新点坐标
+  std::vector<my_point> new_points;
   for (auto& i : all_points)
   {
+    // 接触的面的个数
+    long long n = 0;
+    std::vector<my_face> faces;
+    for (auto& j : all_faces)
+    {
+      if (std::find_if(j.points.begin(), j.points.end(), [i](const size_t& p)
+                       { return p == i.v_id; }) != j.points.end())
+      {
+        n++;
+        faces.push_back(j);
+      }
+    }
+    // std::cout << "点" << i.v_id << "接触面的个数" << n << std::endl;
+    // 面点均值
+    my_point face_sum;
+    face_sum.x = 0.0;
+    face_sum.y = 0.0;
+    for (auto& j : faces)
+    {
+      auto point =
+          *std::find_if(face_points.begin(), face_points.end(),
+                        [j](const my_point& p) { return p.v_id == j.face_id; });
+      face_sum.x += point.x;
+      face_sum.y += point.y;
+      // std::cout << "面的点" << j.face_id << "(" << point.x << "," << point.y
+      //           << ")" << std::endl;
+    }
+    face_sum.x /= n * 1.0;
+    face_sum.y /= n * 1.0;
+    // std::cout << "面的中点" << face_sum.v_id << "(" << face_sum.x << ","
+    //           << face_sum.y << ")" << std::endl;
+    // 边中点均值
+    my_point edge_sum;
+    edge_sum.x = 0.0;
+    edge_sum.y = 0.0;
+    long long cnt = 0;
+    std::vector<my_edge> edges;
+    for (auto& j : all_edges)
+    {
+      if (j.v1_id == i.v_id || j.v2_id == i.v_id)
+      {
+        edges.push_back(j);
+        cnt++;
+      }
+    }
+    for (auto& j : edges)
+    {
+      auto point =
+          *std::find_if(edge_avg_points.begin(), edge_avg_points.end(),
+                        [j](const my_point& p) { return p.v_id == j.edge_id; });
+      edge_sum.x += point.x;
+      edge_sum.y += point.y;
+    }
+    edge_sum.x /= cnt * 1.0;
+    edge_sum.y /= cnt * 1.0;
+    // std::cout << "边的中点" << edge_sum.v_id << "(" << edge_sum.x << ","
+    //           << edge_sum.y << ")" << std::endl;
+    // 新的点坐标
+    my_point new_point;
+    // std::cout << "旧的点" << i.v_id << "(" << i.x << "," << i.y << ")"
+    //           << std::endl;
+    new_point.x = (n - 3) * i.x + 2.0 * edge_sum.x + face_sum.x;
+    new_point.y = (n - 3) * i.y + 2.0 * edge_sum.y + face_sum.y;
+    new_point.x /= n * 1.0;
+    new_point.y /= n * 1.0;
+    new_point.v_id = i.v_id;
+    // std::cout << "新的点" << new_point.v_id << "(" << new_point.x << ","
+    //           << new_point.y << ")" << std::endl;
+    new_points.push_back(new_point);
   }
+  for (auto& i : new_points)
+  {
+    std::cout << "新的点" << i.v_id << "(" << i.x << "," << i.y << ")"
+              << std::endl;
+  }
+  for (auto& i : all_points)
+  {
+    std::cout << "旧的点" << i.v_id << "(" << i.x << "," << i.y << ")"
+              << std::endl;
+  }
+  for (auto& i : all_faces)
+  {
+    std::cout << "面的点的索引" << i.face_id << std::endl;
+    for (auto& j : i.points)
+    {
+      std::cout << j << " ";
+    }
+    std::cout << std::endl;
+  }
+  // 更新点边和面，按面更新
+  std::vector<my_point> new_points_tmp;
+  std::vector<my_edge> new_edges;
+  std::vector<my_face> new_faces;
+  for (auto& i : all_faces)
+  {
+    if (i.points.size() == 4)
+    {
+      auto point_1 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[0]; });
+      auto point_2 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[1]; });
+      auto point_3 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[2]; });
+      auto point_4 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[3]; });
+      std::cout << "四边形面" << i.face_id << std::endl;
+      std::cout << "point_1:" << "(" << point_1.x << "," << point_1.y << ")"
+                << std::endl;
+      std::cout << "point_2:" << "(" << point_2.x << "," << point_2.y << ")"
+                << std::endl;
+      std::cout << "point_3:" << "(" << point_3.x << "," << point_3.y << ")"
+                << std::endl;
+      std::cout << "point_4:" << "(" << point_4.x << "," << point_4.y << ")"
+                << std::endl;
+      auto edge_1_2_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_1, point_2](const my_edge& e)
+          {
+            return (e.v1_id == point_1.v_id && e.v2_id == point_2.v_id) ||
+                   (e.v1_id == point_2.v_id && e.v2_id == point_1.v_id);
+          });
+      auto edge_point_1_2 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_1_2_index](const my_point& p)
+                        { return p.v_id == edge_1_2_index.edge_id; });
+      auto edge_2_3_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_2, point_3](const my_edge& e)
+          {
+            return (e.v1_id == point_2.v_id && e.v2_id == point_3.v_id) ||
+                   (e.v1_id == point_3.v_id && e.v2_id == point_2.v_id);
+          });
+      auto edge_point_2_3 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_2_3_index](const my_point& p)
+                        { return p.v_id == edge_2_3_index.edge_id; });
+      auto edge_3_4_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_3, point_4](const my_edge& e)
+          {
+            return (e.v1_id == point_3.v_id && e.v2_id == point_4.v_id) ||
+                   (e.v1_id == point_4.v_id && e.v2_id == point_3.v_id);
+          });
+      auto edge_point_3_4 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_3_4_index](const my_point& p)
+                        { return p.v_id == edge_3_4_index.edge_id; });
+      auto edge_4_1_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_4, point_1](const my_edge& e)
+          {
+            return (e.v1_id == point_4.v_id && e.v2_id == point_1.v_id) ||
+                   (e.v1_id == point_1.v_id && e.v2_id == point_4.v_id);
+          });
+      auto edge_point_4_1 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_4_1_index](const my_point& p)
+                        { return p.v_id == edge_4_1_index.edge_id; });
+      auto face_point =
+          *std::find_if(face_points.begin(), face_points.end(),
+                        [i](const my_point& p) { return p.v_id == i.face_id; });
+      point_1.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_1);
+      point_2.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_2);
+      point_3.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_3);
+      point_4.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_4);
+      edge_point_1_2.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_1_2);
+      edge_point_2_3.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_2_3);
+      edge_point_3_4.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_3_4);
+      edge_point_4_1.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_4_1);
+      face_point.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(face_point);
+      my_face new_face_1;
+      my_face new_face_2;
+      my_face new_face_3;
+      my_face new_face_4;
+      my_edge new_edge_1_1;
+      my_edge new_edge_1_2;
+      my_edge new_edge_1_3;
+      my_edge new_edge_1_4;
+      my_edge new_edge_2_1;
+      my_edge new_edge_2_2;
+      my_edge new_edge_2_3;
+      my_edge new_edge_2_4;
+      my_edge new_edge_3_1;
+      my_edge new_edge_3_2;
+      my_edge new_edge_3_3;
+      my_edge new_edge_3_4;
+      my_edge new_edge_4_1;
+      my_edge new_edge_4_2;
+      my_edge new_edge_4_3;
+      my_edge new_edge_4_4;
+      // 面1(a,edge_point_ab,face_point,edge_point_da)
+      // 边1(a,edge_point_ab)
+      new_edge_1_1.v1_id = point_1.v_id;
+      new_edge_1_1.v2_id = edge_point_1_2.v_id;
+      // 边2(edge_point_ab,face_point)
+      new_edge_1_2.v1_id = edge_point_1_2.v_id;
+      new_edge_1_2.v1_id = face_point.v_id;
+      // 边3(face_point,edge_point_da)
+      new_edge_1_3.v1_id = face_point.v_id;
+      new_edge_1_3.v2_id = edge_point_4_1.v_id;
+      // 边4(edge_point_da,a)
+      new_edge_1_4.v1_id = edge_point_4_1.v_id;
+      new_edge_1_4.v2_id = point_1.v_id;
+      // 新增边
+      new_edge_1_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_1);
+      new_edge_1_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_2);
+      new_edge_1_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_3);
+      new_edge_1_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_4);
+
+      // 新增面
+      new_face_1.points = {point_1.v_id, edge_point_1_2.v_id, face_point.v_id,
+                           edge_point_4_1.v_id};
+      new_face_1.edges = {new_edge_1_1.edge_id, new_edge_1_2.edge_id,
+                          new_edge_1_3.edge_id, new_edge_1_4.edge_id};
+      new_face_1.face_id = new_faces.size();
+      new_faces.push_back(new_face_1);
+
+      // 面2(b,edge_point_bc,face_point,edge_point_ab)
+      // 边1(b,edge_point_bc)
+      new_edge_2_1.v1_id = point_2.v_id;
+      new_edge_2_1.v2_id = edge_point_2_3.v_id;
+      // 边2(edge_point_bc,face_point)
+      new_edge_2_2.v1_id = edge_point_2_3.v_id;
+      new_edge_2_2.v1_id = face_point.v_id;
+      // 边3(face_point,edge_point_ab)
+      new_edge_2_3.v1_id = face_point.v_id;
+      new_edge_2_3.v2_id = edge_point_1_2.v_id;
+      // 边4(edge_point_ab,b)
+      new_edge_2_4.v1_id = edge_point_1_2.v_id;
+      new_edge_2_4.v2_id = point_2.v_id;
+      // 新增边
+      new_edge_2_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_1);
+      new_edge_2_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_2);
+      new_edge_2_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_3);
+      new_edge_2_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_4);
+
+      // 新增面
+      new_face_2.points = {point_2.v_id, edge_point_2_3.v_id, face_point.v_id,
+                           edge_point_1_2.v_id};
+      new_face_2.edges = {new_edge_2_1.edge_id, new_edge_2_2.edge_id,
+                          new_edge_2_3.edge_id, new_edge_2_4.edge_id};
+      new_face_2.face_id = new_faces.size();
+      new_faces.push_back(new_face_2);
+      // 面3(c,edge_point_cd,face_point,edge_point_bc)
+      // 边1(c,edge_point_cd)
+      new_edge_3_1.v1_id = point_3.v_id;
+      new_edge_3_1.v2_id = edge_point_3_4.v_id;
+      // 边2(edge_point_cd,face_point)
+      new_edge_3_2.v1_id = edge_point_3_4.v_id;
+      new_edge_3_2.v1_id = face_point.v_id;
+      // 边3(face_point,edge_point_bc)
+      new_edge_3_3.v1_id = face_point.v_id;
+      new_edge_3_3.v2_id = edge_point_2_3.v_id;
+      // 边4(edge_point_bc,c)
+      new_edge_3_4.v1_id = edge_point_2_3.v_id;
+      new_edge_3_4.v2_id = point_3.v_id;
+      // 新增边
+      new_edge_3_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_1);
+      new_edge_3_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_2);
+      new_edge_3_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_3);
+      new_edge_3_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_4);
+      // 新增面
+      new_face_3.points = {point_3.v_id, edge_point_3_4.v_id, face_point.v_id,
+                           edge_point_2_3.v_id};
+      new_face_3.edges = {new_edge_3_1.edge_id, new_edge_3_2.edge_id,
+                          new_edge_3_3.edge_id, new_edge_3_4.edge_id};
+      new_face_3.face_id = new_faces.size();
+      new_faces.push_back(new_face_3);
+      // 面4(d,edge_point_da,face_point,edge_point_cd)
+      // 边1(d,edge_point_da)
+      new_edge_4_1.v1_id = point_4.v_id;
+      new_edge_4_1.v2_id = edge_point_4_1.v_id;
+      // 边2(edge_point_da,face_point)
+      new_edge_4_2.v1_id = edge_point_4_1.v_id;
+      new_edge_4_2.v1_id = face_point.v_id;
+      // 边3(face_point,edge_point_cd)
+      new_edge_4_3.v1_id = face_point.v_id;
+      new_edge_4_3.v2_id = edge_point_3_4.v_id;
+      // 边4(edge_point_cd,d)
+      new_edge_4_4.v1_id = edge_point_3_4.v_id;
+      new_edge_4_4.v2_id = point_4.v_id;
+      // 新增边
+      new_edge_4_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_4_1);
+      new_edge_4_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_4_2);
+      new_edge_4_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_4_3);
+      new_edge_4_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_4_4);
+      // 新增面
+      new_face_4.points = {point_4.v_id, edge_point_4_1.v_id, face_point.v_id,
+                           edge_point_3_4.v_id};
+      new_face_4.edges = {new_edge_4_1.edge_id, new_edge_4_2.edge_id,
+                          new_edge_4_3.edge_id, new_edge_4_4.edge_id};
+      new_face_4.face_id = new_faces.size();
+      new_faces.push_back(new_face_4);
+    }
+    else if (i.points.size() == 3)
+    {
+      auto point_1 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[0]; });
+      auto point_2 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[1]; });
+      auto point_3 = *std::find_if(new_points.begin(), new_points.end(),
+                                   [i](const my_point& p)
+                                   { return p.v_id == i.points[2]; });
+      std::cout << "三角形面" << i.face_id << std::endl;
+      std::cout << "point_1:" << "(" << point_1.x << "," << point_1.y << ")"
+                << std::endl;
+      std::cout << "point_2:" << "(" << point_2.x << "," << point_2.y << ")"
+                << std::endl;
+      std::cout << "point_3:" << "(" << point_3.x << "," << point_3.y << ")"
+                << std::endl;
+      auto edge_1_2_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_1, point_2](const my_edge& e)
+          {
+            return (e.v1_id == point_1.v_id && e.v2_id == point_2.v_id) ||
+                   (e.v1_id == point_2.v_id && e.v2_id == point_1.v_id);
+          });
+      auto edge_point_1_2 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_1_2_index](const my_point& p)
+                        { return p.v_id == edge_1_2_index.edge_id; });
+      auto edge_2_3_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_2, point_3](const my_edge& e)
+          {
+            return (e.v1_id == point_2.v_id && e.v2_id == point_3.v_id) ||
+                   (e.v1_id == point_3.v_id && e.v2_id == point_2.v_id);
+          });
+      auto edge_point_2_3 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_2_3_index](const my_point& p)
+                        { return p.v_id == edge_2_3_index.edge_id; });
+      auto edge_3_1_index = *std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [point_3, point_1](const my_edge& e)
+          {
+            return (e.v1_id == point_3.v_id && e.v2_id == point_1.v_id) ||
+                   (e.v1_id == point_1.v_id && e.v2_id == point_3.v_id);
+          });
+      auto edge_point_3_1 =
+          *std::find_if(edge_points.begin(), edge_points.end(),
+                        [edge_3_1_index](const my_point& p)
+                        { return p.v_id == edge_3_1_index.edge_id; });
+      auto face_point =
+          *std::find_if(new_points.begin(), new_points.end(),
+                        [i](const my_point& p) { return p.v_id == i.face_id; });
+      // 新增点
+
+      point_1.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_1);
+      point_2.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_2);
+      point_3.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(point_3);
+      edge_point_1_2.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_1_2);
+      edge_point_2_3.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_2_3);
+      edge_point_3_1.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(edge_point_3_1);
+      face_point.v_id = new_points_tmp.size();
+      new_points_tmp.push_back(face_point);
+      my_face new_face_1;
+      my_face new_face_2;
+      my_face new_face_3;
+      my_edge new_edge_1_1;
+      my_edge new_edge_1_2;
+      my_edge new_edge_1_3;
+      my_edge new_edge_2_1;
+      my_edge new_edge_2_2;
+      my_edge new_edge_2_3;
+      my_edge new_edge_3_1;
+      my_edge new_edge_3_2;
+      my_edge new_edge_3_3;
+      my_edge new_edge_4_1;
+      my_edge new_edge_4_2;
+      my_edge new_edge_4_3;
+      // 面1(a, edge_point_ab, face_point, edge_point_ca)
+      // 边1(a, edge_point_ab)
+      new_edge_1_1.v1_id = point_1.v_id;
+      new_edge_1_1.v2_id = edge_point_1_2.v_id;
+      // 边2(edge_point_ab, face_point)
+      new_edge_1_2.v1_id = edge_point_1_2.v_id;
+      new_edge_1_2.v1_id = face_point.v_id;
+      // 边3(face_point, edge_point_ca)
+      new_edge_1_3.v1_id = face_point.v_id;
+      new_edge_1_3.v2_id = edge_point_3_1.v_id;
+      // 新增边
+      new_edge_1_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_1);
+      new_edge_1_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_2);
+      new_edge_1_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_3);
+      // 新增面
+      new_face_1.points = {point_1.v_id, edge_point_1_2.v_id, face_point.v_id,
+                           edge_point_3_1.v_id};
+      new_face_1.edges = {new_edge_1_1.edge_id, new_edge_1_2.edge_id,
+                          new_edge_1_3.edge_id};
+      new_face_1.face_id = new_faces.size();
+      new_faces.push_back(new_face_1);
+      // 面2(b, edge_point_bc, face_point, edge_point_ab)
+      // 边1(b, edge_point_bc)
+      new_edge_2_1.v1_id = point_2.v_id;
+      new_edge_2_1.v2_id = edge_point_2_3.v_id;
+      // 边2(edge_point_bc, face_point)
+      new_edge_2_2.v1_id = edge_point_2_3.v_id;
+      new_edge_2_2.v1_id = face_point.v_id;
+      // 边3(face_point, edge_point_ab)
+      new_edge_2_3.v1_id = face_point.v_id;
+      new_edge_2_3.v2_id = edge_point_1_2.v_id;
+      // 新增边
+      new_edge_2_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_1);
+      new_edge_2_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_2);
+      new_edge_2_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_3);
+      // 新增面
+      new_face_2.points = {point_2.v_id, edge_point_2_3.v_id, face_point.v_id,
+                           edge_point_1_2.v_id};
+      // 面3(c, edge_point_ca, face_point, edge_point_bc)
+      // 边1(c, edge_point_ca)
+      new_edge_3_1.v1_id = point_3.v_id;
+      new_edge_3_1.v2_id = edge_point_3_1.v_id;
+      // 边2(edge_point_ca, face_point)
+      new_edge_3_2.v1_id = edge_point_3_1.v_id;
+      new_edge_3_2.v1_id = face_point.v_id;
+      // 边3(face_point, edge_point_bc)
+      new_edge_3_3.v1_id = face_point.v_id;
+      new_edge_3_3.v2_id = edge_point_2_3.v_id;
+      // 新增边
+      new_edge_3_1.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_1);
+      new_edge_3_2.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_2);
+      new_edge_3_3.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_3);
+      // 新增面
+      new_face_3.points = {point_3.v_id, edge_point_3_1.v_id, face_point.v_id,
+                           edge_point_2_3.v_id};
+      new_face_3.edges = {new_edge_3_1.edge_id, new_edge_3_2.edge_id,
+                          new_edge_3_3.edge_id};
+      new_face_3.face_id = new_faces.size();
+      new_faces.push_back(new_face_3);
+    }
+  }
+  // 最终结果
+  all_faces = new_faces;
+  all_edges = new_edges;
+  all_points = new_points_tmp;
 }
 int main()
 {
   read_file("obj1.txt");
-  // display_all();
-  display_faces(all_faces);
   Mat img = Mat::zeros(Size(800, 800), CV_8UC3);
   img.setTo(255); // 设置屏幕为白色
-  draw_all(img);
-  // display_all();
   catmull_clark();
+  draw_all(img);
   imshow("画板", img);
   waitKey(0);
   // 输出png
