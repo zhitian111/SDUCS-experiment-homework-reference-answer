@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cstdlib>
+#include <cstring>
 #include <ctime>
 #include <fstream>
 #include <iostream>
@@ -227,6 +228,25 @@ void display_points(Mat& img, std::vector<my_point>& points)
     circle(img, Point(i.x, i.y), 3, Scalar(b, g, r), -1);
   }
 }
+void bind_edges()
+{
+  for (auto& f : all_faces)
+  {
+    for (size_t i = 0; i < f.points.size(); i++)
+    {
+      auto edge = std::find_if(
+          all_edges.begin(), all_edges.end(),
+          [f, i](const my_edge& e)
+          {
+            return (e.v1_id == f.points[i] &&
+                    e.v2_id == f.points[(i + 1) % f.points.size()]) ||
+                   (e.v1_id == f.points[(i + 1) % f.points.size()] &&
+                    e.v2_id == f.points[i]);
+          });
+      f.edges.push_back(edge->edge_id);
+    }
+  }
+}
 void catmull_clark()
 {
   // 面点
@@ -404,6 +424,11 @@ void catmull_clark()
     new_point.v_id = i.v_id;
     // std::cout << "新的点" << new_point.v_id << "(" << new_point.x << ","
     //           << new_point.y << ")" << std::endl;
+    if (cnt != n)
+    {
+      new_point.x = i.x;
+      new_point.y = i.y;
+    }
     new_points.push_back(new_point);
   }
   for (auto& i : new_points)
@@ -425,10 +450,26 @@ void catmull_clark()
     }
     std::cout << std::endl;
   }
+  for (auto& i : face_points)
+  {
+    std::cout << "面点" << i.v_id << "(" << i.x << "," << i.y << ")"
+              << std::endl;
+  }
+  // Mat img = Mat::zeros(Size(800, 800), CV_8UC3);
+  // img.setTo(255); // 设置屏幕为白色
+  // display_points(img, new_points);
+  // display_points(img, face_points);
+  // display_points(img, edge_points);
+  // imshow("花瓣", img);
+  // waitKey(0);
   // 更新点边和面，按面更新
   std::vector<my_point> new_points_tmp;
   std::vector<my_edge> new_edges;
   std::vector<my_face> new_faces;
+  new_points_tmp.push_back(all_points[0]);
+  new_faces.push_back(all_faces[0]);
+  new_edges.push_back(all_edges[0]);
+
   for (auto& i : all_faces)
   {
     if (i.points.size() == 4)
@@ -545,7 +586,7 @@ void catmull_clark()
       new_edge_1_1.v2_id = edge_point_1_2.v_id;
       // 边2(edge_point_ab,face_point)
       new_edge_1_2.v1_id = edge_point_1_2.v_id;
-      new_edge_1_2.v1_id = face_point.v_id;
+      new_edge_1_2.v2_id = face_point.v_id;
       // 边3(face_point,edge_point_da)
       new_edge_1_3.v1_id = face_point.v_id;
       new_edge_1_3.v2_id = edge_point_4_1.v_id;
@@ -565,8 +606,8 @@ void catmull_clark()
       // 新增面
       new_face_1.points = {point_1.v_id, edge_point_1_2.v_id, face_point.v_id,
                            edge_point_4_1.v_id};
-      new_face_1.edges = {new_edge_1_1.edge_id, new_edge_1_2.edge_id,
-                          new_edge_1_3.edge_id, new_edge_1_4.edge_id};
+      // new_face_1.edges = {new_edge_1_1.edge_id, new_edge_1_2.edge_id,
+      // new_edge_1_3.edge_id, new_edge_1_4.edge_id};
       new_face_1.face_id = new_faces.size();
       new_faces.push_back(new_face_1);
 
@@ -576,7 +617,7 @@ void catmull_clark()
       new_edge_2_1.v2_id = edge_point_2_3.v_id;
       // 边2(edge_point_bc,face_point)
       new_edge_2_2.v1_id = edge_point_2_3.v_id;
-      new_edge_2_2.v1_id = face_point.v_id;
+      new_edge_2_2.v2_id = face_point.v_id;
       // 边3(face_point,edge_point_ab)
       new_edge_2_3.v1_id = face_point.v_id;
       new_edge_2_3.v2_id = edge_point_1_2.v_id;
@@ -596,8 +637,8 @@ void catmull_clark()
       // 新增面
       new_face_2.points = {point_2.v_id, edge_point_2_3.v_id, face_point.v_id,
                            edge_point_1_2.v_id};
-      new_face_2.edges = {new_edge_2_1.edge_id, new_edge_2_2.edge_id,
-                          new_edge_2_3.edge_id, new_edge_2_4.edge_id};
+      // new_face_2.edges = {new_edge_2_1.edge_id, new_edge_2_2.edge_id,
+      //                     new_edge_2_3.edge_id, new_edge_2_4.edge_id};
       new_face_2.face_id = new_faces.size();
       new_faces.push_back(new_face_2);
       // 面3(c,edge_point_cd,face_point,edge_point_bc)
@@ -606,7 +647,7 @@ void catmull_clark()
       new_edge_3_1.v2_id = edge_point_3_4.v_id;
       // 边2(edge_point_cd,face_point)
       new_edge_3_2.v1_id = edge_point_3_4.v_id;
-      new_edge_3_2.v1_id = face_point.v_id;
+      new_edge_3_2.v2_id = face_point.v_id;
       // 边3(face_point,edge_point_bc)
       new_edge_3_3.v1_id = face_point.v_id;
       new_edge_3_3.v2_id = edge_point_2_3.v_id;
@@ -625,8 +666,8 @@ void catmull_clark()
       // 新增面
       new_face_3.points = {point_3.v_id, edge_point_3_4.v_id, face_point.v_id,
                            edge_point_2_3.v_id};
-      new_face_3.edges = {new_edge_3_1.edge_id, new_edge_3_2.edge_id,
-                          new_edge_3_3.edge_id, new_edge_3_4.edge_id};
+      // new_face_3.edges = {new_edge_3_1.edge_id, new_edge_3_2.edge_id,
+      // new_edge_3_3.edge_id, new_edge_3_4.edge_id};
       new_face_3.face_id = new_faces.size();
       new_faces.push_back(new_face_3);
       // 面4(d,edge_point_da,face_point,edge_point_cd)
@@ -635,7 +676,7 @@ void catmull_clark()
       new_edge_4_1.v2_id = edge_point_4_1.v_id;
       // 边2(edge_point_da,face_point)
       new_edge_4_2.v1_id = edge_point_4_1.v_id;
-      new_edge_4_2.v1_id = face_point.v_id;
+      new_edge_4_2.v2_id = face_point.v_id;
       // 边3(face_point,edge_point_cd)
       new_edge_4_3.v1_id = face_point.v_id;
       new_edge_4_3.v2_id = edge_point_3_4.v_id;
@@ -654,10 +695,58 @@ void catmull_clark()
       // 新增面
       new_face_4.points = {point_4.v_id, edge_point_4_1.v_id, face_point.v_id,
                            edge_point_3_4.v_id};
-      new_face_4.edges = {new_edge_4_1.edge_id, new_edge_4_2.edge_id,
-                          new_edge_4_3.edge_id, new_edge_4_4.edge_id};
+      // new_face_4.edges = {new_edge_4_1.edge_id, new_edge_4_2.edge_id,
+      // new_edge_4_3.edge_id, new_edge_4_4.edge_id};
       new_face_4.face_id = new_faces.size();
       new_faces.push_back(new_face_4);
+      std::cout << "新增边new_edge_1_1：\n"
+                << "\tfrom\t" << new_edge_1_1.v1_id << "\tto\t"
+                << new_edge_1_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_1_2：\n"
+                << "\tfrom\t" << new_edge_1_2.v1_id << "\tto\t"
+                << new_edge_1_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_1_3：\n"
+                << "\tfrom\t" << new_edge_1_3.v1_id << "\tto\t"
+                << new_edge_1_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_1_4：\n"
+                << "\tfrom\t" << new_edge_1_4.v1_id << "\tto\t"
+                << new_edge_1_4.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_1：\n"
+                << "\tfrom\t" << new_edge_2_1.v1_id << "\tto\t"
+                << new_edge_2_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_2：\n"
+                << "\tfrom\t" << new_edge_2_2.v1_id << "\tto\t"
+                << new_edge_2_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_3：\n"
+                << "\tfrom\t" << new_edge_2_3.v1_id << "\tto\t"
+                << new_edge_2_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_4：\n"
+                << "\tfrom\t" << new_edge_2_4.v1_id << "\tto\t"
+                << new_edge_2_4.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_1：\n"
+                << "\tfrom\t" << new_edge_3_1.v1_id << "\tto\t"
+                << new_edge_3_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_2：\n"
+                << "\tfrom\t" << new_edge_3_2.v1_id << "\tto\t"
+                << new_edge_3_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_3：\n"
+                << "\tfrom\t" << new_edge_3_3.v1_id << "\tto\t"
+                << new_edge_3_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_4：\n"
+                << "\tfrom\t" << new_edge_3_4.v1_id << "\tto\t"
+                << new_edge_3_4.v2_id << std::endl;
+      std::cout << "新增边new_edge_4_1：\n"
+                << "\tfrom\t" << new_edge_4_1.v1_id << "\tto\t"
+                << new_edge_4_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_4_2：\n"
+                << "\tfrom\t" << new_edge_4_2.v1_id << "\tto\t"
+                << new_edge_4_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_4_3：\n"
+                << "\tfrom\t" << new_edge_4_3.v1_id << "\tto\t"
+                << new_edge_4_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_4_4：\n"
+                << "\tfrom\t" << new_edge_4_4.v1_id << "\tto\t"
+                << new_edge_4_4.v2_id << std::endl;
     }
     else if (i.points.size() == 3)
     {
@@ -711,7 +800,7 @@ void catmull_clark()
                         [edge_3_1_index](const my_point& p)
                         { return p.v_id == edge_3_1_index.edge_id; });
       auto face_point =
-          *std::find_if(new_points.begin(), new_points.end(),
+          *std::find_if(face_points.begin(), face_points.end(),
                         [i](const my_point& p) { return p.v_id == i.face_id; });
       // 新增点
 
@@ -735,25 +824,28 @@ void catmull_clark()
       my_edge new_edge_1_1;
       my_edge new_edge_1_2;
       my_edge new_edge_1_3;
+      my_edge new_edge_1_4;
       my_edge new_edge_2_1;
       my_edge new_edge_2_2;
       my_edge new_edge_2_3;
+      my_edge new_edge_2_4;
       my_edge new_edge_3_1;
       my_edge new_edge_3_2;
       my_edge new_edge_3_3;
-      my_edge new_edge_4_1;
-      my_edge new_edge_4_2;
-      my_edge new_edge_4_3;
+      my_edge new_edge_3_4;
       // 面1(a, edge_point_ab, face_point, edge_point_ca)
       // 边1(a, edge_point_ab)
       new_edge_1_1.v1_id = point_1.v_id;
       new_edge_1_1.v2_id = edge_point_1_2.v_id;
       // 边2(edge_point_ab, face_point)
       new_edge_1_2.v1_id = edge_point_1_2.v_id;
-      new_edge_1_2.v1_id = face_point.v_id;
+      new_edge_1_2.v2_id = face_point.v_id;
       // 边3(face_point, edge_point_ca)
       new_edge_1_3.v1_id = face_point.v_id;
       new_edge_1_3.v2_id = edge_point_3_1.v_id;
+      // 边4(edge_point_ca, a)
+      new_edge_1_4.v1_id = edge_point_3_1.v_id;
+      new_edge_1_4.v2_id = point_1.v_id;
       // 新增边
       new_edge_1_1.edge_id = new_edges.size();
       new_edges.push_back(new_edge_1_1);
@@ -761,11 +853,13 @@ void catmull_clark()
       new_edges.push_back(new_edge_1_2);
       new_edge_1_3.edge_id = new_edges.size();
       new_edges.push_back(new_edge_1_3);
+      new_edge_1_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_1_4);
       // 新增面
       new_face_1.points = {point_1.v_id, edge_point_1_2.v_id, face_point.v_id,
                            edge_point_3_1.v_id};
-      new_face_1.edges = {new_edge_1_1.edge_id, new_edge_1_2.edge_id,
-                          new_edge_1_3.edge_id};
+      // new_face_1.edges = {new_edge_1_1.edge_id, new_edge_1_2.edge_id,
+      // new_edge_1_3.edge_id};
       new_face_1.face_id = new_faces.size();
       new_faces.push_back(new_face_1);
       // 面2(b, edge_point_bc, face_point, edge_point_ab)
@@ -774,10 +868,13 @@ void catmull_clark()
       new_edge_2_1.v2_id = edge_point_2_3.v_id;
       // 边2(edge_point_bc, face_point)
       new_edge_2_2.v1_id = edge_point_2_3.v_id;
-      new_edge_2_2.v1_id = face_point.v_id;
+      new_edge_2_2.v2_id = face_point.v_id;
       // 边3(face_point, edge_point_ab)
       new_edge_2_3.v1_id = face_point.v_id;
       new_edge_2_3.v2_id = edge_point_1_2.v_id;
+      // 边4(edge_point_ab, b)
+      new_edge_2_4.v1_id = edge_point_1_2.v_id;
+      new_edge_2_4.v2_id = point_2.v_id;
       // 新增边
       new_edge_2_1.edge_id = new_edges.size();
       new_edges.push_back(new_edge_2_1);
@@ -785,19 +882,28 @@ void catmull_clark()
       new_edges.push_back(new_edge_2_2);
       new_edge_2_3.edge_id = new_edges.size();
       new_edges.push_back(new_edge_2_3);
+      new_edge_2_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_2_4);
       // 新增面
       new_face_2.points = {point_2.v_id, edge_point_2_3.v_id, face_point.v_id,
                            edge_point_1_2.v_id};
+      // new_face_2.edges = {new_edge_2_1.edge_id, new_edge_2_2.edge_id,
+      // new_edge_2_3.edge_id};
+      new_face_2.face_id = new_faces.size();
       // 面3(c, edge_point_ca, face_point, edge_point_bc)
       // 边1(c, edge_point_ca)
+      new_faces.push_back(new_face_2);
       new_edge_3_1.v1_id = point_3.v_id;
       new_edge_3_1.v2_id = edge_point_3_1.v_id;
       // 边2(edge_point_ca, face_point)
       new_edge_3_2.v1_id = edge_point_3_1.v_id;
-      new_edge_3_2.v1_id = face_point.v_id;
+      new_edge_3_2.v2_id = face_point.v_id;
       // 边3(face_point, edge_point_bc)
       new_edge_3_3.v1_id = face_point.v_id;
       new_edge_3_3.v2_id = edge_point_2_3.v_id;
+      // 边4(edge_point_bc, c)
+      new_edge_3_4.v1_id = edge_point_2_3.v_id;
+      new_edge_3_4.v2_id = point_3.v_id;
       // 新增边
       new_edge_3_1.edge_id = new_edges.size();
       new_edges.push_back(new_edge_3_1);
@@ -805,30 +911,160 @@ void catmull_clark()
       new_edges.push_back(new_edge_3_2);
       new_edge_3_3.edge_id = new_edges.size();
       new_edges.push_back(new_edge_3_3);
+      new_edge_3_4.edge_id = new_edges.size();
+      new_edges.push_back(new_edge_3_4);
       // 新增面
       new_face_3.points = {point_3.v_id, edge_point_3_1.v_id, face_point.v_id,
                            edge_point_2_3.v_id};
-      new_face_3.edges = {new_edge_3_1.edge_id, new_edge_3_2.edge_id,
-                          new_edge_3_3.edge_id};
+      // new_face_3.edges = {new_edge_3_1.edge_id, new_edge_3_2.edge_id,
+      //                     new_edge_3_3.edge_id};
       new_face_3.face_id = new_faces.size();
       new_faces.push_back(new_face_3);
+      std::cout << "新增边new_edge_1_1：\n"
+                << "\tfrom\t" << new_edge_1_1.v1_id << "\tto\t"
+                << new_edge_1_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_1_2：\n"
+                << "\tfrom\t" << new_edge_1_2.v1_id << "\tto\t"
+                << new_edge_1_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_1_3：\n"
+                << "\tfrom\t" << new_edge_1_3.v1_id << "\tto\t"
+                << new_edge_1_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_1_4：\n"
+                << "\tfrom\t" << new_edge_1_4.v1_id << "\tto\t"
+                << new_edge_1_4.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_1：\n"
+                << "\tfrom\t" << new_edge_2_1.v1_id << "\tto\t"
+                << new_edge_2_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_2：\n"
+                << "\tfrom\t" << new_edge_2_2.v1_id << "\tto\t"
+                << new_edge_2_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_3：\n"
+                << "\tfrom\t" << new_edge_2_3.v1_id << "\tto\t"
+                << new_edge_2_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_2_4：\n"
+                << "\tfrom\t" << new_edge_2_4.v1_id << "\tto\t"
+                << new_edge_2_4.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_1：\n"
+                << "\tfrom\t" << new_edge_3_1.v1_id << "\tto\t"
+                << new_edge_3_1.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_2：\n"
+                << "\tfrom\t" << new_edge_3_2.v1_id << "\tto\t"
+                << new_edge_3_2.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_3：\n"
+                << "\tfrom\t" << new_edge_3_3.v1_id << "\tto\t"
+                << new_edge_3_3.v2_id << std::endl;
+      std::cout << "新增边new_edge_3_4：\n"
+                << "\tfrom\t" << new_edge_3_4.v1_id << "\tto\t"
+                << new_edge_3_4.v2_id << std::endl;
     }
   }
   // 最终结果
+  new_faces.erase(new_faces.begin());
+  new_edges.erase(new_edges.begin());
+  new_points_tmp.erase(new_points_tmp.begin());
   all_faces = new_faces;
   all_edges = new_edges;
   all_points = new_points_tmp;
+  bind_edges();
+  for (auto& i : all_points)
+  {
+    std::cout << "点" << i.v_id << "(" << i.x << "," << i.y << ")" << std::endl;
+  }
+  for (auto& i : all_edges)
+  {
+    std::cout << "边" << i.edge_id << " from " << i.v1_id << " to " << i.v2_id
+              << std::endl;
+  }
+  for (auto& i : all_faces)
+  {
+    std::cout << "面" << i.face_id << std::endl;
+    std::cout << "\t点\t";
+    for (auto& j : i.points)
+    {
+      std::cout << j << " ";
+    }
+    std::cout << std::endl;
+    std::cout << "\t边\t";
+    for (auto& j : i.edges)
+    {
+      std::cout << j << " ";
+    }
+    std::cout << std::endl;
+  }
 }
-int main()
+void write_all(const char* path)
 {
-  read_file("obj1.txt");
+  std::ofstream ofs(path);
+  for (auto& i : all_points)
+  {
+    ofs << "v " << (i.x - OFFSET) / SCALE << " " << (i.y - OFFSET) / SCALE
+        << "\n";
+  }
+  for (auto& i : all_edges)
+  {
+    ofs << "e " << i.v1_id << " " << i.v2_id << "\n";
+  }
+  for (auto& i : all_faces)
+  {
+    ofs << "f ";
+    for (auto& j : i.points)
+    {
+      ofs << j << " ";
+    }
+    ofs << "\n";
+  }
+}
+int main(int argc, char** argv)
+{
+  std::string filepath = "obj1.txt";
+  if (argc > 1)
+  {
+    filepath = argv[1];
+  }
+  size_t loop_times = 1;
+  if (argc > 2)
+  {
+    loop_times = std::stoull(argv[2]);
+  }
+  read_file(filepath.c_str());
   Mat img = Mat::zeros(Size(800, 800), CV_8UC3);
   img.setTo(255); // 设置屏幕为白色
-  catmull_clark();
   draw_all(img);
   imshow("画板", img);
   waitKey(0);
+  for (size_t i = 0; i < loop_times; i++)
+  {
+    // if (i > 0)
+    // {
+    //   read_file(".temp.obj");
+    // }
+    std::cout << "\n\n\n";
+    std::cout << "第" << i + 1 << "次细分" << std::endl;
+    std::cout << "\n\n\n";
+    img.setTo(255);
+    catmull_clark();
+    draw_all(img);
+    imshow("画板", img);
+    waitKey(0);
+    // write_all(".temp.obj");
+  }
+  // system("rm .temp.obj");
+  if (loop_times == 0)
+  {
+    img.setTo(255);
+    draw_all(img);
+    imshow("画板", img);
+    waitKey(0);
+  }
   // 输出png
   imwrite("output.png", img);
+  if (argc > 3)
+  {
+    if (strcmp(argv[3], "-o") == 0)
+    {
+      std::string output_filepath = argv[4];
+      write_all(output_filepath.c_str());
+    }
+  }
   return 0;
 }
