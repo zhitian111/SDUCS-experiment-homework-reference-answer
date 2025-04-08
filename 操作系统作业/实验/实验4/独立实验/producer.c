@@ -1,30 +1,38 @@
 #include "common.h"
 
-int run(int timer)
+int run()
 {
   if (iniSharedMemory() == -1)
   {
     perror("初始化共享内存失败");
     return -1;
   }
-  for (int i = 0; i < 26; i++)
+  if (iniSemaphore() == -1)
   {
-    char c = 'a' + i;
-    writeForPaper(&c, sizeof(char));
-    printf("向共享内存写入%c\n", c);
-    sleep(timer);
+    perror("初始化信号量失败");
+    freeAllSharedMemory();
+    return -1;
   }
+  producerRun();
   freeAllSharedMemory();
+  freeAllSemaphore();
   return 0;
 }
 
 int main(int argc, char const* argv[])
 {
   int timer = 1;
-  if (argc > 1)
+  for (int i = 1; i < argc; i++)
   {
-    timer = atoi(argv[1]);
+    if (strcmp(argv[i], "-t") == 0)
+    {
+      timer = atoi(argv[i + 1]);
+    }
+    // if (strcmp(argv[i], "-i") == 0)
+    // {
+    //
+    // }
   }
-  run(timer);
+  run();
   return 0;
 }

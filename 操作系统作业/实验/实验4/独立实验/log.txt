@@ -1,0 +1,60 @@
+[ 2025-04-08 10:43:13 ] Consumer Pid : 25431, consume paper. got data : 5
+[ 2025-04-08 10:43:13 ] Consumer Pid : 25431, consume water. got data : 5
+[ 2025-04-08 10:43:13 ] Producer Pid : 25429, produce paper. paper_cnt : 1
+[ 2025-04-08 10:43:13 ] Producer Pid : 25429, produce water. water_cnt : 1
+[ 2025-04-08 10:43:13 ] Consumer Pid : 25432, consume water. got data : 0
+[ 2025-04-08 10:43:13 ] Consumer Pid : 25432, consume tobacco. got data : 5
+[ 2025-04-08 10:43:13 ] Producer Pid : 25429, produce water. water_cnt : 2
+[ 2025-04-08 10:43:13 ] Producer Pid : 25429, produce tobacco. tobacco_cnt : 1
+[ 2025-04-08 10:43:13 ] Consumer Pid : 25433, consume tobacco. got data : 0
+[ 2025-04-08 10:43:13 ] Consumer Pid : 25433, consume paper. got data : 0
+[ 2025-04-08 10:43:14 ] Consumer Pid : 25431, consume paper. got data : 0
+[ 2025-04-08 10:43:14 ] Consumer Pid : 25431, consume water. got data : 1
+[ 2025-04-08 10:43:14 ] Consumer Pid : 25432, consume water. got data : 1
+[ 2025-04-08 10:43:14 ] Consumer Pid : 25432, consume tobacco. got data : 1
+[ 2025-04-08 10:43:14 ] Consumer Pid : 25433, consume tobacco. got data : 1
+[ 2025-04-08 10:43:14 ] Consumer Pid : 25433, consume paper. got data : 0
+[ 2025-04-08 10:43:13 ] Producer Pid : 25429, produce tobacco. tobacco_cnt : 2
+[ 2025-04-08 10:43:14 ] Producer Pid : 25429, produce paper. paper_cnt : 2
+[ 2025-04-08 10:43:13 ] Producer Pid : 25430, produce paper. paper_cnt : 1
+[ 2025-04-08 10:43:14 ] Producer Pid : 25430, produce water. water_cnt : 1
+[ 2025-04-08 10:43:14 ] Producer Pid : 25430, produce water. water_cnt : 2
+[ 2025-04-08 10:43:14 ] Producer Pid : 25430, produce tobacco. tobacco_cnt : 1
+[ 2025-04-08 10:43:14 ] Producer Pid : 25430, produce tobacco. tobacco_cnt : 2
+[ 2025-04-08 10:43:14 ] Producer Pid : 25430, produce paper. paper_cnt : 2
+[ 2025-04-08 10:43:15 ] Consumer Pid : 25433, consume tobacco. got data : 1
+[ 2025-04-08 10:43:15 ] Consumer Pid : 25433, consume paper. got data : 1
+[ 2025-04-08 10:43:15 ] Producer Pid : 25429, produce paper. paper_cnt : 3
+[ 2025-04-08 10:43:15 ] Producer Pid : 25429, produce water. water_cnt : 3
+[ 2025-04-08 10:43:15 ] Consumer Pid : 25432, consume water. got data : 1
+[ 2025-04-08 10:43:15 ] Consumer Pid : 25432, consume tobacco. got data : 1
+[ 2025-04-08 10:43:15 ] Consumer Pid : 25431, consume paper. got data : 2
+[ 2025-04-08 10:43:15 ] Consumer Pid : 25431, consume water. got data : 1
+[ 2025-04-08 10:43:15 ] Producer Pid : 25429, produce water. water_cnt : 4
+[ 2025-04-08 10:43:15 ] Producer Pid : 25429, produce tobacco. tobacco_cnt : 3
+[ 2025-04-08 10:43:15 ] Producer Pid : 25429, produce tobacco. tobacco_cnt : 4
+[ 2025-04-08 10:43:15 ] Producer Pid : 25429, produce paper. paper_cnt : 4
+[ 2025-04-08 10:43:16 ] Consumer Pid : 25433, consume tobacco. got data : 3
+[ 2025-04-08 10:43:16 ] Consumer Pid : 25433, consume paper. got data : 3
+[ 2025-04-08 10:43:16 ] Consumer Pid : 25432, consume water. got data : 3
+[ 2025-04-08 10:43:16 ] Consumer Pid : 25432, consume tobacco. got data : 3
+[ 2025-04-08 10:43:16 ] Consumer Pid : 25431, consume paper. got data : 4
+[ 2025-04-08 10:43:16 ] Consumer Pid : 25431, consume water. got data : 4
+[ 2025-04-08 10:43:16 ] Producer Pid : 25429, produce paper. paper_cnt : 5
+[ 2025-04-08 10:43:16 ] Producer Pid : 25429, produce water. water_cnt : 5
+[ 2025-04-08 10:43:16 ] Producer Pid : 25430, produce paper. paper_cnt : 3
+[ 2025-04-08 10:43:16 ] Producer Pid : 25430, produce water. water_cnt : 3
+[ 2025-04-08 10:43:17 ] Consumer Pid : 25433, consume tobacco. got data : 3
+[ 2025-04-08 10:43:17 ] Consumer Pid : 25433, consume paper. got data : 4
+[ 2025-04-08 10:43:17 ] Consumer Pid : 25432, consume water. got data : 2
+[ 2025-04-08 10:43:17 ] Consumer Pid : 25432, consume tobacco. got data : 3
+[ 2025-04-08 10:43:17 ] Consumer Pid : 25431, consume paper. got data : 4
+[ 2025-04-08 10:43:17 ] Consumer Pid : 25431, consume water. got data : 2
+[ 2025-04-08 10:43:17 ] Producer Pid : 25429, produce water. water_cnt : 6
+[ 2025-04-08 10:43:17 ] Producer Pid : 25429, produce tobacco. tobacco_cnt : 5
+[ 2025-04-08 10:43:17 ] Producer Pid : 25429, produce tobacco. tobacco_cnt : 6
+[ 2025-04-08 10:43:17 ] Producer Pid : 25429, produce paper. paper_cnt : 6
+[ 2025-04-08 10:43:17 ] Producer Pid : 25430, produce water. water_cnt : 4
+[ 2025-04-08 10:43:17 ] Producer Pid : 25430, produce tobacco. tobacco_cnt : 3
+[ 2025-04-08 10:43:17 ] Producer Pid : 25430, produce tobacco. tobacco_cnt : 4
+[ 2025-04-08 10:43:17 ] Producer Pid : 25430, produce paper. paper_cnt : 4
