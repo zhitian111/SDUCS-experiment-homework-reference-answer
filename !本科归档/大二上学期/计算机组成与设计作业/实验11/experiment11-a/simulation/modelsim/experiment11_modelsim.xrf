@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, F:/FPGA Tools/experiment11/experiment11.bdf
+source_file = 1, F:/FPGA Tools/experiment11/Waveform.vwf
+source_file = 1, F:/FPGA Tools/experiment11/db/experiment11.cbx.xml
+design_name = experiment11
+instance = comp, \T1~output , T1~output, experiment11, 1
+instance = comp, \T2~output , T2~output, experiment11, 1
+instance = comp, \T3~output , T3~output, experiment11, 1
+instance = comp, \T4~output , T4~output, experiment11, 1
+instance = comp, \clock~input , clock~input, experiment11, 1
+instance = comp, \clock~inputclkctrl , clock~inputclkctrl, experiment11, 1
+instance = comp, \D2~0 , D2~0, experiment11, 1
+instance = comp, \RST~input , RST~input, experiment11, 1
+instance = comp, \D3~feeder , D3~feeder, experiment11, 1
+instance = comp, \D4~feeder , D4~feeder, experiment11, 1
+instance = comp, \D1~0 , D1~0, experiment11, 1

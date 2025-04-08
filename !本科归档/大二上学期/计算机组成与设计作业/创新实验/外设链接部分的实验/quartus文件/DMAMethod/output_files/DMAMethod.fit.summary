@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Dec 24 10:10:01 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DMAMethod
+Top-level Entity Name : DMAMethod
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 404 / 6,272 ( 6 % )
+    Total combinational functions : 350 / 6,272 ( 6 % )
+    Dedicated logic registers : 254 / 6,272 ( 4 % )
+Total registers : 254
+Total pins : 19 / 92 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 66,560 / 276,480 ( 24 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

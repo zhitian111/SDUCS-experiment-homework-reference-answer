@@ -1,0 +1,19 @@
+﻿CREATE OR REPLACE VIEW TEST2_05 AS
+    SELECT
+        DISTINCT PUB.STUDENT_COURSE.SID,
+        PUB.STUDENT_COURSE.CID,
+        PUB.COURSE.NAME,
+        PUB.STUDENT_COURSE.SCORE
+    FROM
+        PUB.STUDENT_COURSE,
+        PUB.COURSE
+    WHERE
+        PUB.STUDENT_COURSE.SID IN(
+            SELECT
+                PUB.STUDENT.SID
+            FROM
+                PUB.STUDENT
+            WHERE
+                PUB.STUDENT.NAME = '李龙'
+        )
+        AND PUB.STUDENT_COURSE.CID = PUB.COURSE.CID;

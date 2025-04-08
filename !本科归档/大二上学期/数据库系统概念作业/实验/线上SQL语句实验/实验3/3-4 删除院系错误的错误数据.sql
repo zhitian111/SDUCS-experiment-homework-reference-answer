@@ -1,0 +1,13 @@
+﻿CREATE TABLE TEST3_04 AS
+    SELECT
+        *
+    FROM
+        PUB.STUDENT_31;
+
+drop table TEST3_04;
+
+DELETE FROM TEST3_04
+WHERE
+    INSTR(DNAME, ' ') != 0
+    OR DNAME IS NULL
+    OR LENGTH(DNAME)<3;

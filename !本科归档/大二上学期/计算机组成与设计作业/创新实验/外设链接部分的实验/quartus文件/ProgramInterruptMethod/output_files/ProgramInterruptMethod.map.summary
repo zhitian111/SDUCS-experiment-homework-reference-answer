@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Dec 23 22:57:56 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : ProgramInterruptMethod
+Top-level Entity Name : ProgramInterruptMethod
+Family : Cyclone IV E
+Total logic elements : 424
+    Total combinational functions : 362
+    Dedicated logic registers : 259
+Total registers : 259
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 66,560
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

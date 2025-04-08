@@ -1,0 +1,99 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 288 208)
+	(text "controller" (rect 5 0 79 18)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 172 33 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "address[4]" (rect 0 0 87 18)(font "Arial" (font_size 8)))
+		(text "address[4]" (rect 21 27 108 45)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "address[5]" (rect 0 0 87 18)(font "Arial" (font_size 8)))
+		(text "address[5]" (rect 21 43 108 61)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "LD" (rect 0 0 27 18)(font "Arial" (font_size 8)))
+		(text "LD" (rect 21 59 48 77)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "address[0]" (rect 0 0 87 18)(font "Arial" (font_size 8)))
+		(text "address[0]" (rect 21 75 108 93)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "address[1]" (rect 0 0 87 18)(font "Arial" (font_size 8)))
+		(text "address[1]" (rect 21 91 108 109)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "address[2]" (rect 0 0 87 18)(font "Arial" (font_size 8)))
+		(text "address[2]" (rect 21 107 108 125)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "address[3]" (rect 0 0 87 18)(font "Arial" (font_size 8)))
+		(text "address[3]" (rect 21 123 108 141)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "clock" (rect 0 0 42 18)(font "Arial" (font_size 8)))
+		(text "clock" (rect 21 139 63 157)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "enable" (rect 0 0 55 18)(font "Arial" (font_size 8)))
+		(text "enable" (rect 21 155 76 173)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 272 32)
+		(output)
+		(text "command[15..0]" (rect 0 0 132 18)(font "Arial" (font_size 8)))
+		(text "command[15..0]" (rect 119 27 251 45)(font "Arial" (font_size 8)))
+		(line (pt 272 32)(pt 256 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 256 176))
+	)
+)

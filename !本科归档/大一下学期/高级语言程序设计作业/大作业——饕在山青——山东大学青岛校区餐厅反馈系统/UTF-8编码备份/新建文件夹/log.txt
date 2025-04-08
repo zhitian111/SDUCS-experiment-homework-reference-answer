@@ -1,0 +1,2166 @@
+
+
+
+[2024-5-29-18-41-7] SYSTEM operation : Start running
+[2024-5-29-18-41-8] SYSTEM operation : Open the main window
+[2024-5-29-18-41-39] username : test operation : Tried to login,successed
+[2024-5-29-18-41-42] username : test operation : Tried to check out the dishes,successed
+[2024-5-29-18-41-42] SYSTEM operation : Open the show_table window
+[2024-5-29-18-41-47] username : test operation : Stop checking out the dishes
+[2024-5-29-18-41-47] SYSTEM operation : Close the show_table window
+[2024-5-29-18-41-48] username : test operation : Tried to check out the dishes,successed
+[2024-5-29-18-41-48] SYSTEM operation : Open the show_table window
+[2024-5-29-18-41-51] username : test operation : Tried to search the dish:aaa,filed
+[2024-5-29-18-41-59] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-8] username : test operation : Tried to search the dish:兰州拉面,successed
+[2024-5-29-18-42-11] username : test operation : Tried to search the dish:兰州拉面,successed
+[2024-5-29-18-42-11] username : test operation : Tried to search the dish:兰州拉面,successed
+[2024-5-29-18-42-12] username : test operation : Tried to search the dish:兰州拉面,successed
+[2024-5-29-18-42-16] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-16] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-16] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-16] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-17] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-17] username : test operation : Tried to search the dish:番茄炒蛋,successed
+[2024-5-29-18-42-24] username : test operation : Tried to search the dish:老友粉,successed
+[2024-5-29-18-42-25] username : test operation : Tried to search the dish:老友粉,successed
+[2024-5-29-18-42-25] username : test operation : Tried to search the dish:老友粉,successed
+[2024-5-29-18-42-34] username : test operation : Tried to search the dish:老友粉,successed
+[2024-5-29-18-43-11] username : test operation : Stop checking out the dishes
+[2024-5-29-18-43-11] SYSTEM operation : Close the show_table window
+[2024-5-29-18-43-20] username : test operation : Tried to check out the dishes,successed
+[2024-5-29-18-43-20] SYSTEM operation : Open the show_table window
+[2024-5-29-18-43-23] username : test operation : Stop checking out the dishes
+[2024-5-29-18-43-23] SYSTEM operation : Close the show_table window
+[2024-5-29-18-43-35] username : test operation : Tried to check out the dishes,successed
+[2024-5-29-18-43-35] SYSTEM operation : Open the show_table window
+[2024-5-29-18-43-47] username : test operation : Stop checking out the dishes
+[2024-5-29-18-43-47] SYSTEM operation : Close the show_table window
+[2024-5-29-18-43-50] username : test operation : Logout
+[2024-5-29-18-43-52] SYSTEM operation : Close the main window
+[2024-5-29-18-43-52] SYSTEM operation : Stop running
+
+
+[2024-5-29-18-48-56] SYSTEM operation : Start running
+[2024-5-29-18-48-57] SYSTEM operation : Open the main window
+[2024-5-29-18-48-58] SYSTEM operation : Close the main window
+[2024-5-29-18-48-58] SYSTEM operation : Stop running
+
+
+[2024-5-29-18-53-56] SYSTEM operation : Start running
+[2024-5-29-18-53-57] SYSTEM operation : Open the main window
+[2024-5-29-18-53-58] SYSTEM operation : Open the registration window
+[2024-5-29-18-54-4] SYSTEM operation : Close the registration window
+[2024-5-29-18-54-6] SYSTEM operation : Close the main window
+[2024-5-29-18-54-6] SYSTEM operation : Stop running
+
+
+[2024-5-29-19-9-1] SYSTEM operation : Start running
+[2024-5-29-19-9-1] SYSTEM operation : Open the main window
+[2024-5-29-19-9-3] SYSTEM operation : Close the main window
+[2024-5-29-19-9-3] SYSTEM operation : Stop running
+
+
+[2024-5-29-19-29-36] SYSTEM operation : Start running
+[2024-5-29-19-29-36] SYSTEM operation : Open the main window
+[2024-5-29-19-29-39] SYSTEM operation : Close the main window
+[2024-5-29-19-29-39] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-16-14] SYSTEM operation : Start running
+[2024-5-29-20-16-15] SYSTEM operation : Open the main window
+[2024-5-29-20-16-20] username : test operation : Tried to login,successed
+[2024-5-29-20-16-22] SYSTEM operation : Open account manage window of user:test
+[2024-5-29-20-16-40] username : test operation : Stop managing account
+[2024-5-29-20-16-40] SYSTEM operation : Close account manage window of user:test
+[2024-5-29-20-16-41] username : test operation : Logout
+[2024-5-29-20-16-42] SYSTEM operation : Close the main window
+[2024-5-29-20-16-42] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-18-20] SYSTEM operation : Start running
+[2024-5-29-20-18-20] SYSTEM operation : Open the main window
+[2024-5-29-20-18-22] SYSTEM operation : Close the main window
+[2024-5-29-20-18-22] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-19-7] SYSTEM operation : Start running
+[2024-5-29-20-19-8] SYSTEM operation : Open the main window
+[2024-5-29-20-19-12] username : test operation : Tried to login,successed
+[2024-5-29-20-19-14] SYSTEM operation : Open account manage window of user:test
+[2024-5-29-20-19-14] username : test operation : Tried to manage the account,successed
+[2024-5-29-20-19-21] username : test operation : Stop managing account
+[2024-5-29-20-19-21] SYSTEM operation : Close account manage window of user:test
+[2024-5-29-20-19-23] username : test operation : Logout
+[2024-5-29-20-19-25] SYSTEM operation : Close the main window
+[2024-5-29-20-19-25] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-19-51] SYSTEM operation : Start running
+[2024-5-29-20-19-51] SYSTEM operation : Open the main window
+[2024-5-29-20-19-55] username : test operation : Tried to login,successed
+[2024-5-29-20-19-56] SYSTEM operation : Open account manage window of user:test
+[2024-5-29-20-19-56] username : test operation : Tried to manage the account,successed
+[2024-5-29-20-20-1] username : test operation : Stop managing account
+[2024-5-29-20-20-1] SYSTEM operation : Close account manage window of user:test
+[2024-5-29-20-20-2] username : test operation : Logout
+[2024-5-29-20-20-5] SYSTEM operation : Close the main window
+[2024-5-29-20-20-5] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-26-11] SYSTEM operation : Start running
+[2024-5-29-20-26-11] SYSTEM operation : Open the main window
+[2024-5-29-20-26-16] SYSTEM operation : Open the registration window
+[2024-5-29-20-26-19] username : 1 operation : Tried to regist,successed
+[2024-5-29-20-26-19] SYSTEM operation : Add a new user, username: 1
+[2024-5-29-20-26-20] SYSTEM operation : Close the registration window
+[2024-5-29-20-26-21] username : 1 operation : Tried to login,successed
+[2024-5-29-20-26-22] SYSTEM operation : Open account manage window of user:1
+[2024-5-29-20-26-22] username : 1 operation : Tried to manage the account,successed
+[2024-5-29-20-26-31] username : 1 operation : Stop managing account
+[2024-5-29-20-26-31] SYSTEM operation : Close account manage window of user:1
+[2024-5-29-20-26-33] username : 1 operation : Logout
+[2024-5-29-20-26-34] SYSTEM operation : Close the main window
+[2024-5-29-20-26-34] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-28-9] SYSTEM operation : Start running
+[2024-5-29-20-28-9] SYSTEM operation : Open the main window
+[2024-5-29-20-28-12] username : 1 operation : Tried to login,successed
+[2024-5-29-20-28-13] SYSTEM operation : Open account manage window of user:1
+[2024-5-29-20-28-13] username : 1 operation : Tried to manage the account,successed
+[2024-5-29-20-28-18] username : 1 operation : Stop managing account
+[2024-5-29-20-28-18] SYSTEM operation : Close account manage window of user:1
+[2024-5-29-20-28-19] username : 1 operation : Logout
+[2024-5-29-20-28-21] SYSTEM operation : Close the main window
+[2024-5-29-20-28-21] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-31-43] SYSTEM operation : Start running
+[2024-5-29-20-31-43] SYSTEM operation : Open the main window
+[2024-5-29-20-31-45] username : 1 operation : Tried to login,successed
+[2024-5-29-20-31-46] SYSTEM operation : Open account manage window of user:1
+[2024-5-29-20-31-46] username : 1 operation : Tried to manage the account,successed
+[2024-5-29-20-31-56] username : 1 operation : Stop managing account
+[2024-5-29-20-31-56] SYSTEM operation : Close account manage window of user:1
+[2024-5-29-20-31-58] username : 1 operation : Tried to check out the dishes,successed
+[2024-5-29-20-31-58] SYSTEM operation : Open the show_table window
+[2024-5-29-20-31-59] username : 1 operation : Stop checking out the dishes
+[2024-5-29-20-31-59] SYSTEM operation : Close the show_table window
+[2024-5-29-20-31-59] username : 1 operation : Tried to check out the dishes,successed
+[2024-5-29-20-31-59] SYSTEM operation : Open the show_table window
+[2024-5-29-20-32-2] username : 1 operation : Tried to search the dish:1,filed
+[2024-5-29-20-32-4] username : 1 operation : Stop checking out the dishes
+[2024-5-29-20-32-4] SYSTEM operation : Close the show_table window
+[2024-5-29-20-32-5] username : 1 operation : Tried to check out the dishes,successed
+[2024-5-29-20-32-5] SYSTEM operation : Open the show_table window
+[2024-5-29-20-32-7] username : 1 operation : Stop checking out the dishes
+[2024-5-29-20-32-7] SYSTEM operation : Close the show_table window
+[2024-5-29-20-32-9] username : 1 operation : Tried to check out the dishes,successed
+[2024-5-29-20-32-9] SYSTEM operation : Open the show_table window
+[2024-5-29-20-32-10] username : 1 operation : Tried to search the dish:,filed
+[2024-5-29-20-32-11] username : 1 operation : Stop checking out the dishes
+[2024-5-29-20-32-11] SYSTEM operation : Close the show_table window
+[2024-5-29-20-32-13] username : 1 operation : Logout
+[2024-5-29-20-32-14] SYSTEM operation : Close the main window
+[2024-5-29-20-32-14] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-33-24] SYSTEM operation : Start running
+[2024-5-29-20-33-24] SYSTEM operation : Open the main window
+[2024-5-29-20-33-27] username : 1 operation : Tried to login,successed
+[2024-5-29-20-33-28] SYSTEM operation : Open account manage window of user:1
+[2024-5-29-20-33-28] username : 1 operation : Tried to manage the account,successed
+[2024-5-29-20-33-31] username : 1 operation : Stop managing account
+[2024-5-29-20-33-31] SYSTEM operation : Close account manage window of user:1
+[2024-5-29-20-33-32] username : 1 operation : Logout
+[2024-5-29-20-33-34] SYSTEM operation : Close the main window
+[2024-5-29-20-33-34] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-34-4] SYSTEM operation : Start running
+[2024-5-29-20-34-4] SYSTEM operation : Open the main window
+[2024-5-29-20-34-6] username : 1 operation : Tried to login,successed
+[2024-5-29-20-34-7] SYSTEM operation : Open account manage window of user:1
+[2024-5-29-20-34-7] username : 1 operation : Tried to manage the account,successed
+[2024-5-29-20-34-16] username : 1 operation : Stop managing account
+[2024-5-29-20-34-16] SYSTEM operation : Close account manage window of user:1
+[2024-5-29-20-34-19] username : 1 operation : Logout
+[2024-5-29-20-34-22] username : 1 operation : Tried to login,successed
+[2024-5-29-20-34-23] username : 1 operation : Tried to check out the dishes,successed
+[2024-5-29-20-34-23] SYSTEM operation : Open the show_table window
+[2024-5-29-20-34-25] username : 1 operation : Stop checking out the dishes
+[2024-5-29-20-34-25] SYSTEM operation : Close the show_table window
+[2024-5-29-20-34-26] username : 1 operation : Tried to check out the dishes,successed
+[2024-5-29-20-34-26] SYSTEM operation : Open the show_table window
+[2024-5-29-20-34-30] username : 1 operation : Stop checking out the dishes
+[2024-5-29-20-34-30] SYSTEM operation : Close the show_table window
+[2024-5-29-20-34-31] SYSTEM operation : Open account manage window of user:1
+[2024-5-29-20-34-31] username : 1 operation : Tried to manage the account,successed
+[2024-5-29-20-34-33] username : 1 operation : Stop managing account
+[2024-5-29-20-34-33] SYSTEM operation : Close account manage window of user:1
+[2024-5-29-20-34-35] username : 1 operation : Logout
+[2024-5-29-20-34-36] SYSTEM operation : Close the main window
+[2024-5-29-20-34-36] SYSTEM operation : Stop running
+
+
+[2024-5-29-20-54-29] SYSTEM operation : Start running
+[2024-5-29-20-54-30] SYSTEM operation : Open the main window
+[2024-5-29-20-54-31] SYSTEM operation : Close the main window
+[2024-5-29-20-54-31] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-31-55] SYSTEM operation : Start running
+[2024-6-1-9-31-56] SYSTEM operation : Open the main window
+[2024-6-1-9-31-59] username : 1 operation : Tried to login,successed
+[2024-6-1-9-32-1] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-32-1] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-32-9] username : 1 operation : Stop managing account
+[2024-6-1-9-32-9] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-32-11] username : 1 operation : Logout
+[2024-6-1-9-32-12] SYSTEM operation : Close the main window
+[2024-6-1-9-32-12] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-33-45] SYSTEM operation : Start running
+[2024-6-1-9-33-46] SYSTEM operation : Open the main window
+[2024-6-1-9-33-49] username : 1 operation : Tried to login,successed
+[2024-6-1-9-33-53] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-33-53] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-33-58] username : 1 operation : Stop managing account
+[2024-6-1-9-33-58] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-34-20] username : 1 operation : Logout
+[2024-6-1-9-34-23] SYSTEM operation : Close the main window
+[2024-6-1-9-34-23] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-34-34] SYSTEM operation : Start running
+[2024-6-1-9-34-34] SYSTEM operation : Open the main window
+[2024-6-1-9-34-36] username : 1 operation : Tried to login,successed
+[2024-6-1-9-34-37] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-34-37] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-34-49] username : 1 operation : Stop managing account
+[2024-6-1-9-34-49] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-36-33] username : 1 operation : Logout
+[2024-6-1-9-36-34] SYSTEM operation : Close the main window
+[2024-6-1-9-36-34] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-36-36] SYSTEM operation : Start running
+[2024-6-1-9-36-36] SYSTEM operation : Open the main window
+[2024-6-1-9-36-39] username : 1 operation : Tried to login,successed
+[2024-6-1-9-36-40] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-36-40] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-36-43] username : 1 operation : Stop managing account
+[2024-6-1-9-36-43] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-36-45] username : 1 operation : Logout
+[2024-6-1-9-36-46] SYSTEM operation : Close the main window
+[2024-6-1-9-36-46] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-40-52] SYSTEM operation : Start running
+[2024-6-1-9-40-53] SYSTEM operation : Open the main window
+[2024-6-1-9-40-56] username : 1 operation : Tried to login,successed
+[2024-6-1-9-40-57] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-40-57] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-41-1] username : 1 operation : Stop managing account
+[2024-6-1-9-41-1] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-41-3] username : 1 operation : Logout
+[2024-6-1-9-41-5] SYSTEM operation : Close the main window
+[2024-6-1-9-41-5] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-43-55] SYSTEM operation : Start running
+[2024-6-1-9-43-55] SYSTEM operation : Open the main window
+[2024-6-1-9-43-58] username : 1 operation : Tried to login,successed
+[2024-6-1-9-43-59] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-43-59] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-44-4] username : 1 operation : Stop managing account
+[2024-6-1-9-44-4] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-44-5] username : 1 operation : Logout
+[2024-6-1-9-44-34] SYSTEM operation : Close the main window
+[2024-6-1-9-44-34] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-44-35] SYSTEM operation : Start running
+[2024-6-1-9-44-36] SYSTEM operation : Open the main window
+[2024-6-1-9-44-38] username : 1 operation : Tried to login,successed
+[2024-6-1-9-44-39] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-44-39] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-44-43] username : 1 operation : Stop managing account
+[2024-6-1-9-44-43] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-44-44] username : 1 operation : Logout
+[2024-6-1-9-44-46] SYSTEM operation : Close the main window
+[2024-6-1-9-44-46] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-46-1] SYSTEM operation : Start running
+[2024-6-1-9-46-2] SYSTEM operation : Open the main window
+[2024-6-1-9-46-4] username : 1 operation : Tried to login,successed
+
+
+[2024-6-1-9-48-43] SYSTEM operation : Start running
+[2024-6-1-9-48-43] SYSTEM operation : Open the main window
+[2024-6-1-9-48-45] username : 1 operation : Tried to login,successed
+[2024-6-1-9-48-46] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-48-46] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-48-49] username : 1 operation : Tries to reset password,failed
+[2024-6-1-9-48-50] username : 1 operation : Stop managing account
+[2024-6-1-9-48-50] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-48-52] username : 1 operation : Logout
+[2024-6-1-9-48-53] SYSTEM operation : Close the main window
+[2024-6-1-9-48-53] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-48-59] SYSTEM operation : Start running
+[2024-6-1-9-48-59] SYSTEM operation : Open the main window
+[2024-6-1-9-49-1] username : 1 operation : Tried to login,successed
+[2024-6-1-9-49-2] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-49-2] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-49-6] username : 1 operation : Tries to reset password,failed
+[2024-6-1-9-49-10] username : 1 operation : Stop managing account
+[2024-6-1-9-49-10] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-49-11] username : 1 operation : Logout
+[2024-6-1-9-50-26] username : 1 operation : Tried to login,successed
+[2024-6-1-9-50-29] username : 1 operation : Logout
+[2024-6-1-9-50-31] SYSTEM operation : Close the main window
+[2024-6-1-9-50-31] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-51-25] SYSTEM operation : Start running
+[2024-6-1-9-51-26] SYSTEM operation : Open the main window
+[2024-6-1-9-51-27] username : 1 operation : Tried to login,successed
+[2024-6-1-9-51-28] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-51-28] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-51-37] username : 1 operation : Tries to reset password,failed
+[2024-6-1-9-51-41] username : 1 operation : Stop managing account
+[2024-6-1-9-51-41] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-51-42] username : 1 operation : Logout
+[2024-6-1-9-51-44] SYSTEM operation : Close the main window
+[2024-6-1-9-51-44] SYSTEM operation : Refresh the users file
+[2024-6-1-9-51-44] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-54-6] SYSTEM operation : Start running
+[2024-6-1-9-54-6] SYSTEM operation : Open the main window
+[2024-6-1-9-54-9] SYSTEM operation : Open the registration window
+[2024-6-1-9-54-13] username : 1 operation : Tried to regist,successed
+[2024-6-1-9-54-13] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-9-54-14] SYSTEM operation : Close the registration window
+[2024-6-1-9-54-15] username : 1 operation : Tried to login,successed
+[2024-6-1-9-54-17] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-9-54-17] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-9-54-21] username : 1 operation : Stop managing account
+[2024-6-1-9-54-21] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-9-54-22] username : 1 operation : Logout
+[2024-6-1-9-54-23] SYSTEM operation : Close the main window
+[2024-6-1-9-54-23] SYSTEM operation : Refresh the users file
+[2024-6-1-9-54-23] SYSTEM operation : Stop running
+
+
+[2024-6-1-9-55-27] SYSTEM operation : Start running
+[2024-6-1-9-55-27] SYSTEM operation : Open the main window
+[2024-6-1-9-55-29] username : 1 operation : Tried to login,failed
+[2024-6-1-9-55-30] SYSTEM operation : Open the registration window
+[2024-6-1-9-55-32] username : 1 operation : Tried to regist,successed
+[2024-6-1-9-55-32] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-9-55-33] SYSTEM operation : Close the registration window
+[2024-6-1-9-55-34] username : 1 operation : Tried to login,successed
+[2024-6-1-9-55-38] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-1-9-55-38] SYSTEM operation : Open the show_table window
+[2024-6-1-9-55-49] username : 1 operation : Stop checking out the dishes
+[2024-6-1-9-55-49] SYSTEM operation : Close the show_table window
+[2024-6-1-9-55-50] username : 1 operation : Logout
+[2024-6-1-9-55-52] SYSTEM operation : Close the main window
+[2024-6-1-9-55-52] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-0-25] SYSTEM operation : Start running
+[2024-6-1-10-0-26] SYSTEM operation : Open the main window
+[2024-6-1-10-0-29] SYSTEM operation : Close the main window
+[2024-6-1-10-0-29] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-1-2] SYSTEM operation : Start running
+[2024-6-1-10-1-3] SYSTEM operation : Open the main window
+[2024-6-1-10-1-5] username : 1 operation : Tried to login,failed
+[2024-6-1-10-1-9] SYSTEM operation : Close the main window
+[2024-6-1-10-1-9] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-1-28] SYSTEM operation : Start running
+[2024-6-1-10-1-28] SYSTEM operation : Open the main window
+[2024-6-1-10-1-29] SYSTEM operation : Open the registration window
+[2024-6-1-10-1-38] username : test operation : Tried to regist,successed
+[2024-6-1-10-1-38] SYSTEM operation : Add a new user, username: test
+[2024-6-1-10-1-39] SYSTEM operation : Close the registration window
+[2024-6-1-10-1-41] SYSTEM operation : Close the main window
+[2024-6-1-10-1-41] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-3-45] SYSTEM operation : Start running
+[2024-6-1-10-3-45] SYSTEM operation : Open the main window
+[2024-6-1-10-3-46] SYSTEM operation : Open the registration window
+[2024-6-1-10-3-51] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-3-51] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-3-51] SYSTEM operation : Close the registration window
+[2024-6-1-10-3-54] username : 123 operation : Tried to login,failed
+[2024-6-1-10-3-56] username : 123 operation : Tried to login,failed
+[2024-6-1-10-3-59] username : 123 operation : Tried to login,failed
+[2024-6-1-10-4-2] SYSTEM operation : Close the main window
+[2024-6-1-10-4-2] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-4-37] SYSTEM operation : Start running
+[2024-6-1-10-4-37] SYSTEM operation : Open the main window
+[2024-6-1-10-4-39] username : 123 operation : Tried to login,failed
+[2024-6-1-10-4-40] SYSTEM operation : Open the registration window
+[2024-6-1-10-4-43] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-4-43] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-4-44] SYSTEM operation : Close the registration window
+[2024-6-1-10-4-45] username : 123 operation : Tried to login,failed
+[2024-6-1-10-4-47] SYSTEM operation : Close the main window
+[2024-6-1-10-4-47] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-7-6] SYSTEM operation : Start running
+[2024-6-1-10-7-6] SYSTEM operation : Open the main window
+[2024-6-1-10-7-8] username : 123 operation : Tried to login,successed
+[2024-6-1-10-7-9] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-10-7-9] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-10-7-15] username : 123 operation : Stop managing account
+[2024-6-1-10-7-15] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-10-7-16] username : 123 operation : Logout
+[2024-6-1-10-7-18] username : 123 operation : Tried to login,successed
+[2024-6-1-10-7-20] username : 123 operation : Logout
+[2024-6-1-10-7-22] SYSTEM operation : Close the main window
+
+
+[2024-6-1-10-7-56] SYSTEM operation : Start running
+[2024-6-1-10-7-56] SYSTEM operation : Open the main window
+[2024-6-1-10-7-58] SYSTEM operation : Open the registration window
+[2024-6-1-10-8-0] SYSTEM operation : Close the registration window
+[2024-6-1-10-8-2] username : 123 operation : Tried to login,failed
+[2024-6-1-10-8-3] SYSTEM operation : Open the registration window
+[2024-6-1-10-8-6] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-8-6] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-8-7] SYSTEM operation : Close the registration window
+[2024-6-1-10-8-7] username : 123 operation : Tried to login,successed
+[2024-6-1-10-8-8] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-10-8-8] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-10-8-16] username : 123 operation : Stop managing account
+[2024-6-1-10-8-16] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-10-8-17] username : 123 operation : Logout
+[2024-6-1-10-8-19] username : 123 operation : Tried to login,failed
+[2024-6-1-10-8-20] username : 123 operation : Tried to login,successed
+[2024-6-1-10-8-22] username : 123 operation : Logout
+[2024-6-1-10-8-24] SYSTEM operation : Close the main window
+[2024-6-1-10-8-24] SYSTEM operation : Refresh the users file
+[2024-6-1-10-8-24] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-9-50] SYSTEM operation : Start running
+[2024-6-1-10-9-51] SYSTEM operation : Open the main window
+[2024-6-1-10-10-2] SYSTEM operation : Open the registration window
+[2024-6-1-10-10-6] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-10-6] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-10-7] SYSTEM operation : Close the registration window
+[2024-6-1-10-10-9] username : 123 operation : Tried to login,successed
+[2024-6-1-10-10-10] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-10-10-10] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-10-10-16] username : 123 operation : Stop managing account
+[2024-6-1-10-10-16] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-10-10-18] username : 123 operation : Logout
+[2024-6-1-10-10-19] username : 123 operation : Tried to login,failed
+[2024-6-1-10-10-21] username : 123 operation : Tried to login,successed
+[2024-6-1-10-10-22] username : 123 operation : Logout
+[2024-6-1-10-10-23] SYSTEM operation : Close the main window
+[2024-6-1-10-10-23] SYSTEM operation : Refresh the users file
+[2024-6-1-10-10-23] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-11-55] SYSTEM operation : Start running
+[2024-6-1-10-11-55] SYSTEM operation : Open the main window
+[2024-6-1-10-12-12] username : 202499900088 operation : Tried to login,successed
+[2024-6-1-10-12-14] SYSTEM operation : Open account manage window of user:202499900088
+[2024-6-1-10-12-14] username : 202499900088 operation : Tried to manage the account,successed
+[2024-6-1-10-12-24] username : 202499900088 operation : Stop managing account
+[2024-6-1-10-12-24] SYSTEM operation : Close account manage window of user:202499900088
+[2024-6-1-10-12-26] username : 202499900088 operation : Logout
+[2024-6-1-10-12-27] SYSTEM operation : Close the main window
+
+
+[2024-6-1-10-14-20] SYSTEM operation : Start running
+[2024-6-1-10-14-20] SYSTEM operation : Open the main window
+[2024-6-1-10-14-23] SYSTEM operation : Open the registration window
+[2024-6-1-10-14-26] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-14-26] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-14-26] SYSTEM operation : Close the registration window
+[2024-6-1-10-14-28] SYSTEM operation : Close the main window
+[2024-6-1-10-14-28] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-18-40] SYSTEM operation : Start running
+[2024-6-1-10-18-41] SYSTEM operation : Open the main window
+[2024-6-1-10-18-49] SYSTEM operation : Open the registration window
+[2024-6-1-10-18-51] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-18-51] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-18-52] SYSTEM operation : Close the registration window
+[2024-6-1-10-18-54] username : 123 operation : Tried to login,successed
+[2024-6-1-10-18-55] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-10-18-55] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-10-19-0] username : 123 operation : Stop managing account
+[2024-6-1-10-19-0] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-10-19-1] username : 123 operation : Logout
+[2024-6-1-10-19-2] SYSTEM operation : Close the main window
+[2024-6-1-10-19-2] SYSTEM operation : Refresh the users file
+[2024-6-1-10-19-2] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-21-38] SYSTEM operation : Start running
+[2024-6-1-10-21-38] SYSTEM operation : Open the main window
+[2024-6-1-10-21-40] SYSTEM operation : Open the registration window
+[2024-6-1-10-21-43] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-21-43] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-21-43] SYSTEM operation : Close the registration window
+[2024-6-1-10-21-44] SYSTEM operation : Close the main window
+[2024-6-1-10-21-44] SYSTEM operation : Refresh the users file
+[2024-6-1-10-21-44] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-22-24] SYSTEM operation : Start running
+[2024-6-1-10-22-25] SYSTEM operation : Open the main window
+[2024-6-1-10-22-26] SYSTEM operation : Open the registration window
+[2024-6-1-10-22-28] username : 123 operation : Tried to regist,successed
+[2024-6-1-10-22-28] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-10-22-29] SYSTEM operation : Close the registration window
+[2024-6-1-10-22-30] SYSTEM operation : Close the main window
+[2024-6-1-10-22-30] SYSTEM operation : Refresh the users file
+[2024-6-1-10-22-30] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-22-42] SYSTEM operation : Start running
+[2024-6-1-10-22-42] SYSTEM operation : Open the main window
+[2024-6-1-10-22-44] username : 123 operation : Tried to login,successed
+[2024-6-1-10-22-46] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-10-22-46] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-10-22-49] username : 123 operation : Stop managing account
+[2024-6-1-10-22-49] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-10-22-51] username : 123 operation : Logout
+[2024-6-1-10-22-53] SYSTEM operation : Close the main window
+[2024-6-1-10-22-53] SYSTEM operation : Refresh the users file
+[2024-6-1-10-22-53] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-23-0] SYSTEM operation : Start running
+[2024-6-1-10-23-1] SYSTEM operation : Open the main window
+[2024-6-1-10-23-3] username : 123 operation : Tried to login,successed
+[2024-6-1-10-23-3] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-10-23-3] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-10-23-10] username : 123 operation : Stop managing account
+[2024-6-1-10-23-10] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-10-23-11] username : 123 operation : Logout
+[2024-6-1-10-23-13] SYSTEM operation : Close the main window
+[2024-6-1-10-23-13] SYSTEM operation : Refresh the users file
+[2024-6-1-10-23-13] SYSTEM operation : Stop running
+
+
+[2024-6-1-10-46-6] SYSTEM operation : Start running
+[2024-6-1-10-46-7] SYSTEM operation : Open the main window
+[2024-6-1-10-46-8] SYSTEM operation : Close the main window
+
+
+[2024-6-1-10-47-5] SYSTEM operation : Start running
+[2024-6-1-10-47-5] SYSTEM operation : Open the main window
+[2024-6-1-10-47-7] username : 123 operation : Tried to login,failed
+[2024-6-1-10-47-8] SYSTEM operation : Open the registration window
+[2024-6-1-10-47-11] username : 123 operation : Tried to regist,failed
+[2024-6-1-10-47-13] username : 1234 operation : Tried to regist,successed
+[2024-6-1-10-47-13] SYSTEM operation : Add a new user, username: 1234
+[2024-6-1-10-47-14] SYSTEM operation : Close the registration window
+[2024-6-1-10-47-16] username : 1234 operation : Tried to login,successed
+[2024-6-1-10-47-17] SYSTEM operation : Open account manage window of user:1234
+[2024-6-1-10-47-17] username : 1234 operation : Tried to manage the account,successed
+[2024-6-1-10-47-22] username : 1234 operation : Tried to delet account,successed
+[2024-6-1-10-47-22] username : 1234 operation : Stop managing account
+[2024-6-1-10-47-22] SYSTEM operation : Close account manage window of user:1234
+[2024-6-1-10-47-22] SYSTEM operation : Delet a user,username:1234
+[2024-6-1-10-47-29] username : 1234 operation : Tried to login,failed
+[2024-6-1-10-47-30] username : 1234 operation : Tried to login,failed
+[2024-6-1-10-47-32] SYSTEM operation : Close the main window
+
+
+[2024-6-1-10-48-33] SYSTEM operation : Start running
+[2024-6-1-10-48-34] SYSTEM operation : Open the main window
+[2024-6-1-10-48-39] username : 123 operation : Tried to login,successed
+[2024-6-1-10-48-42] username : 123 operation : Tried to check out the dishes,successed
+[2024-6-1-10-48-42] SYSTEM operation : Open the show_table window
+[2024-6-1-10-48-55] username : 123 operation : Stop checking out the dishes
+[2024-6-1-10-48-55] SYSTEM operation : Close the show_table window
+[2024-6-1-10-52-31] username : 123 operation : Logout
+[2024-6-1-10-52-33] SYSTEM operation : Close the main window
+
+
+[2024-6-1-10-52-38] SYSTEM operation : Start running
+[2024-6-1-10-52-39] SYSTEM operation : Open the main window
+[2024-6-1-10-52-46] SYSTEM operation : Close the main window
+
+
+[2024-6-1-11-51-47] SYSTEM operation : Start running
+[2024-6-1-11-51-47] SYSTEM operation : Open the main window
+[2024-6-1-11-51-49] SYSTEM operation : Close the main window
+
+
+[2024-6-1-11-51-51] SYSTEM operation : Start running
+[2024-6-1-11-51-51] SYSTEM operation : Open the main window
+[2024-6-1-11-51-54] SYSTEM operation : Close the main window
+
+
+[2024-6-1-11-51-55] SYSTEM operation : Start running
+[2024-6-1-11-51-56] SYSTEM operation : Open the main window
+[2024-6-1-11-51-57] username : 123 operation : Tried to login,failed
+[2024-6-1-11-51-59] SYSTEM operation : Open the registration window
+[2024-6-1-11-52-2] username : 123 operation : Tried to regist,failed
+[2024-6-1-11-52-3] SYSTEM operation : Close the registration window
+[2024-6-1-11-52-5] username : 123 operation : Tried to login,successed
+[2024-6-1-11-52-6] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-11-52-6] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-11-52-11] username : 123 operation : Stop managing account
+[2024-6-1-11-52-11] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-11-52-17] username : 123 operation : Logout
+[2024-6-1-11-52-19] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-6-28] SYSTEM operation : Start running
+[2024-6-1-12-6-28] SYSTEM operation : Open the main window
+[2024-6-1-12-6-32] username : 123 operation : Tried to login,failed
+[2024-6-1-12-6-35] username : 123 operation : Tried to login,successed
+[2024-6-1-12-6-37] username : 123 operation : Logout
+[2024-6-1-12-6-39] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-7-2] SYSTEM operation : Start running
+[2024-6-1-12-7-2] SYSTEM operation : Open the main window
+[2024-6-1-12-7-5] username : 123 operation : Tried to login,successed
+[2024-6-1-12-7-6] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-12-7-6] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-12-7-13] username : 123 operation : Stop managing account
+[2024-6-1-12-7-13] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-12-7-14] username : 123 operation : Logout
+[2024-6-1-12-7-15] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-10-28] SYSTEM operation : Start running
+[2024-6-1-12-10-28] SYSTEM operation : Open the main window
+[2024-6-1-12-10-29] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-11-2] SYSTEM operation : Start running
+[2024-6-1-12-11-3] SYSTEM operation : Open the main window
+[2024-6-1-12-11-4] SYSTEM operation : Open the registration window
+[2024-6-1-12-11-11] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-11-11] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-11-11] SYSTEM operation : Close the registration window
+[2024-6-1-12-11-14] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-12-8] SYSTEM operation : Start running
+[2024-6-1-12-12-8] SYSTEM operation : Open the main window
+[2024-6-1-12-12-12] username : 123 operation : Tried to login,failed
+[2024-6-1-12-12-14] username : 123 operation : Tried to login,successed
+[2024-6-1-12-12-16] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-12-12-16] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-12-12-20] username : 123 operation : Stop managing account
+[2024-6-1-12-12-20] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-12-12-33] username : 123 operation : Logout
+[2024-6-1-12-12-35] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-14-55] SYSTEM operation : Start running
+[2024-6-1-12-14-56] SYSTEM operation : Open the main window
+[2024-6-1-12-14-58] username : 123 operation : Tried to login,failed
+[2024-6-1-12-15-0] SYSTEM operation : Open the registration window
+[2024-6-1-12-15-2] username : 123 operation : Tried to regist,failed
+[2024-6-1-12-15-6] username : 123 operation : Tried to regist,successed
+[2024-6-1-12-15-6] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-12-15-7] SYSTEM operation : Close the registration window
+[2024-6-1-12-15-9] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-17-20] SYSTEM operation : Start running
+[2024-6-1-12-17-20] SYSTEM operation : Open the main window
+[2024-6-1-12-17-21] SYSTEM operation : Open the registration window
+[2024-6-1-12-17-23] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-17-23] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-17-23] SYSTEM operation : Close the registration window
+[2024-6-1-12-17-25] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-17-51] SYSTEM operation : Start running
+[2024-6-1-12-17-51] SYSTEM operation : Open the main window
+[2024-6-1-12-17-56] SYSTEM operation : Open the registration window
+[2024-6-1-12-17-59] username : 11 operation : Tried to regist,successed
+[2024-6-1-12-17-59] SYSTEM operation : Add a new user, username: 11
+[2024-6-1-12-17-59] SYSTEM operation : Close the registration window
+[2024-6-1-12-18-0] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-18-46] SYSTEM operation : Start running
+[2024-6-1-12-18-46] SYSTEM operation : Open the main window
+[2024-6-1-12-18-48] SYSTEM operation : Open the registration window
+[2024-6-1-12-18-49] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-18-49] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-18-50] SYSTEM operation : Close the registration window
+[2024-6-1-12-18-51] username : 1 operation : Tried to login,successed
+[2024-6-1-12-18-52] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-1-12-18-52] SYSTEM operation : Open the show_table window
+[2024-6-1-12-18-53] username : 1 operation : Stop checking out the dishes
+[2024-6-1-12-18-53] SYSTEM operation : Close the show_table window
+[2024-6-1-12-18-58] username : 1 operation : Stop submitting comments
+[2024-6-1-12-18-58] SYSTEM operation : Close the submit window
+[2024-6-1-12-18-59] username : 1 operation : Logout
+[2024-6-1-12-19-0] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-19-49] SYSTEM operation : Start running
+[2024-6-1-12-19-49] SYSTEM operation : Open the main window
+[2024-6-1-12-19-51] username : 1 operation : Tried to login,failed
+[2024-6-1-12-19-52] SYSTEM operation : Open the registration window
+[2024-6-1-12-19-55] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-19-55] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-19-56] SYSTEM operation : Close the registration window
+[2024-6-1-12-19-57] username : 1 operation : Tried to login,successed
+[2024-6-1-12-19-59] username : 1 operation : Logout
+[2024-6-1-12-20-0] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-20-38] SYSTEM operation : Start running
+[2024-6-1-12-20-39] SYSTEM operation : Open the main window
+[2024-6-1-12-20-40] SYSTEM operation : Open the registration window
+[2024-6-1-12-20-42] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-20-42] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-20-43] SYSTEM operation : Close the registration window
+[2024-6-1-12-20-44] username : 1 operation : Tried to login,successed
+[2024-6-1-12-20-45] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-12-20-45] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-12-20-49] username : 1 operation : Stop managing account
+[2024-6-1-12-20-49] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-12-20-50] username : 1 operation : Logout
+[2024-6-1-12-20-52] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-21-45] SYSTEM operation : Start running
+[2024-6-1-12-21-46] SYSTEM operation : Open the main window
+[2024-6-1-12-21-47] SYSTEM operation : Open the registration window
+[2024-6-1-12-21-49] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-21-49] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-21-49] SYSTEM operation : Close the registration window
+[2024-6-1-12-21-50] SYSTEM operation : Close the main window
+
+
+[2024-6-1-12-22-0] SYSTEM operation : Start running
+[2024-6-1-12-22-0] SYSTEM operation : Open the main window
+[2024-6-1-12-22-1] SYSTEM operation : Open the registration window
+[2024-6-1-12-22-3] username : 1 operation : Tried to regist,successed
+[2024-6-1-12-22-3] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-12-22-4] SYSTEM operation : Close the registration window
+[2024-6-1-12-22-5] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-7-49] SYSTEM operation : Start running
+[2024-6-1-13-7-49] SYSTEM operation : Open the main window
+[2024-6-1-13-7-51] SYSTEM operation : Open the registration window
+[2024-6-1-13-7-54] username : 123 operation : Tried to regist,successed
+[2024-6-1-13-7-54] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-13-7-55] SYSTEM operation : Close the registration window
+[2024-6-1-13-7-56] SYSTEM operation : Close the main window
+[2024-6-1-13-7-56] SYSTEM operation : Refresh the users file
+[2024-6-1-13-7-56] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-8-7] SYSTEM operation : Start running
+[2024-6-1-13-8-8] SYSTEM operation : Open the main window
+[2024-6-1-13-8-8] username :  operation : Tried to login,failed
+[2024-6-1-13-8-9] SYSTEM operation : Open the registration window
+[2024-6-1-13-8-11] username : 1 operation : Tried to regist,successed
+[2024-6-1-13-8-11] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-13-8-12] SYSTEM operation : Close the registration window
+[2024-6-1-13-8-13] username : 123 operation : Tried to login,successed
+[2024-6-1-13-8-15] SYSTEM operation : Open account manage window of user:123
+[2024-6-1-13-8-15] username : 123 operation : Tried to manage the account,successed
+[2024-6-1-13-8-23] username : 123 operation : Tried to delet account,failed
+[2024-6-1-13-8-26] username : 123 operation : Stop managing account
+[2024-6-1-13-8-26] SYSTEM operation : Close account manage window of user:123
+[2024-6-1-13-8-27] username : 123 operation : Logout
+[2024-6-1-13-8-29] username : 1 operation : Tried to login,successed
+[2024-6-1-13-8-30] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-13-8-30] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-13-8-34] username : 1 operation : Tried to delet account,successed
+[2024-6-1-13-8-34] username : 1 operation : Stop managing account
+[2024-6-1-13-8-34] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-13-8-34] SYSTEM operation : Delet a user,username:1
+[2024-6-1-13-8-35] username : 1 operation : Tried to login,failed
+[2024-6-1-13-8-37] SYSTEM operation : Close the main window
+[2024-6-1-13-8-37] SYSTEM operation : Refresh the dishes file
+[2024-6-1-13-8-37] SYSTEM operation : Refresh the users file
+[2024-6-1-13-8-37] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-11-50] SYSTEM operation : Start running
+[2024-6-1-13-11-50] SYSTEM operation : Open the main window
+[2024-6-1-13-11-53] username : 123 operation : Tried to login,failed
+[2024-6-1-13-11-58] SYSTEM operation : Open the registration window
+[2024-6-1-13-12-2] username : 123 operation : Tried to regist,successed
+[2024-6-1-13-12-2] SYSTEM operation : Add a new user, username: 123
+[2024-6-1-13-12-3] SYSTEM operation : Close the registration window
+[2024-6-1-13-12-4] username : 123 operation : Tried to login,successed
+[2024-6-1-13-12-8] username : 123 operation : Tried to submit comment,failed
+[2024-6-1-13-12-15] username : 123 operation : Tried to submit comment,failed
+[2024-6-1-13-12-18] username : 123 operation : Tried to submit comment,failed
+[2024-6-1-13-12-35] username : 123 operation : Stop submitting comments
+[2024-6-1-13-12-35] SYSTEM operation : Close the submit window
+[2024-6-1-13-12-36] username : 123 operation : Logout
+[2024-6-1-13-12-37] SYSTEM operation : Close the main window
+[2024-6-1-13-12-37] SYSTEM operation : Refresh the users file
+[2024-6-1-13-12-37] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-12-40] SYSTEM operation : Start running
+[2024-6-1-13-12-40] SYSTEM operation : Open the main window
+[2024-6-1-13-12-43] username : 123 operation : Tried to login,successed
+[2024-6-1-13-12-56] username : 123 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:
+[2024-6-1-13-12-57] username : 123 operation : Stop submitting comments
+[2024-6-1-13-12-57] SYSTEM operation : Close the submit window
+[2024-6-1-13-12-59] username : 123 operation : Logout
+[2024-6-1-13-13-0] SYSTEM operation : Close the main window
+[2024-6-1-13-13-0] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-14-6] SYSTEM operation : Start running
+[2024-6-1-13-14-6] SYSTEM operation : Open the main window
+[2024-6-1-13-14-10] username : 123 operation : Tried to login,successed
+[2024-6-1-13-14-20] username : 123 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123123123
+[2024-6-1-13-14-29] username : 123 operation : Tried to submit comment,failed
+[2024-6-1-13-14-32] username : 123 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:1230
+[2024-6-1-13-14-33] username : 123 operation : Stop submitting comments
+[2024-6-1-13-14-33] SYSTEM operation : Close the submit window
+[2024-6-1-13-14-34] username : 123 operation : Logout
+[2024-6-1-13-14-35] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-15-39] SYSTEM operation : Start running
+[2024-6-1-13-15-40] SYSTEM operation : Open the main window
+[2024-6-1-13-15-42] SYSTEM operation : Open the registration window
+[2024-6-1-13-15-43] SYSTEM operation : Close the registration window
+[2024-6-1-13-15-44] username : 123 operation : Tried to login,successed
+[2024-6-1-13-15-52] username : 123 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123
+[2024-6-1-13-15-52] username : 123 operation : Stop submitting comments
+[2024-6-1-13-15-52] SYSTEM operation : Close the submit window
+[2024-6-1-13-15-54] username : 123 operation : Logout
+[2024-6-1-13-15-55] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-17-8] SYSTEM operation : Start running
+[2024-6-1-13-17-9] SYSTEM operation : Open the main window
+[2024-6-1-13-17-11] SYSTEM operation : Open the registration window
+[2024-6-1-13-17-13] username : 1 operation : Tried to regist,successed
+[2024-6-1-13-17-13] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-13-17-14] SYSTEM operation : Close the registration window
+[2024-6-1-13-17-15] username : 1 operation : Tried to login,successed
+[2024-6-1-13-17-26] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123
+[2024-6-1-13-17-27] username : 1 operation : Stop submitting comments
+[2024-6-1-13-17-27] SYSTEM operation : Close the submit window
+[2024-6-1-13-17-28] username : 1 operation : Logout
+[2024-6-1-13-17-30] SYSTEM operation : Close the main window
+[2024-6-1-13-17-30] SYSTEM operation : Refresh the users file
+
+
+[2024-6-1-13-18-1] SYSTEM operation : Start running
+[2024-6-1-13-18-2] SYSTEM operation : Open the main window
+[2024-6-1-13-18-4] SYSTEM operation : Close the main window
+[2024-6-1-13-18-4] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-18-35] SYSTEM operation : Start running
+[2024-6-1-13-18-35] SYSTEM operation : Open the main window
+[2024-6-1-13-18-41] username : 1 operation : Tried to login,successed
+[2024-6-1-13-18-48] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123
+[2024-6-1-13-18-49] username : 1 operation : Stop submitting comments
+[2024-6-1-13-18-49] SYSTEM operation : Close the submit window
+[2024-6-1-13-18-50] username : 1 operation : Logout
+[2024-6-1-13-18-51] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-20-28] SYSTEM operation : Start running
+[2024-6-1-13-20-29] SYSTEM operation : Open the main window
+[2024-6-1-13-20-30] username : 1 operation : Tried to login,successed
+[2024-6-1-13-20-34] username : 1 operation : Tried to submit comment,successed, dish name:1 content:23
+[2024-6-1-13-20-34] username : 1 operation : Stop submitting comments
+[2024-6-1-13-20-34] SYSTEM operation : Close the submit window
+[2024-6-1-13-20-35] username : 1 operation : Logout
+[2024-6-1-13-20-36] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-20-56] SYSTEM operation : Start running
+[2024-6-1-13-20-56] SYSTEM operation : Open the main window
+[2024-6-1-13-20-57] username : 1 operation : Tried to login,successed
+[2024-6-1-13-21-0] username : 1 operation : Tried to submit comment,successed, dish name:1 content:21
+[2024-6-1-13-21-1] username : 1 operation : Stop submitting comments
+[2024-6-1-13-21-1] SYSTEM operation : Close the submit window
+[2024-6-1-13-21-3] username : 1 operation : Logout
+[2024-6-1-13-21-4] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-21-23] SYSTEM operation : Start running
+[2024-6-1-13-21-23] SYSTEM operation : Open the main window
+[2024-6-1-13-21-24] username : 1 operation : Tried to login,successed
+[2024-6-1-13-21-27] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-13-21-28] username : 1 operation : Stop submitting comments
+[2024-6-1-13-21-28] SYSTEM operation : Close the submit window
+[2024-6-1-13-21-29] username : 1 operation : Logout
+[2024-6-1-13-21-30] SYSTEM operation : Close the main window
+
+
+[2024-6-1-13-22-38] SYSTEM operation : Start running
+[2024-6-1-13-22-39] SYSTEM operation : Open the main window
+[2024-6-1-13-22-40] username : 1 operation : Tried to login,successed
+[2024-6-1-13-22-43] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-13-22-43] username : 1 operation : Stop submitting comments
+[2024-6-1-13-22-43] SYSTEM operation : Close the submit window
+[2024-6-1-13-22-44] username : 1 operation : Logout
+[2024-6-1-13-22-45] SYSTEM operation : Close the main window
+[2024-6-1-13-22-45] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-25-39] SYSTEM operation : Start running
+[2024-6-1-13-25-40] SYSTEM operation : Open the main window
+[2024-6-1-13-25-43] username : 1 operation : Tried to login,successed
+[2024-6-1-13-25-55] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:太贵了
+[2024-6-1-13-25-56] username : 1 operation : Stop submitting comments
+[2024-6-1-13-25-56] SYSTEM operation : Close the submit window
+[2024-6-1-13-25-58] username : 1 operation : Logout
+[2024-6-1-13-26-0] SYSTEM operation : Close the main window
+[2024-6-1-13-26-0] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-26-16] SYSTEM operation : Start running
+[2024-6-1-13-26-16] SYSTEM operation : Open the main window
+[2024-6-1-13-26-19] username : 1 operation : Tried to login,successed
+[2024-6-1-13-26-29] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:太贵了
+[2024-6-1-13-26-30] username : 1 operation : Stop submitting comments
+[2024-6-1-13-26-30] SYSTEM operation : Close the submit window
+[2024-6-1-13-26-31] username : 1 operation : Logout
+[2024-6-1-13-26-33] SYSTEM operation : Close the main window
+[2024-6-1-13-26-33] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-26-45] SYSTEM operation : Start running
+[2024-6-1-13-26-46] SYSTEM operation : Open the main window
+[2024-6-1-13-26-49] username : 1 operation : Tried to login,successed
+[2024-6-1-13-26-52] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-13-26-53] username : 1 operation : Stop submitting comments
+[2024-6-1-13-26-53] SYSTEM operation : Close the submit window
+[2024-6-1-13-26-54] username : 1 operation : Logout
+[2024-6-1-13-26-55] SYSTEM operation : Close the main window
+[2024-6-1-13-26-55] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-28-40] SYSTEM operation : Start running
+[2024-6-1-13-28-40] SYSTEM operation : Open the main window
+[2024-6-1-13-28-42] SYSTEM operation : Close the main window
+[2024-6-1-13-28-42] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-28-51] SYSTEM operation : Start running
+[2024-6-1-13-28-51] SYSTEM operation : Open the main window
+[2024-6-1-13-28-53] username : 1 operation : Tried to login,successed
+[2024-6-1-13-29-2] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123
+[2024-6-1-13-29-3] username : 1 operation : Stop submitting comments
+[2024-6-1-13-29-3] SYSTEM operation : Close the submit window
+[2024-6-1-13-29-4] username : 1 operation : Logout
+[2024-6-1-13-29-10] SYSTEM operation : Close the main window
+[2024-6-1-13-29-10] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-29-43] SYSTEM operation : Start running
+[2024-6-1-13-29-44] SYSTEM operation : Open the main window
+[2024-6-1-13-29-46] username : 1 operation : Tried to login,successed
+[2024-6-1-13-29-51] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123
+[2024-6-1-13-29-52] username : 1 operation : Stop submitting comments
+[2024-6-1-13-29-52] SYSTEM operation : Close the submit window
+[2024-6-1-13-29-53] username : 1 operation : Logout
+[2024-6-1-13-29-54] SYSTEM operation : Close the main window
+[2024-6-1-13-29-54] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-30-24] SYSTEM operation : Start running
+[2024-6-1-13-30-24] SYSTEM operation : Open the main window
+[2024-6-1-13-30-26] username : 1 operation : Tried to login,successed
+[2024-6-1-13-30-29] username : 1 operation : Tried to submit comment,successed, dish name:1 content:11
+[2024-6-1-13-30-32] username : 1 operation : Tried to submit comment,successed, dish name:1 content:12312
+[2024-6-1-13-30-35] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1232131
+[2024-6-1-13-30-35] username : 1 operation : Stop submitting comments
+[2024-6-1-13-30-35] SYSTEM operation : Close the submit window
+[2024-6-1-13-30-36] username : 1 operation : Logout
+[2024-6-1-13-30-38] SYSTEM operation : Close the main window
+[2024-6-1-13-30-38] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-31-28] SYSTEM operation : Start running
+[2024-6-1-13-31-28] SYSTEM operation : Open the main window
+[2024-6-1-13-31-30] username : 1 operation : Tried to login,successed
+[2024-6-1-13-31-34] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1123
+[2024-6-1-13-31-35] username : 1 operation : Stop submitting comments
+[2024-6-1-13-31-35] SYSTEM operation : Close the submit window
+[2024-6-1-13-31-36] username : 1 operation : Logout
+[2024-6-1-13-31-37] SYSTEM operation : Close the main window
+[2024-6-1-13-31-37] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-32-0] SYSTEM operation : Start running
+[2024-6-1-13-32-0] SYSTEM operation : Open the main window
+[2024-6-1-13-32-3] username : 1 operation : Tried to login,successed
+[2024-6-1-13-32-12] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:番茄
+[2024-6-1-13-32-12] username : 1 operation : Stop submitting comments
+[2024-6-1-13-32-12] SYSTEM operation : Close the submit window
+[2024-6-1-13-32-13] username : 1 operation : Logout
+[2024-6-1-13-32-15] SYSTEM operation : Close the main window
+[2024-6-1-13-32-15] SYSTEM operation : Stop running
+
+
+
+
+
+
+
+
+
+
+
+
+[2024-6-1-13-37-59] SYSTEM operation : Start running
+[2024-6-1-13-38-0] SYSTEM operation : Open the main window
+[2024-6-1-13-38-3] SYSTEM operation : Close the main window
+[2024-6-1-13-38-3] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-38-53] SYSTEM operation : Start running
+[2024-6-1-13-38-54] SYSTEM operation : Open the main window
+[2024-6-1-13-38-56] SYSTEM operation : Close the main window
+[2024-6-1-13-38-56] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-39-59] SYSTEM operation : Start running
+[2024-6-1-13-39-59] SYSTEM operation : Open the main window
+[2024-6-1-13-40-1] SYSTEM operation : Close the main window
+[2024-6-1-13-40-1] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-40-53] SYSTEM operation : Start running
+[2024-6-1-13-40-54] SYSTEM operation : Open the main window
+[2024-6-1-13-40-56] username : 1 operation : Tried to login,successed
+[2024-6-1-13-41-6] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:偶以西
+[2024-6-1-13-41-6] username : 1 operation : Stop submitting comments
+[2024-6-1-13-41-6] SYSTEM operation : Close the submit window
+[2024-6-1-13-41-8] username : 1 operation : Logout
+[2024-6-1-13-41-9] SYSTEM operation : Close the main window
+[2024-6-1-13-41-9] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-42-2] SYSTEM operation : Start running
+[2024-6-1-13-42-2] SYSTEM operation : Open the main window
+[2024-6-1-13-42-4] username : 1 operation : Tried to login,successed
+[2024-6-1-13-42-14] username : 1 operation : Tried to submit comment,successed, dish name:重庆小面 content:难吃
+[2024-6-1-13-42-15] username : 1 operation : Stop submitting comments
+[2024-6-1-13-42-15] SYSTEM operation : Close the submit window
+[2024-6-1-13-42-16] username : 1 operation : Logout
+[2024-6-1-13-42-18] SYSTEM operation : Close the main window
+[2024-6-1-13-42-18] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-42-47] SYSTEM operation : Start running
+[2024-6-1-13-42-48] SYSTEM operation : Open the main window
+[2024-6-1-13-42-50] username : 1 operation : Tried to login,successed
+[2024-6-1-13-43-10] username : 1 operation : Tried to submit comment,successed, dish name:重庆小面 content:好次捏
+[2024-6-1-13-43-11] username : 1 operation : Stop submitting comments
+[2024-6-1-13-43-11] SYSTEM operation : Close the submit window
+[2024-6-1-13-43-13] username : 1 operation : Logout
+[2024-6-1-13-43-15] SYSTEM operation : Close the main window
+[2024-6-1-13-43-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-48-52] SYSTEM operation : Start running
+[2024-6-1-13-48-52] SYSTEM operation : Open the main window
+[2024-6-1-13-48-57] username : 1 operation : Tried to login,successed
+[2024-6-1-13-49-3] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:123
+[2024-6-1-13-49-4] username : 1 operation : Stop submitting comments
+[2024-6-1-13-49-4] SYSTEM operation : Close the submit window
+[2024-6-1-13-49-5] username : 1 operation : Logout
+[2024-6-1-13-49-7] SYSTEM operation : Close the main window
+[2024-6-1-13-49-7] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-51-30] SYSTEM operation : Start running
+[2024-6-1-13-51-30] SYSTEM operation : Open the main window
+[2024-6-1-13-51-32] username : 1 operation : Tried to login,successed
+[2024-6-1-13-51-38] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:1
+[2024-6-1-13-51-39] username : 1 operation : Stop submitting comments
+[2024-6-1-13-51-39] SYSTEM operation : Close the submit window
+[2024-6-1-13-51-40] SYSTEM operation : Close the main window
+[2024-6-1-13-51-40] SYSTEM operation : Stop running
+
+
+[2024-6-1-13-57-31] SYSTEM operation : Start running
+[2024-6-1-13-57-32] SYSTEM operation : Open the main window
+[2024-6-1-13-57-35] username : 1 operation : Tried to login,successed
+[2024-6-1-13-57-39] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-13-57-39] username : 1 operation : Stop submitting comments
+[2024-6-1-13-57-39] SYSTEM operation : Close the submit window
+[2024-6-1-13-57-40] username : 1 operation : Logout
+[2024-6-1-13-57-42] SYSTEM operation : Close the main window
+[2024-6-1-13-57-42] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-4-58] SYSTEM operation : Start running
+[2024-6-1-14-4-58] SYSTEM operation : Open the main window
+[2024-6-1-14-4-59] username : 1 operation : Tried to login,successed
+[2024-6-1-14-5-2] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-5-3] username : 1 operation : Stop submitting comments
+[2024-6-1-14-5-3] SYSTEM operation : Close the submit window
+[2024-6-1-14-5-4] username : 1 operation : Logout
+[2024-6-1-14-5-5] SYSTEM operation : Close the main window
+[2024-6-1-14-5-5] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-6-13] SYSTEM operation : Start running
+[2024-6-1-14-6-14] SYSTEM operation : Open the main window
+[2024-6-1-14-6-15] username : 1 operation : Tried to login,successed
+[2024-6-1-14-6-18] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-6-18] username : 1 operation : Stop submitting comments
+[2024-6-1-14-6-18] SYSTEM operation : Close the submit window
+[2024-6-1-14-6-19] username : 1 operation : Logout
+[2024-6-1-14-6-20] SYSTEM operation : Close the main window
+[2024-6-1-14-6-20] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-9-31] SYSTEM operation : Start running
+[2024-6-1-14-9-32] SYSTEM operation : Open the main window
+[2024-6-1-14-9-33] username : 1 operation : Tried to login,successed
+[2024-6-1-14-9-49] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:好词捏
+[2024-6-1-14-9-50] username : 1 operation : Stop submitting comments
+[2024-6-1-14-9-50] SYSTEM operation : Close the submit window
+[2024-6-1-14-9-51] SYSTEM operation : Close the main window
+[2024-6-1-14-9-51] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-13-33] SYSTEM operation : Start running
+[2024-6-1-14-13-33] SYSTEM operation : Open the main window
+[2024-6-1-14-13-35] username : 1 operation : Tried to login,successed
+[2024-6-1-14-13-53] username : 1 operation : Tried to submit comment,successed, dish name:1 content:11
+[2024-6-1-14-13-54] username : 1 operation : Stop submitting comments
+[2024-6-1-14-13-54] SYSTEM operation : Close the submit window
+[2024-6-1-14-13-55] SYSTEM operation : Close the main window
+[2024-6-1-14-13-55] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-14-46] SYSTEM operation : Start running
+[2024-6-1-14-14-46] SYSTEM operation : Open the main window
+[2024-6-1-14-14-47] username : 1 operation : Tried to login,successed
+[2024-6-1-14-14-50] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-14-51] username : 1 operation : Stop submitting comments
+[2024-6-1-14-14-51] SYSTEM operation : Close the submit window
+[2024-6-1-14-14-52] username : 1 operation : Logout
+[2024-6-1-14-14-53] SYSTEM operation : Close the main window
+[2024-6-1-14-14-53] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-15-34] SYSTEM operation : Start running
+[2024-6-1-14-15-34] SYSTEM operation : Open the main window
+[2024-6-1-14-15-36] username : 1 operation : Tried to login,successed
+[2024-6-1-14-15-38] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-15-39] username : 1 operation : Stop submitting comments
+[2024-6-1-14-15-39] SYSTEM operation : Close the submit window
+[2024-6-1-14-15-40] username : 1 operation : Logout
+[2024-6-1-14-15-41] SYSTEM operation : Close the main window
+[2024-6-1-14-15-41] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-16-3] SYSTEM operation : Start running
+[2024-6-1-14-16-4] SYSTEM operation : Open the main window
+[2024-6-1-14-16-6] username : 1 operation : Tried to login,successed
+[2024-6-1-14-16-10] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-16-10] username : 1 operation : Stop submitting comments
+[2024-6-1-14-16-10] SYSTEM operation : Close the submit window
+[2024-6-1-14-16-11] username : 1 operation : Logout
+[2024-6-1-14-16-12] SYSTEM operation : Close the main window
+[2024-6-1-14-16-12] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-18-20] SYSTEM operation : Start running
+[2024-6-1-14-18-21] SYSTEM operation : Open the main window
+[2024-6-1-14-18-22] username : 1 operation : Tried to login,successed
+[2024-6-1-14-18-25] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-18-26] username : 1 operation : Stop submitting comments
+[2024-6-1-14-18-26] SYSTEM operation : Close the submit window
+[2024-6-1-14-18-26] SYSTEM operation : Close the main window
+[2024-6-1-14-18-26] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-19-4] SYSTEM operation : Start running
+[2024-6-1-14-19-4] SYSTEM operation : Open the main window
+[2024-6-1-14-19-7] username : 1 operation : Tried to login,successed
+[2024-6-1-14-19-10] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-19-10] username : 1 operation : Stop submitting comments
+[2024-6-1-14-19-10] SYSTEM operation : Close the submit window
+[2024-6-1-14-19-11] username : 1 operation : Logout
+[2024-6-1-14-19-11] SYSTEM operation : Close the main window
+[2024-6-1-14-19-12] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-21-21] SYSTEM operation : Start running
+[2024-6-1-14-21-21] SYSTEM operation : Open the main window
+[2024-6-1-14-21-22] username : 1 operation : Tried to login,successed
+[2024-6-1-14-21-25] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-21-26] username : 1 operation : Stop submitting comments
+[2024-6-1-14-21-26] SYSTEM operation : Close the submit window
+[2024-6-1-14-21-27] username : 1 operation : Logout
+[2024-6-1-14-21-28] SYSTEM operation : Close the main window
+[2024-6-1-14-21-28] SYSTEM operation : Refresh the dishes file
+[2024-6-1-14-21-28] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-22-8] SYSTEM operation : Start running
+[2024-6-1-14-22-9] SYSTEM operation : Open the main window
+[2024-6-1-14-22-10] username : 1 operation : Tried to login,successed
+[2024-6-1-14-22-13] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-22-13] username : 1 operation : Stop submitting comments
+[2024-6-1-14-22-13] SYSTEM operation : Close the submit window
+[2024-6-1-14-22-14] username : 1 operation : Logout
+[2024-6-1-14-22-15] SYSTEM operation : Close the main window
+[2024-6-1-14-22-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-23-7] SYSTEM operation : Start running
+[2024-6-1-14-23-8] SYSTEM operation : Open the main window
+[2024-6-1-14-23-10] username : 1 operation : Tried to login,successed
+[2024-6-1-14-23-13] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-23-13] username : 1 operation : Stop submitting comments
+[2024-6-1-14-23-13] SYSTEM operation : Close the submit window
+[2024-6-1-14-23-15] username : 1 operation : Logout
+[2024-6-1-14-23-15] SYSTEM operation : Close the main window
+[2024-6-1-14-23-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-25-50] SYSTEM operation : Start running
+[2024-6-1-14-25-50] SYSTEM operation : Open the main window
+
+
+[2024-6-1-14-26-14] SYSTEM operation : Start running
+[2024-6-1-14-26-14] SYSTEM operation : Open the main window
+[2024-6-1-14-26-16] SYSTEM operation : Close the main window
+[2024-6-1-14-26-16] SYSTEM operation : Stop running
+[2024-6-1-14-26-18] username : 1 operation : Tried to login,successed
+[2024-6-1-14-26-21] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-26-22] username : 1 operation : Stop submitting comments
+[2024-6-1-14-26-22] SYSTEM operation : Close the submit window
+[2024-6-1-14-26-24] username : 1 operation : Logout
+[2024-6-1-14-26-25] SYSTEM operation : Close the main window
+[2024-6-1-14-26-25] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-26-53] SYSTEM operation : Start running
+[2024-6-1-14-26-54] SYSTEM operation : Open the main window
+[2024-6-1-14-26-57] username : 1 operation : Tried to login,successed
+[2024-6-1-14-27-8] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:好次捏
+[2024-6-1-14-27-9] username : 1 operation : Stop submitting comments
+[2024-6-1-14-27-9] SYSTEM operation : Close the submit window
+[2024-6-1-14-27-10] username : 1 operation : Logout
+[2024-6-1-14-27-12] SYSTEM operation : Close the main window
+[2024-6-1-14-27-12] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-28-55] SYSTEM operation : Start running
+[2024-6-1-14-28-55] SYSTEM operation : Open the main window
+[2024-6-1-14-28-56] username : 1 operation : Tried to login,successed
+[2024-6-1-14-28-59] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-29-0] username : 1 operation : Stop submitting comments
+[2024-6-1-14-29-0] SYSTEM operation : Close the submit window
+[2024-6-1-14-29-1] username : 1 operation : Logout
+[2024-6-1-14-29-2] SYSTEM operation : Close the main window
+[2024-6-1-14-29-2] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-29-38] SYSTEM operation : Start running
+[2024-6-1-14-29-38] SYSTEM operation : Open the main window
+[2024-6-1-14-29-40] username : 1 operation : Tried to login,successed
+[2024-6-1-14-29-43] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-29-44] username : 1 operation : Stop submitting comments
+[2024-6-1-14-29-44] SYSTEM operation : Close the submit window
+[2024-6-1-14-29-44] SYSTEM operation : Close the main window
+[2024-6-1-14-29-44] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-31-32] SYSTEM operation : Start running
+[2024-6-1-14-31-32] SYSTEM operation : Open the main window
+[2024-6-1-14-31-33] username : 1 operation : Tried to login,successed
+[2024-6-1-14-31-36] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-31-37] username : 1 operation : Stop submitting comments
+[2024-6-1-14-31-37] SYSTEM operation : Close the submit window
+[2024-6-1-14-31-39] SYSTEM operation : Close the main window
+[2024-6-1-14-31-39] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-31-55] SYSTEM operation : Start running
+[2024-6-1-14-31-55] SYSTEM operation : Open the main window
+[2024-6-1-14-31-56] username : 1 operation : Tried to login,successed
+[2024-6-1-14-32-0] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-32-1] username : 1 operation : Stop submitting comments
+[2024-6-1-14-32-1] SYSTEM operation : Close the submit window
+[2024-6-1-14-32-1] SYSTEM operation : Close the main window
+[2024-6-1-14-32-1] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-36-18] SYSTEM operation : Start running
+[2024-6-1-14-36-18] SYSTEM operation : Open the main window
+[2024-6-1-14-36-20] SYSTEM operation : Close the main window
+[2024-6-1-14-36-20] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-36-40] SYSTEM operation : Start running
+[2024-6-1-14-36-40] SYSTEM operation : Open the main window
+[2024-6-1-14-36-42] username : 1 operation : Tried to login,successed
+[2024-6-1-14-36-45] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-36-46] username : 1 operation : Stop submitting comments
+[2024-6-1-14-36-46] SYSTEM operation : Close the submit window
+[2024-6-1-14-36-46] SYSTEM operation : Close the main window
+[2024-6-1-14-36-46] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-38-35] SYSTEM operation : Start running
+[2024-6-1-14-38-35] SYSTEM operation : Open the main window
+[2024-6-1-14-38-37] username : 1 operation : Tried to login,successed
+[2024-6-1-14-38-40] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-38-41] username : 1 operation : Stop submitting comments
+[2024-6-1-14-38-41] SYSTEM operation : Close the submit window
+[2024-6-1-14-38-42] SYSTEM operation : Close the main window
+[2024-6-1-14-38-42] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-38-55] SYSTEM operation : Start running
+[2024-6-1-14-38-56] SYSTEM operation : Open the main window
+[2024-6-1-14-38-57] username : 1 operation : Tried to login,successed
+[2024-6-1-14-39-0] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-39-1] username : 1 operation : Stop submitting comments
+[2024-6-1-14-39-1] SYSTEM operation : Close the submit window
+[2024-6-1-14-39-1] SYSTEM operation : Close the main window
+[2024-6-1-14-39-1] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-45-40] SYSTEM operation : Start running
+[2024-6-1-14-45-41] SYSTEM operation : Open the main window
+[2024-6-1-14-45-42] username : 1 operation : Tried to login,successed
+[2024-6-1-14-45-45] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-45-46] username : 1 operation : Stop submitting comments
+[2024-6-1-14-45-46] SYSTEM operation : Close the submit window
+[2024-6-1-14-45-46] SYSTEM operation : Close the main window
+[2,024-6-1-14-45-46] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-46-13] SYSTEM operation : Start running
+[2024-6-1-14-46-13] SYSTEM operation : Open the main window
+[2024-6-1-14-46-14] username : 1 operation : Tried to login,successed
+[2024-6-1-14-46-17] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-46-18] username : 1 operation : Stop submitting comments
+[2024-6-1-14-46-18] SYSTEM operation : Close the submit window
+[2024-6-1-14-46-18] SYSTEM operation : Close the main window
+[2,024-6-1-14-46-18] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-48-3] SYSTEM operation : Start running
+[2024-6-1-14-48-4] SYSTEM operation : Open the main window
+[2024-6-1-14-48-5] username : 1 operation : Tried to login,successed
+[2024-6-1-14-48-9] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-48-10] username : 1 operation : Stop submitting comments
+[2024-6-1-14-48-10] SYSTEM operation : Close the submit window
+[2024-6-1-14-48-10] SYSTEM operation : Close the main window
+[2,024-6-1-14-48-10] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-48-47] SYSTEM operation : Start running
+[2024-6-1-14-48-47] SYSTEM operation : Open the main window
+[2024-6-1-14-48-49] username : 1 operation : Tried to login,successed
+[2024-6-1-14-48-52] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-48-53] username : 1 operation : Stop submitting comments
+[2024-6-1-14-48-53] SYSTEM operation : Close the submit window
+[2024-6-1-14-48-53] SYSTEM operation : Close the main window
+[2,024-6-1-14-48-53] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-49-38] SYSTEM operation : Start running
+[2024-6-1-14-49-38] SYSTEM operation : Open the main window
+[2024-6-1-14-49-40] username : 1 operation : Tried to login,successed
+[2024-6-1-14-49-42] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-49-43] username : 1 operation : Stop submitting comments
+[2024-6-1-14-49-43] SYSTEM operation : Close the submit window
+[2024-6-1-14-49-43] SYSTEM operation : Close the main window
+[2024-6-1-14-49-43] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-51-43] SYSTEM operation : Start running
+[2024-6-1-14-51-44] SYSTEM operation : Open the main window
+[2024-6-1-14-51-46] username : 1 operation : Tried to login,successed
+[2024-6-1-14-51-49] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-14-51-50] username : 1 operation : Stop submitting comments
+[2024-6-1-14-51-50] SYSTEM operation : Close the submit window
+[2024-6-1-14-51-51] username : 1 operation : Logout
+[2024-6-1-14-51-52] SYSTEM operation : Close the main window
+[2024-6-1-14-51-52] SYSTEM operation : Stop running
+
+
+[2024-6-1-14-52-31] SYSTEM operation : Start running
+[2024-6-1-14-52-31] SYSTEM operation : Open the main window
+[2024-6-1-14-52-32] SYSTEM operation : Open the registration window
+[2024-6-1-14-52-34] username : 1 operation : Tried to regist,successed
+[2024-6-1-14-52-34] SYSTEM operation : Add a new user, username: 1
+[2024-6-1-14-52-35] SYSTEM operation : Close the registration window
+[2024-6-1-14-52-36] username : 1 operation : Tried to login,successed
+[2024-6-1-14-52-39] username : 1 operation : Tried to submit comment,failed
+[2024-6-1-14-52-41] username : 1 operation : Stop submitting comments
+[2024-6-1-14-52-41] SYSTEM operation : Close the submit window
+[2024-6-1-14-52-44] username : 1 operation : Tried to submit comment,failed
+[2024-6-1-14-52-49] username : 1 operation : Tried to submit comment,failed
+[2024-6-1-14-52-50] username : 1 operation : Stop submitting comments
+[2024-6-1-14-52-50] SYSTEM operation : Close the submit window
+[2024-6-1-14-52-51] SYSTEM operation : Close the main window
+[2024-6-1-14-52-51] SYSTEM operation : Refresh the users file
+[2024-6-1-14-52-51] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-2-13] SYSTEM operation : Start running
+[2024-6-1-15-2-14] SYSTEM operation : Open the main window
+[2024-6-1-15-2-15] SYSTEM operation : Close the main window
+[2024-6-1-15-2-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-5-4] SYSTEM operation : Start running
+[2024-6-1-15-5-5] SYSTEM operation : Open the main window
+[2024-6-1-15-5-6] username : 1 operation : Tried to login,successed
+[2024-6-1-15-5-9] username : 1 operation : Tried to submit comment,failed
+[2024-6-1-15-5-10] username : 1 operation : Stop submitting comments
+[2024-6-1-15-5-10] SYSTEM operation : Close the submit window
+[2024-6-1-15-5-11] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-1-15-5-11] SYSTEM operation : Open the show_table window
+[2024-6-1-15-5-12] username : 1 operation : Stop checking out the dishes
+[2024-6-1-15-5-12] SYSTEM operation : Close the show_table window
+[2024-6-1-15-5-13] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-15-5-13] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-15-5-13] username : 1 operation : Stop managing account
+[2024-6-1-15-5-13] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-15-5-14] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-1-15-5-14] SYSTEM operation : Open the show_table window
+[2024-6-1-15-5-15] username : 1 operation : Stop checking out the dishes
+[2024-6-1-15-5-15] SYSTEM operation : Close the show_table window
+[2024-6-1-15-5-17] username : 1 operation : Logout
+[2024-6-1-15-5-18] SYSTEM operation : Close the main window
+[2024-6-1-15-5-18] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-6-2] SYSTEM operation : Start running
+[2024-6-1-15-6-2] SYSTEM operation : Open the main window
+[2024-6-1-15-6-4] username : 1 operation : Tried to login,successed
+[2024-6-1-15-6-7] username : 1 operation : Tried to submit comment,successed, dish name:1 content:112
+[2024-6-1-15-6-8] username : 1 operation : Stop submitting comments
+[2024-6-1-15-6-8] SYSTEM operation : Close the submit window
+[2024-6-1-15-6-8] SYSTEM operation : Close the main window
+[2024-6-1-15-6-8] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-8-11] SYSTEM operation : Start running
+[2024-6-1-15-8-12] SYSTEM operation : Open the main window
+[2024-6-1-15-8-13] username : 1 operation : Tried to login,successed
+[2024-6-1-15-8-17] username : 1 operation : Tried to submit comment,failed
+[2024-6-1-15-8-19] username : 1 operation : Tried to submit comment,successed, dish name:1 content:123
+[2024-6-1-15-8-20] username : 1 operation : Stop submitting comments
+[2024-6-1-15-8-20] SYSTEM operation : Close the submit window
+[2024-6-1-15-8-20] SYSTEM operation : Close the main window
+[2024-6-1-15-8-20] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-8-42] SYSTEM operation : Start running
+[2024-6-1-15-8-42] SYSTEM operation : Open the main window
+[2024-6-1-15-8-44] username : 1 operation : Tried to login,successed
+[2024-6-1-15-8-47] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-15-8-47] username : 1 operation : Stop submitting comments
+[2024-6-1-15-8-47] SYSTEM operation : Close the submit window
+[2024-6-1-15-8-48] SYSTEM operation : Close the main window
+[2024-6-1-15-8-48] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-9-27] SYSTEM operation : Start running
+[2024-6-1-15-9-27] SYSTEM operation : Open the main window
+[2024-6-1-15-9-29] username : 1 operation : Tried to login,successed
+[2024-6-1-15-9-31] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-15-9-32] username : 1 operation : Stop submitting comments
+[2024-6-1-15-9-32] SYSTEM operation : Close the submit window
+[2024-6-1-15-9-32] SYSTEM operation : Close the main window
+[2024-6-1-15-9-32] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-10-2] SYSTEM operation : Start running
+[2024-6-1-15-10-2] SYSTEM operation : Open the main window
+[2024-6-1-15-10-3] username : 1 operation : Tried to login,successed
+[2024-6-1-15-10-6] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-15-10-7] username : 1 operation : Stop submitting comments
+[2024-6-1-15-10-7] SYSTEM operation : Close the submit window
+[2024-6-1-15-10-8] SYSTEM operation : Close the main window
+[2024-6-1-15-10-8] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-10-43] SYSTEM operation : Start running
+[2024-6-1-15-10-44] SYSTEM operation : Open the main window
+[2024-6-1-15-10-46] username : 1 operation : Tried to login,successed
+[2024-6-1-15-10-49] username : 1 operation : Tried to submit comment,successed, dish name:1 content:1
+[2024-6-1-15-10-49] username : 1 operation : Stop submitting comments
+[2024-6-1-15-10-49] SYSTEM operation : Close the submit window
+[2024-6-1-15-10-50] SYSTEM operation : Close the main window
+[2024-6-1-15-10-50] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-14-29] SYSTEM operation : Start running
+[2024-6-1-15-14-29] SYSTEM operation : Open the main window
+[2024-6-1-15-14-32] SYSTEM operation : Close the main window
+[2024-6-1-15-14-32] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-22-54] SYSTEM operation : Start running
+[2024-6-1-15-22-55] SYSTEM operation : Open the main window
+[2024-6-1-15-22-56] username : 1 operation : Tried to login,successed
+[2024-6-1-15-22-58] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-15-22-58] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-15-25-10] username : 1 operation : Stop managing account
+[2024-6-1-15-25-10] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-15-25-11] SYSTEM operation : Close the main window
+[2024-6-1-15-25-11] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-25-13] SYSTEM operation : Start running
+[2024-6-1-15-25-13] SYSTEM operation : Open the main window
+[2024-6-1-15-25-15] SYSTEM operation : Close the main window
+[2024-6-1-15-25-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-15-25-18] SYSTEM operation : Start running
+[2024-6-1-15-25-18] SYSTEM operation : Open the main window
+[2024-6-1-15-25-20] username : 1 operation : Tried to login,successed
+[2024-6-1-15-25-23] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-1-15-25-23] SYSTEM operation : Open the show_table window
+[2024-6-1-15-25-24] username : 1 operation : Stop checking out the dishes
+[2024-6-1-15-25-24] SYSTEM operation : Close the show_table window
+[2024-6-1-15-25-26] username : 1 operation : Logout
+[2024-6-1-15-25-30] username : admin operation : Tried to login,successed
+[2024-6-1-15-25-39] SYSTEM operation : Close the main window
+[2024-6-1-15-25-39] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-8-48] SYSTEM operation : Start running
+[2024-6-1-16-8-48] SYSTEM operation : Open the main window
+[2024-6-1-16-8-52] username : admin operation : Tried to login,successed
+[2024-6-1-16-8-54] SYSTEM operation : Open the log window
+[2024-6-1-16-8-54] username : admin operation : Start checking the log
+[2024-6-1-16-9-9] SYSTEM operation : Close the main window
+[2024-6-1-16-9-9] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-9-57] SYSTEM operation : Start running
+[2024-6-1-16-9-57] SYSTEM operation : Open the main window
+[2024-6-1-16-10-0] username : admin operation : Tried to login,successed
+[2024-6-1-16-10-2] SYSTEM operation : Open the log window
+[2024-6-1-16-10-2] username : admin operation : Start checking the log
+[2024-6-1-16-10-26] username : admin operation : Logout
+[2024-6-1-16-10-28] SYSTEM operation : Close the main window
+[2024-6-1-16-10-28] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-11-15] SYSTEM operation : Start running
+[2024-6-1-16-11-16] SYSTEM operation : Open the main window
+[2024-6-1-16-11-22] username : admin operation : Tried to login,successed
+[2024-6-1-16-11-23] SYSTEM operation : Open the log window
+[2024-6-1-16-11-23] username : admin operation : Start checking the log
+[2024-6-1-16-11-38] username : admin operation : Logout
+[2024-6-1-16-11-39] SYSTEM operation : Close the main window
+[2024-6-1-16-11-39] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-13-26] SYSTEM operation : Start running
+[2024-6-1-16-13-27] SYSTEM operation : Open the main window
+[2024-6-1-16-13-30] username : admin operation : Tried to login,successed
+[2024-6-1-16-13-31] SYSTEM operation : Open the log window
+[2024-6-1-16-13-31] username : admin operation : Start checking the log
+[2024-6-1-16-13-42] SYSTEM operation : Close the main window
+[2024-6-1-16-13-42] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-14-14] SYSTEM operation : Start running
+[2024-6-1-16-14-15] SYSTEM operation : Open the main window
+[2024-6-1-16-14-18] username : admin operation : Tried to login,successed
+[2024-6-1-16-14-19] SYSTEM operation : Open the log window
+[2024-6-1-16-14-19] username : admin operation : Start checking the log
+[2024-6-1-16-14-30] SYSTEM operation : Close the main window
+[2024-6-1-16-14-30] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-15-7] SYSTEM operation : Start running
+[2024-6-1-16-15-7] SYSTEM operation : Open the main window
+[2024-6-1-16-15-13] username : admin operation : Tried to login,successed
+[2024-6-1-16-15-15] SYSTEM operation : Open the log window
+[2024-6-1-16-15-15] username : admin operation : Start checking the log
+[2024-6-1-16-15-31] username : admin operation : Logout
+[2024-6-1-16-15-32] SYSTEM operation : Close the main window
+[2024-6-1-16-15-32] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-15-45] SYSTEM operation : Start running
+[2024-6-1-16-15-45] SYSTEM operation : Open the main window
+[2024-6-1-16-15-49] username : admin operation : Tried to login,successed
+[2024-6-1-16-15-51] SYSTEM operation : Open the log window
+[2024-6-1-16-15-51] username : admin operation : Start checking the log
+[2024-6-1-16-16-15] SYSTEM operation : Close the main window
+[2024-6-1-16-16-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-17-0] SYSTEM operation : Start running
+[2024-6-1-16-17-0] SYSTEM operation : Open the main window
+[2024-6-1-16-17-2] username : admin operation : Tried to login,successed
+[2024-6-1-16-17-3] SYSTEM operation : Open the log window
+[2024-6-1-16-17-3] username : admin operation : Start checking the log
+[2024-6-1-16-17-15] SYSTEM operation : Close the main window
+[2024-6-1-16-17-15] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-19-12] SYSTEM operation : Start running
+[2024-6-1-16-19-13] SYSTEM operation : Open the main window
+[2024-6-1-16-19-18] username : admin operation : Tried to login,successed
+[2024-6-1-16-19-20] SYSTEM operation : Open the log window
+[2024-6-1-16-19-20] username : admin operation : Start checking the log
+[2024-6-1-16-19-34] SYSTEM operation : Close the main window
+[2024-6-1-16-19-34] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-21-43] SYSTEM operation : Start running
+[2024-6-1-16-21-43] SYSTEM operation : Open the main window
+[2024-6-1-16-21-47] username : admin operation : Tried to login,successed
+[2024-6-1-16-21-52] SYSTEM operation : Open the log window
+[2024-6-1-16-21-52] username : admin operation : Start checking the log
+[2024-6-1-16-23-1] SYSTEM operation : Close the main window
+[2024-6-1-16-23-1] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-35-12] SYSTEM operation : Start running
+[2024-6-1-16-35-12] SYSTEM operation : Open the main window
+[2024-6-1-16-35-14] SYSTEM operation : Close the main window
+[2024-6-1-16-35-14] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-37-41] SYSTEM operation : Start running
+[2024-6-1-16-37-41] SYSTEM operation : Open the main window
+[2024-6-1-16-37-43] SYSTEM operation : Close the main window
+[2024-6-1-16-37-43] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-38-46] SYSTEM operation : Start running
+[2024-6-1-16-38-47] SYSTEM operation : Open the main window
+[2024-6-1-16-38-48] SYSTEM operation : Close the main window
+[2024-6-1-16-38-48] SYSTEM operation : Stop running
+
+
+[2024-6-1-16-49-30] SYSTEM operation : Start running
+[2024-6-1-16-49-30] SYSTEM operation : Open the main window
+[2024-6-1-16-49-31] SYSTEM operation : Close the main window
+[2024-6-1-16-49-31] SYSTEM operation : Stop running
+
+
+[2024-6-1-17-9-36] SYSTEM operation : Start running
+[2024-6-1-17-9-36] SYSTEM operation : Open the main window
+[2024-6-1-17-9-38] SYSTEM operation : Close the main window
+[2024-6-1-17-9-38] SYSTEM operation : Stop running
+
+
+[2024-6-1-17-10-19] SYSTEM operation : Start running
+[2024-6-1-17-10-19] SYSTEM operation : Open the main window
+[2024-6-1-17-10-24] username : admin operation : Tried to login,successed
+[2024-6-1-17-10-26] SYSTEM operation : Open the comments shown window
+[2024-6-1-17-10-26] username : admin operation : Star checking the comments
+[2024-6-1-17-10-48] SYSTEM operation : Close the comments shown window
+[2024-6-1-17-10-48] username : admin operation : Stop checking the comments
+[2024-6-1-17-10-49] SYSTEM operation : Close the main window
+[2024-6-1-17-10-49] SYSTEM operation : Stop running
+
+
+[2024-6-1-17-12-36] SYSTEM operation : Start running
+[2024-6-1-17-12-36] SYSTEM operation : Open the main window
+[2024-6-1-17-12-41] username : admin operation : Tried to login,successed
+[2024-6-1-17-12-42] SYSTEM operation : Open the comments shown window
+[2024-6-1-17-12-42] username : admin operation : Star checking the comments
+[2024-6-1-17-13-1] username : admin operation : Tried to search comment,successed
+[2024-6-1-17-13-5] username : admin operation : Tried to search comment,successed
+[2024-6-1-17-13-9] username : admin operation : Tried to search comment,successed
+[2024-6-1-17-13-12] SYSTEM operation : Close the comments shown window
+[2024-6-1-17-13-12] username : admin operation : Stop checking the comments
+[2024-6-1-17-13-12] SYSTEM operation : Close the main window
+[2024-6-1-17-13-12] SYSTEM operation : Stop running
+
+
+[2024-6-1-17-15-14] SYSTEM operation : Start running
+[2024-6-1-17-15-15] SYSTEM operation : Open the main window
+[2024-6-1-17-15-16] username : 1 operation : Tried to login,successed
+[2024-6-1-17-15-18] SYSTEM operation : Open account manage window of user:1
+[2024-6-1-17-15-18] username : 1 operation : Tried to manage the account,successed
+[2024-6-1-17-15-19] username : 1 operation : Stop managing account
+[2024-6-1-17-15-19] SYSTEM operation : Close account manage window of user:1
+[2024-6-1-17-15-20] username : 1 operation : Logout
+[2024-6-1-17-15-25] username : admin operation : Tried to login,successed
+[2024-6-1-17-15-26] SYSTEM operation : Open the comments shown window
+[2024-6-1-17-15-26] username : admin operation : Star checking the comments
+[2024-6-1-17-15-31] username : admin operation : Tried to search comment,successed
+[2024-6-1-17-15-39] SYSTEM operation : Close the comments shown window
+[2024-6-1-17-15-39] username : admin operation : Stop checking the comments
+[2024-6-1-17-15-41] username : admin operation : Logout
+[2024-6-1-17-15-43] username : 1 operation : Tried to login,successed
+[2024-6-1-17-15-52] username : 1 operation : Tried to submit comment,successed, dish name:番茄炒蛋 content:好次捏
+[2024-6-1-17-15-53] username : 1 operation : Stop submitting comments
+[2024-6-1-17-15-53] SYSTEM operation : Close the submit window
+[2024-6-1-17-15-56] username : 1 operation : Stop submitting comments
+[2024-6-1-17-15-56] SYSTEM operation : Close the submit window
+[2024-6-1-17-15-57] username : 1 operation : Logout
+[2024-6-1-17-16-0] username : admin operation : Tried to login,successed
+[2024-6-1-17-16-3] SYSTEM operation : Open the comments shown window
+[2024-6-1-17-16-3] username : admin operation : Star checking the comments
+[2024-6-1-17-16-8] SYSTEM operation : Close the comments shown window
+[2024-6-1-17-16-8] username : admin operation : Stop checking the comments
+[2024-6-1-17-16-9] SYSTEM operation : Open the log window
+[2024-6-1-17-16-9] username : admin operation : Start checking the log
+[2024-6-1-17-16-23] username : admin operation : Stop checking the log
+[2024-6-1-17-16-23] SYSTEM operation : Close the log window
+[2024-6-1-17-16-27] SYSTEM operation : Close the main window
+[2024-6-1-17-16-27] SYSTEM operation : Stop running
+
+
+[2024-6-1-17-29-27] SYSTEM operation : Start running
+[2024-6-1-17-29-28] SYSTEM operation : Open the main window
+[2024-6-1-17-29-33] username : admin operation : Tried to login,successed
+[2024-6-1-17-29-35] SYSTEM operation : Open the comments shown window
+[2024-6-1-17-29-35] username : admin operation : Star checking the comments
+[2024-6-1-17-29-53] SYSTEM operation : Close the comments shown window
+[2024-6-1-17-29-53] username : admin operation : Stop checking the comments
+[2024-6-1-17-29-55] username : admin operation : Logout
+[2024-6-1-17-29-56] SYSTEM operation : Close the main window
+[2024-6-1-17-29-56] SYSTEM operation : Stop running
+
+
+[2024-6-1-17-59-12] SYSTEM operation : Start running
+[2024-6-1-17-59-13] SYSTEM operation : Open the main window
+[2024-6-1-17-59-14] SYSTEM operation : Close the main window
+[2024-6-1-17-59-14] SYSTEM operation : Stop running
+
+
+[2024-6-1-18-1-53] SYSTEM operation : Start running
+[2024-6-1-18-1-53] SYSTEM operation : Open the main window
+[2024-6-1-18-1-57] username : admin operation : Tried to login,successed
+[2024-6-1-18-1-59] SYSTEM operation : Open the dishes manage window
+[2024-6-1-18-1-59] username : admin operation : Start managing the dishes
+[2024-6-1-18-2-32] SYSTEM operation : Close the dishes manage window
+[2024-6-1-18-2-32] username : admin operation : Stop managing the dishes
+[2024-6-1-18-2-33] SYSTEM operation : Close the main window
+[2024-6-1-18-2-33] SYSTEM operation : Stop running
+
+
+[2024-6-1-18-3-25] SYSTEM operation : Start running
+[2024-6-1-18-3-26] SYSTEM operation : Open the main window
+[2024-6-1-18-3-30] username : admin operation : Tried to login,successed
+[2024-6-1-18-3-32] SYSTEM operation : Open the dishes manage window
+[2024-6-1-18-3-32] username : admin operation : Start managing the dishes
+[2024-6-1-18-4-11] SYSTEM operation : Close the dishes manage window
+[2024-6-1-18-4-11] username : admin operation : Stop managing the dishes
+[2024-6-1-18-4-12] SYSTEM operation : Close the main window
+[2024-6-1-18-4-12] SYSTEM operation : Stop running
+
+
+[2024-6-1-18-5-43] SYSTEM operation : Start running
+[2024-6-1-18-5-43] SYSTEM operation : Open the main window
+[2024-6-1-18-5-48] username : 1 operation : Tried to login,successed
+[2024-6-1-18-5-50] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-1-18-5-50] SYSTEM operation : Open the show_table window
+[2024-6-1-18-6-0] username : 1 operation : Stop checking out the dishes
+[2024-6-1-18-6-0] SYSTEM operation : Close the show_table window
+[2024-6-1-18-6-2] username : 1 operation : Logout
+[2024-6-1-18-6-3] SYSTEM operation : Close the main window
+[2024-6-1-18-6-3] SYSTEM operation : Stop running
+
+
+[2024-6-1-18-15-13] SYSTEM operation : Start running
+[2024-6-1-18-15-13] SYSTEM operation : Open the main window
+[2024-6-1-18-15-14] SYSTEM operation : Close the main window
+[2024-6-1-18-15-14] SYSTEM operation : Stop running
+
+
+[2024-6-1-18-28-57] SYSTEM operation : Start running
+[2024-6-1-18-28-57] SYSTEM operation : Open the main window
+[2024-6-1-18-29-1] username : admin operation : Tried to login,successed
+[2024-6-1-18-29-2] SYSTEM operation : Open the dishes manage window
+[2024-6-1-18-29-2] username : admin operation : Start managing the dishes
+[2024-6-1-18-29-9] SYSTEM operation : Close the dishes manage window
+[2024-6-1-18-29-9] username : admin operation : Stop managing the dishes
+[2024-6-1-18-29-9] SYSTEM operation : Close the main window
+[2024-6-1-18-29-9] SYSTEM operation : Stop running
+
+
+[2024-6-1-18-29-26] SYSTEM operation : Start running
+[2024-6-1-18-29-26] SYSTEM operation : Open the main window
+[2024-6-1-18-29-30] username : admin operation : Tried to login,successed
+[2024-6-1-18-29-31] SYSTEM operation : Open the dishes manage window
+[2024-6-1-18-29-31] username : admin operation : Start managing the dishes
+[2024-6-1-18-29-41] SYSTEM operation : Close the dishes manage window
+[2024-6-1-18-29-41] username : admin operation : Stop managing the dishes
+[2024-6-1-18-29-42] SYSTEM operation : Open the dishes manage window
+[2024-6-1-18-29-42] username : admin operation : Start managing the dishes
+[2024-6-1-18-29-45] SYSTEM operation : Close the dishes manage window
+[2024-6-1-18-29-45] username : admin operation : Stop managing the dishes
+[2024-6-1-18-29-46] SYSTEM operation : Close the main window
+[2024-6-1-18-29-46] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-19-29] SYSTEM operation : Start running
+[2024-6-2-11-19-30] SYSTEM operation : Open the main window
+[2024-6-2-11-19-34] username : admin operation : Tried to login,successed
+[2024-6-2-11-19-36] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-19-36] username : admin operation : Start managing the dishes
+[2024-6-2-11-20-3] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-20-3] username : admin operation : Stop managing the dishes
+[2024-6-2-11-20-7] SYSTEM operation : Close the main window
+[2024-6-2-11-20-7] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-21-17] SYSTEM operation : Start running
+[2024-6-2-11-21-18] SYSTEM operation : Open the main window
+[2024-6-2-11-21-21] username : 1 operation : Tried to login,successed
+[2024-6-2-11-21-23] username : 1 operation : Tried to check out the dishes,successed
+[2024-6-2-11-21-23] SYSTEM operation : Open the show_table window
+[2024-6-2-11-21-26] username : 1 operation : Stop checking out the dishes
+[2024-6-2-11-21-26] SYSTEM operation : Close the show_table window
+[2024-6-2-11-21-27] username : 1 operation : Logout
+[2024-6-2-11-21-31] username : admin operation : Tried to login,successed
+[2024-6-2-11-21-32] SYSTEM operation : Open the comments shown window
+[2024-6-2-11-21-32] username : admin operation : Star checking the comments
+[2024-6-2-11-21-34] SYSTEM operation : Close the comments shown window
+[2024-6-2-11-21-34] username : admin operation : Stop checking the comments
+[2024-6-2-11-21-34] SYSTEM operation : Open the comments shown window
+[2024-6-2-11-21-34] username : admin operation : Star checking the comments
+[2024-6-2-11-21-52] SYSTEM operation : Close the comments shown window
+[2024-6-2-11-21-52] username : admin operation : Stop checking the comments
+[2024-6-2-11-21-55] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-21-55] username : admin operation : Start managing the dishes
+[2024-6-2-11-22-7] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-22-7] username : admin operation : Stop managing the dishes
+[2024-6-2-11-22-7] SYSTEM operation : Close the main window
+[2024-6-2-11-22-7] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-23-19] SYSTEM operation : Start running
+[2024-6-2-11-23-19] SYSTEM operation : Open the main window
+[2024-6-2-11-23-24] username : admin operation : Tried to login,successed
+[2024-6-2-11-23-27] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-23-27] username : admin operation : Start managing the dishes
+[2024-6-2-11-23-46] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-23-46] username : admin operation : Stop managing the dishes
+[2024-6-2-11-23-47] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-23-47] username : admin operation : Start managing the dishes
+[2024-6-2-11-23-50] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-23-50] username : admin operation : Stop managing the dishes
+[2024-6-2-11-23-51] username : admin operation : Logout
+[2024-6-2-11-23-53] SYSTEM operation : Close the main window
+[2024-6-2-11-23-53] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-25-47] SYSTEM operation : Start running
+[2024-6-2-11-25-48] SYSTEM operation : Open the main window
+[2024-6-2-11-25-52] username : admin operation : Tried to login,successed
+[2024-6-2-11-25-53] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-25-53] username : admin operation : Start managing the dishes
+[2024-6-2-11-26-53] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-26-53] username : admin operation : Stop managing the dishes
+[2024-6-2-11-26-56] username : admin operation : Logout
+[2024-6-2-11-26-57] SYSTEM operation : Close the main window
+[2024-6-2-11-26-57] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-31-24] SYSTEM operation : Start running
+[2024-6-2-11-31-25] SYSTEM operation : Open the main window
+[2024-6-2-11-31-26] SYSTEM operation : Close the main window
+[2024-6-2-11-31-26] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-31-42] SYSTEM operation : Start running
+[2024-6-2-11-31-43] SYSTEM operation : Open the main window
+[2024-6-2-11-31-44] SYSTEM operation : Close the main window
+[2024-6-2-11-31-44] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-37-54] SYSTEM operation : Start running
+[2024-6-2-11-37-55] SYSTEM operation : Open the main window
+[2024-6-2-11-37-58] username : admin operation : Tried to login,successed
+[2024-6-2-11-37-59] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-37-59] username : admin operation : Start managing the dishes
+[2024-6-2-11-38-27] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-38-27] username : admin operation : Stop managing the dishes
+[2024-6-2-11-38-37] username : admin operation : Logout
+[2024-6-2-11-38-38] SYSTEM operation : Close the main window
+[2024-6-2-11-38-38] SYSTEM operation : Stop running
+
+
+[2024-6-2-11-58-45] SYSTEM operation : Start running
+[2024-6-2-11-58-46] SYSTEM operation : Open the main window
+[2024-6-2-11-58-50] username : admin operation : Tried to login,successed
+[2024-6-2-11-58-52] SYSTEM operation : Open the dishes manage window
+[2024-6-2-11-58-52] username : admin operation : Start managing the dishes
+[2024-6-2-11-59-49] SYSTEM operation : Close the dishes manage window
+[2024-6-2-11-59-49] username : admin operation : Stop managing the dishes
+[2024-6-2-11-59-51] username : admin operation : Logout
+[2024-6-2-11-59-52] SYSTEM operation : Close the main window
+[2024-6-2-11-59-52] SYSTEM operation : Refresh the dishes file
+[2024-6-2-11-59-52] SYSTEM operation : Stop running
+
+
+[2024-6-2-12-2-51] SYSTEM operation : Start running
+[2024-6-2-12-2-51] SYSTEM operation : Open the main window
+[2024-6-2-12-2-56] username : admin operation : Tried to login,successed
+[2024-6-2-12-2-58] SYSTEM operation : Open the dishes manage window
+[2024-6-2-12-2-58] username : admin operation : Start managing the dishes
+[2024-6-2-12-3-20] SYSTEM operation : Close the dishes manage window
+[2024-6-2-12-3-20] username : admin operation : Stop managing the dishes
+[2024-6-2-12-3-21] SYSTEM operation : Close the main window
+[2024-6-2-12-3-21] SYSTEM operation : Stop running
+
+
+[2024-6-2-12-4-2] SYSTEM operation : Start running
+[2024-6-2-12-4-3] SYSTEM operation : Open the main window
+[2024-6-2-12-4-6] username : admin operation : Tried to login,failed
+[2024-6-2-12-4-9] username : admin operation : Tried to login,successed
+[2024-6-2-12-4-10] SYSTEM operation : Open the dishes manage window
+[2024-6-2-12-4-10] username : admin operation : Start managing the dishes
+[2024-6-2-12-4-18] SYSTEM operation : Close the dishes manage window
+[2024-6-2-12-4-18] username : admin operation : Stop managing the dishes
+[2024-6-2-12-4-18] SYSTEM operation : Close the main window
+[2024-6-2-12-4-18] SYSTEM operation : Refresh the dishes file
+[2024-6-2-12-4-18] SYSTEM operation : Stop running
+
+
+[2024-6-2-14-14-15] SYSTEM operation : Start running
+[2024-6-2-14-14-15] SYSTEM operation : Open the main window
+[2024-6-2-14-14-19] username : admin operation : Tried to login,successed
+[2024-6-2-14-14-21] SYSTEM operation : Open the dishes manage window
+[2024-6-2-14-14-21] username : admin operation : Start managing the dishes
+[2024-6-2-14-14-39] username : admin operation : Tried to search the dish:番茄炒蛋,successed
+[2024-6-2-14-14-48] SYSTEM operation : Close the dishes manage window
+[2024-6-2-14-14-48] username : admin operation : Stop managing the dishes
+[2024-6-2-14-14-48] SYSTEM operation : Close the main window
+[2024-6-2-14-14-48] SYSTEM operation : Stop running
+
+
+[2024-6-2-14-15-54] SYSTEM operation : Start running
+[2024-6-2-14-15-55] SYSTEM operation : Open the main window
+[2024-6-2-14-16-7] username : admin operation : Tried to login,successed
+[2024-6-2-14-16-9] SYSTEM operation : Open the dishes manage window
+[2024-6-2-14-16-9] username : admin operation : Start managing the dishes
+[2024-6-2-14-16-17] username : admin operation : Tried to search the dish:番茄炒蛋,successed
+[2024-6-2-14-16-18] username : admin operation : Tried to search the dish:番茄炒蛋,successed
+[2024-6-2-14-16-20] username : admin operation : Tried to search the dish:,filed
+[2024-6-2-14-17-17] SYSTEM operation : Close the dishes manage window
+[2024-6-2-14-17-17] username : admin operation : Stop managing the dishes
+[2024-6-2-14-17-18] SYSTEM operation : Close the main window
+[2024-6-2-14-17-18] SYSTEM operation : Stop running
+
+
+[2024-6-2-14-21-16] SYSTEM operation : Start running
+[2024-6-2-14-21-16] SYSTEM operation : Open the main window
+[2024-6-2-14-21-21] username : admin operation : Tried to login,successed
+[2024-6-2-14-21-23] SYSTEM operation : Open the dishes manage window
+[2024-6-2-14-21-23] username : admin operation : Start managing the dishes
+[2024-6-2-14-21-31] username : admin operation : Tried to delete dish,failed
+[2024-6-2-14-21-35] username : admin operation : Tried to delete dish,successed,dish information:炒菜类 1
+[2024-6-2-14-21-55] SYSTEM operation : Close the dishes manage window
+[2024-6-2-14-21-55] username : admin operation : Stop managing the dishes
+[2024-6-2-14-21-58] SYSTEM operation : Open the log window
+[2024-6-2-14-21-58] username : admin operation : Start checking the log
+[2024-6-2-14-22-22] username : admin operation : Stop checking the log
+[2024-6-2-14-22-22] SYSTEM operation : Close the log window
+[2024-6-2-14-22-23] SYSTEM operation : Close the main window
+[2024-6-2-14-22-23] SYSTEM operation : Refresh the dishes file
+[2024-6-2-14-22-23] SYSTEM operation : Stop running
+
+
+[2024-6-2-14-23-1] SYSTEM operation : Start running
+[2024-6-2-14-23-1] SYSTEM operation : Open the main window
+[2024-6-2-14-23-10] username : admin operation : Tried to login,failed
+[2024-6-2-14-23-13] username : admin operation : Tried to login,successed
+[2024-6-2-14-23-14] SYSTEM operation : Open the dishes manage window
+[2024-6-2-14-23-14] username : admin operation : Start managing the dishes
+[2024-6-2-14-23-19] SYSTEM operation : Close the dishes manage window
+[2024-6-2-14-23-19] username : admin operation : Stop managing the dishes
+[2024-6-2-14-23-23] username : admin operation : Logout
+[2024-6-2-14-23-24] SYSTEM operation : Close the main window
+[2024-6-2-14-23-24] SYSTEM operation : Stop running
+
+
+[2024-6-2-14-27-35] SYSTEM operation : Start running
+[2024-6-2-14-27-36] SYSTEM operation : Open the main window
+[2024-6-2-14-27-39] username : admin operation : Tried to login,successed
+[2024-6-2-14-27-42] SYSTEM operation : Open the comments shown window
+[2024-6-2-14-27-42] username : admin operation : Star checking the comments
+[2024-6-2-14-28-14] SYSTEM operation : Close the comments shown window
+[2024-6-2-14-28-14] username : admin operation : Stop checking the comments
+[2024-6-2-14-38-14] SYSTEM operation : Close the main window
+[2024-6-2-14-38-14] SYSTEM operation : Stop running
+
+
+[2024-6-2-15-57-51] SYSTEM operation : Start running
+[2024-6-2-15-57-51] SYSTEM operation : Open the main window
+[2024-6-2-15-57-56] username : admin operation : Tried to login,successed
+[2024-6-2-15-58-3] SYSTEM operation : Close the main window
+[2024-6-2-15-58-3] SYSTEM operation : Stop running
+
+
+[2024-6-2-16-0-4] SYSTEM operation : Start running
+[2024-6-2-16-0-4] SYSTEM operation : Open the main window
+[2024-6-2-16-0-9] username : admin operation : Tried to login,successed
+[2024-6-2-16-0-27] SYSTEM operation : Close the main window
+[2024-6-2-16-0-27] SYSTEM operation : Stop running
+
+
+[2024-6-2-16-6-11] SYSTEM operation : Start running
+[2024-6-2-16-6-11] SYSTEM operation : Open the main window
+[2024-6-2-16-6-12] SYSTEM operation : Close the main window
+[2024-6-2-16-6-12] SYSTEM operation : Stop running
+
+
+[2024-6-2-16-12-1] SYSTEM operation : Start running
+[2024-6-2-16-12-1] SYSTEM operation : Open the main window
+[2024-6-2-16-12-5] username : admin operation : Tried to login,successed
+[2024-6-2-16-12-6] SYSTEM operation : Open the user management window
+[2024-6-2-16-12-6] username : admin operation : Start managing users
+[2024-6-2-16-12-20] SYSTEM operation : Close the user management window
+[2024-6-2-16-12-20] username : admin operation : Stop managing users
+[2024-6-2-16-12-20] SYSTEM operation : Close the main window
+[2024-6-2-16-12-20] SYSTEM operation : Stop running
+
+
+[2024-6-2-16-35-8] SYSTEM operation : Start running
+[2024-6-2-16-35-9] SYSTEM operation : Open the main window
+[2024-6-2-16-35-13] username : admin operation : Tried to login,successed
+[2024-6-2-16-35-15] SYSTEM operation : Open the user management window
+[2024-6-2-16-35-15] username : admin operation : Start managing users
+[2024-6-2-16-35-25] SYSTEM operation : Close the user management window
+[2024-6-2-16-35-25] username : admin operation : Stop managing users
+[2024-6-2-16-35-32] username : admin operation : Tried to login,failed
+[2024-6-2-16-35-35] SYSTEM operation : Close the main window
+[2024-6-2-16-35-35] SYSTEM operation : Refresh the admins file
+[2024-6-2-16-35-35] SYSTEM operation : Stop running
+
+
+[2024-6-2-17-1-38] SYSTEM operation : Start running
+[2024-6-2-17-1-38] SYSTEM operation : Open the main window
+[2024-6-2-17-1-39] SYSTEM operation : Close the main window
+[2024-6-2-17-1-39] SYSTEM operation : Stop running
+
+
+[2024-6-2-17-3-36] SYSTEM operation : Start running
+[2024-6-2-17-3-36] SYSTEM operation : Open the main window
+[2024-6-2-17-3-41] username : admin operation : Tried to login,successed
+[2024-6-2-17-3-44] SYSTEM operation : Open the user management window
+[2024-6-2-17-3-44] username : admin operation : Start managing users
+[2024-6-2-17-3-46] username : admin operation : Tried to delete an admin account,failed
+[2024-6-2-17-4-47] username : admin operation : Tried to add an admin account,successed
+[2024-6-2-17-4-47] SYSTEM operation : Add an admin account,username:12
+[2024-6-2-17-4-50] SYSTEM operation : Close the user management window
+[2024-6-2-17-4-50] username : admin operation : Stop managing users
+[2024-6-2-17-4-51] username : admin operation : Logout
+[2024-6-2-17-4-53] username : 12 operation : Tried to login,successed
+[2024-6-2-17-4-54] SYSTEM operation : Open the comments shown window
+[2024-6-2-17-4-54] username : 12 operation : Star checking the comments
+[2024-6-2-17-4-55] SYSTEM operation : Close the comments shown window
+[2024-6-2-17-4-55] username : 12 operation : Stop checking the comments
+[2024-6-2-17-4-56] SYSTEM operation : Open the user management window
+[2024-6-2-17-4-56] username : 12 operation : Start managing users
+[2024-6-2-17-5-2] SYSTEM operation : Close the user management window
+[2024-6-2-17-5-2] username : 12 operation : Stop managing users
+[2024-6-2-17-5-3] username : 12 operation : Logout
+[2024-6-2-17-5-5] username : 12 operation : Tried to login,failed
+[2024-6-2-17-5-7] username : 12 operation : Tried to login,successed
+[2024-6-2-17-5-10] username : 12 operation : Logout
+[2024-6-2-17-5-11] SYSTEM operation : Close the main window
+[2024-6-2-17-5-11] SYSTEM operation : Refresh the admins file
+[2024-6-2-17-5-11] SYSTEM operation : Stop running
+
+
+[2024-6-2-17-17-7] SYSTEM operation : Start running
+[2024-6-2-17-17-7] SYSTEM operation : Open the main window
+[2024-6-2-17-17-12] username : admin operation : Tried to login,successed
+[2024-6-2-17-17-13] SYSTEM operation : Open the user management window
+[2024-6-2-17-17-13] username : admin operation : Start managing users
+[2024-6-2-17-17-26] SYSTEM operation : Close the user management window
+[2024-6-2-17-17-26] username : admin operation : Stop managing users
+[2024-6-2-17-17-26] SYSTEM operation : Close the main window
+[2024-6-2-17-17-26] SYSTEM operation : Stop running
+
+
+[2024-6-2-17-17-47] SYSTEM operation : Start running
+[2024-6-2-17-17-48] SYSTEM operation : Open the main window
+[2024-6-2-17-17-52] username : admin operation : Tried to login,successed
+[2024-6-2-17-17-54] SYSTEM operation : Open the user management window
+[2024-6-2-17-17-54] username : admin operation : Start managing users
+[2024-6-2-17-18-1] username : admin operation : Tried to delete a user account,successed
+[2024-6-2-17-18-1] SYSTEM operation : Delete a user account,username:1
+[2024-6-2-17-18-8] SYSTEM operation : Close the user management window
+[2024-6-2-17-18-8] username : admin operation : Stop managing users
+[2024-6-2-17-18-10] username : admin operation : Logout
+[2024-6-2-17-18-11] username : 1 operation : Tried to login,failed
+[2024-6-2-17-18-17] username : admin operation : Tried to login,successed
+[2024-6-2-17-18-18] SYSTEM operation : Open the user management window
+[2024-6-2-17-18-18] username : admin operation : Start managing users
+[2024-6-2-17-18-40] username : admin operation : Tried to add an admin account,successed
+[2024-6-2-17-18-40] SYSTEM operation : Add an admin account,username:sb
+[2024-6-2-17-18-44] username : admin operation : Tried to delete an admin account,successed
+[2024-6-2-17-18-44] SYSTEM operation : Delete an admin account,username:admin
+[2024-6-2-17-18-44] SYSTEM operation : Close the user management window
+[2024-6-2-17-18-44] username : admin operation : Stop managing users
+[2024-6-2-17-18-47] username : sb operation : Tried to login,successed
+[2024-6-2-17-18-48] SYSTEM operation : Open the user management window
+[2024-6-2-17-18-48] username : sb operation : Start managing users
+[2024-6-2-17-18-50] SYSTEM operation : Close the user management window
+[2024-6-2-17-18-50] username : sb operation : Stop managing users
+[2024-6-2-17-18-51] SYSTEM operation : Open the dishes manage window
+[2024-6-2-17-18-51] username : sb operation : Start managing the dishes
+[2024-6-2-17-19-6] username : sb operation : Tried to add new dish,successed,dish information:炒菜类 1 1 1、1、1 1 1 1
+[2024-6-2-17-19-25] username : sb operation : Tried to add new dish,successed,dish information:炒菜类 1 1 1、1、1 1 1 1
+[2024-6-2-17-19-36] username : sb operation : Tried to add new dish,successed,dish information:炒菜类 2 2 2、2、22 2 2 2
+[2024-6-2-17-19-43] username : sb operation : Tried to delete dish,successed,dish information:炒菜类 1
+[2024-6-2-17-20-1] SYSTEM operation : Close the dishes manage window
+[2024-6-2-17-20-1] username : sb operation : Stop managing the dishes
+[2024-6-2-17-20-3] username : sb operation : Logout
+[2024-6-2-17-20-5] SYSTEM operation : Close the main window
+[2024-6-2-17-20-5] SYSTEM operation : Refresh the dishes file
+[2024-6-2-17-20-5] SYSTEM operation : Refresh the users file
+[2024-6-2-17-20-5] SYSTEM operation : Refresh the admins file
+[2024-6-2-17-20-5] SYSTEM operation : Stop running
+
+
+[2024-6-2-17-22-8] SYSTEM operation : Start running
+[2024-6-2-17-22-8] SYSTEM operation : Open the main window
+[2024-6-2-17-22-11] username : sb operation : Tried to login,failed
+[2024-6-2-17-22-13] SYSTEM operation : Close the main window
+[2024-6-2-17-22-13] SYSTEM operation : Stop running
+
+
+[2024-6-2-17-23-41] SYSTEM operation : Start running
+[2024-6-2-17-23-41] SYSTEM operation : Open the main window
+[2024-6-2-17-23-52] SYSTEM operation : Close the main window
+[2024-6-2-17-23-52] SYSTEM operation : Stop running

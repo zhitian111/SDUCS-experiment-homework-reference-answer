@@ -1,0 +1,22 @@
+﻿SELECT
+    USER.NICKNAME,
+    (USER.LONGITUDE - 309)*(USER.LONGITUDE-309) + (USER.LATITUDE-470)*(USER.LATITUDE-470) AS DISTANCE
+FROM
+    USER
+WHERE
+    (USER.LONGITUDE - 309)*(USER.LONGITUDE-309) + (USER.LATITUDE-470)*(USER.LATITUDE-470) < 100
+    AND USER.UID NOT IN (
+        SELECT
+            UID1
+        FROM
+            FRIEND
+        WHERE
+            UID2 = 1
+        UNION
+        SELECT
+            UID2
+        FROM
+            FRIEND
+        WHERE
+            UID1 = 1
+    );

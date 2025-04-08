@@ -1,0 +1,95 @@
+|experiment2
+e1 <= experiment1:inst.e
+a1 => experiment1:inst.a
+b1 => experiment1:inst.b
+and => experiment1:inst.and
+and => experiment1:inst1.and
+and => experiment1:inst2.and
+and => experiment1:inst3.and
+or => experiment1:inst.or
+or => experiment1:inst1.or
+or => experiment1:inst2.or
+or => experiment1:inst3.or
+xor => experiment1:inst.xor
+xor => experiment1:inst1.xor
+xor => experiment1:inst2.xor
+xor => experiment1:inst3.xor
+e2 <= experiment1:inst1.e
+a2 => experiment1:inst1.a
+b2 => experiment1:inst1.b
+e3 <= experiment1:inst2.e
+a3 => experiment1:inst2.a
+b3 => experiment1:inst2.b
+e4 <= experiment1:inst3.e
+a4 => experiment1:inst3.a
+b4 => experiment1:inst3.b
+
+
+|experiment2|experiment1:inst
+e <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+a => inst2.IN0
+a => inst3.IN0
+a => inst5.IN0
+a => inst.IN0
+b => inst2.IN1
+b => inst4.IN0
+b => inst1.IN0
+b => inst6.IN0
+and => inst2.IN2
+or => inst4.IN1
+or => inst3.IN1
+xor => inst5.IN2
+xor => inst6.IN2
+
+
+|experiment2|experiment1:inst1
+e <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+a => inst2.IN0
+a => inst3.IN0
+a => inst5.IN0
+a => inst.IN0
+b => inst2.IN1
+b => inst4.IN0
+b => inst1.IN0
+b => inst6.IN0
+and => inst2.IN2
+or => inst4.IN1
+or => inst3.IN1
+xor => inst5.IN2
+xor => inst6.IN2
+
+
+|experiment2|experiment1:inst2
+e <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+a => inst2.IN0
+a => inst3.IN0
+a => inst5.IN0
+a => inst.IN0
+b => inst2.IN1
+b => inst4.IN0
+b => inst1.IN0
+b => inst6.IN0
+and => inst2.IN2
+or => inst4.IN1
+or => inst3.IN1
+xor => inst5.IN2
+xor => inst6.IN2
+
+
+|experiment2|experiment1:inst3
+e <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+a => inst2.IN0
+a => inst3.IN0
+a => inst5.IN0
+a => inst.IN0
+b => inst2.IN1
+b => inst4.IN0
+b => inst1.IN0
+b => inst6.IN0
+and => inst2.IN2
+or => inst4.IN1
+or => inst3.IN1
+xor => inst5.IN2
+xor => inst6.IN2
+
+

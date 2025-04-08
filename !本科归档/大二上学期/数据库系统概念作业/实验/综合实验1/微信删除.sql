@@ -1,0 +1,10 @@
+﻿DROP TABLE for_home_work.WECHAT[MOMENT]
+DROP TRIGGER for_home_work.TRG_UpdateGroupMessageCount;
+DROP TABLE for_home_work.WECHAT.[GROUP_SEND];
+DROP TABLE for_home_work.WECHAT.[JOIN];
+drop table for_home_work.WECHAT.[GROUPS];
+DROP TRIGGER for_home_work.trg_UpdateSharedCount;
+drop table for_home_work.WECHAT.[SEND];
+drop table for_home_work.WECHAT.[MESSAGE];
+DROP table for_home_work.WECHAT.[FRIEND];
+drop table for_home_work.WECHAT.[USER];

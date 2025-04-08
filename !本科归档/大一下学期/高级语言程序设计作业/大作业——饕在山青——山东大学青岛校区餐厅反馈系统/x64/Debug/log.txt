@@ -1,0 +1,13 @@
+
+
+
+[2024-5-29-19-4-35] SYSTEM operation : Start running
+[2024-5-29-19-4-36] SYSTEM operation : Open the main window
+[2024-5-29-19-5-1] SYSTEM operation : Close the main window
+[2024-5-29-19-5-1] SYSTEM operation : Stop running
+
+
+[2024-5-29-19-22-27] SYSTEM operation : Start running
+[2024-5-29-19-22-27] SYSTEM operation : Open the main window
+[2024-5-29-19-22-29] SYSTEM operation : Close the main window
+[2024-5-29-19-22-29] SYSTEM operation : Stop running

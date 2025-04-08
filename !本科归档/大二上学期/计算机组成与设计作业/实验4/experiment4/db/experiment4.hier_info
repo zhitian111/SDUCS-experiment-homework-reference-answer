@@ -1,0 +1,29 @@
+|experiment4
+e4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+a3 => inst8.IN0
+a3 => inst1.IN0
+a3 => inst15.IN0
+LM => inst8.IN1
+LM => inst9.IN1
+LM => inst10.IN1
+LM => inst11.IN1
+RM => inst13.IN1
+RM => inst14.IN1
+RM => inst15.IN1
+RM => inst16.IN1
+a4 => inst.IN0
+a4 => inst14.IN0
+DM => inst.IN1
+DM => inst1.IN1
+DM => inst2.IN1
+DM => inst3.IN1
+e3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+a2 => inst9.IN0
+a2 => inst2.IN0
+a2 => inst16.IN0
+e2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a1 => inst10.IN0
+a1 => inst3.IN0
+e1 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="stack_2-12x2-16">
+		<CBX_INST_ENTRY INSTANCE_NAME="|stack_2-12x2-16|ram_2-16x2-16:inst|ram_65536x65535:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjh1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Dec 23 00:58:54 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : ram_2-16x2-16
+Top-level Entity Name : ram_2-16x2-16
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 208 / 6,272 ( 3 % )
+    Total combinational functions : 186 / 6,272 ( 3 % )
+    Dedicated logic registers : 127 / 6,272 ( 2 % )
+Total registers : 127
+Total pins : 46 / 92 ( 50 % )
+Total virtual pins : 0
+Total memory bits : 65,536 / 276,480 ( 24 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

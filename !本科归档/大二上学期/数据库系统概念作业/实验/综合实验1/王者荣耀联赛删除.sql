@@ -1,0 +1,9 @@
+﻿drop table for_home_work.KINGSHONER.[GRAND];
+drop table for_home_work.KINGSHONER.[KILL];
+drop table for_home_work.KINGSHONER.[DAMAGE];
+drop table for_home_work.KINGSHONER.[BAN];
+drop table for_home_work.KINGSHONER.[CHOOSE];
+drop table for_home_work.KINGSHONER.[CHAMPION];
+drop table for_home_work.KINGSHONER.[MATCH];
+drop table for_home_work.KINGSHONER.[PLAYER];
+drop table for_home_work.KINGSHONER.[TEAM];
