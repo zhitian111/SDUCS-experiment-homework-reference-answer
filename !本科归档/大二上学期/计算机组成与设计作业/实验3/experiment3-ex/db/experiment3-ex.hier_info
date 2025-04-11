@@ -1,0 +1,265 @@
+|experiment3-ex
+C4 <= expreriment3:inst1.C4
+A1 => expreriment3:inst1.K
+A1 => expreriment3:inst.K
+A1 => expreriment3:inst.A1
+A1 => expreriment3:inst.C0
+A5 => expreriment3:inst1.A1
+A6 => expreriment3:inst1.A2
+A7 => expreriment3:inst1.A3
+A8 => expreriment3:inst1.A4
+B5 => expreriment3:inst1.B1
+B6 => expreriment3:inst1.B2
+B7 => expreriment3:inst1.B3
+B8 => expreriment3:inst1.B4
+A2 => expreriment3:inst.A2
+A3 => expreriment3:inst.A3
+A4 => expreriment3:inst.A4
+B1 => expreriment3:inst.B1
+B2 => expreriment3:inst.B2
+B3 => expreriment3:inst.B3
+B4 => expreriment3:inst.B4
+SUM8 <= expreriment3:inst1.SUM4
+SUM7 <= expreriment3:inst1.SUM3
+SUM6 <= expreriment3:inst1.SUM2
+SUM5 <= expreriment3:inst1.SUM1
+SUM4 <= expreriment3:inst.SUM4
+SUM3 <= expreriment3:inst.SUM3
+SUM2 <= expreriment3:inst.SUM2
+SUM1 <= expreriment3:inst.SUM1
+
+
+|experiment3-ex|expreriment3:inst1
+C4 <= 7482:inst4.C2
+A4 => 7482:inst4.A2
+K => 7486:inst.2
+K => 7486:inst1.2
+K => 7486:inst3.2
+K => 7486:inst2.2
+B4 => 7486:inst.3
+B3 => 7486:inst1.3
+A2 => 7482:inst5.A2
+B2 => 7486:inst3.3
+B1 => 7486:inst2.3
+C0 => 7482:inst5.C0
+A1 => 7482:inst5.A1
+A3 => 7482:inst4.A1
+SUM4 <= 7482:inst4.SUM2
+SUM3 <= 7482:inst4.SUM1
+SUM2 <= 7482:inst5.SUM2
+SUM1 <= 7482:inst5.SUM1
+
+
+|experiment3-ex|expreriment3:inst1|7482:inst4
+SUM1 <= 8.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 3.IN0
+A1 => 15.IN0
+A1 => 20.IN1
+A1 => 38.IN1
+A1 => 39.IN1
+B1 => 3.IN1
+B1 => 11.IN0
+B1 => 20.IN0
+B1 => 38.IN0
+B1 => 39.IN4
+B1 => 39.IN5
+C0 => 8.IN1
+C0 => 17.IN2
+C0 => 18.IN1
+C0 => 19.IN0
+C0 => 13.IN0
+C0 => 30.IN0
+C0 => 31.IN0
+C0 => 32.IN3
+C0 => 33.IN0
+SUM2 <= 27.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 14.IN0
+A2 => 19.IN2
+A2 => 21.IN1
+A2 => 29.IN0
+A2 => 30.IN1
+B2 => 16.IN0
+B2 => 19.IN1
+B2 => 22.IN0
+B2 => 29.IN1
+B2 => 31.IN1
+C2 <= 36.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|experiment3-ex|expreriment3:inst1|7486:inst
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst1|7486:inst1
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst1|7482:inst5
+SUM1 <= 8.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 3.IN0
+A1 => 15.IN0
+A1 => 20.IN1
+A1 => 38.IN1
+A1 => 39.IN1
+B1 => 3.IN1
+B1 => 11.IN0
+B1 => 20.IN0
+B1 => 38.IN0
+B1 => 39.IN4
+B1 => 39.IN5
+C0 => 8.IN1
+C0 => 17.IN2
+C0 => 18.IN1
+C0 => 19.IN0
+C0 => 13.IN0
+C0 => 30.IN0
+C0 => 31.IN0
+C0 => 32.IN3
+C0 => 33.IN0
+SUM2 <= 27.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 14.IN0
+A2 => 19.IN2
+A2 => 21.IN1
+A2 => 29.IN0
+A2 => 30.IN1
+B2 => 16.IN0
+B2 => 19.IN1
+B2 => 22.IN0
+B2 => 29.IN1
+B2 => 31.IN1
+C2 <= 36.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|experiment3-ex|expreriment3:inst1|7486:inst3
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst1|7486:inst2
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst
+C4 <= 7482:inst4.C2
+A4 => 7482:inst4.A2
+K => 7486:inst.2
+K => 7486:inst1.2
+K => 7486:inst3.2
+K => 7486:inst2.2
+B4 => 7486:inst.3
+B3 => 7486:inst1.3
+A2 => 7482:inst5.A2
+B2 => 7486:inst3.3
+B1 => 7486:inst2.3
+C0 => 7482:inst5.C0
+A1 => 7482:inst5.A1
+A3 => 7482:inst4.A1
+SUM4 <= 7482:inst4.SUM2
+SUM3 <= 7482:inst4.SUM1
+SUM2 <= 7482:inst5.SUM2
+SUM1 <= 7482:inst5.SUM1
+
+
+|experiment3-ex|expreriment3:inst|7482:inst4
+SUM1 <= 8.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 3.IN0
+A1 => 15.IN0
+A1 => 20.IN1
+A1 => 38.IN1
+A1 => 39.IN1
+B1 => 3.IN1
+B1 => 11.IN0
+B1 => 20.IN0
+B1 => 38.IN0
+B1 => 39.IN4
+B1 => 39.IN5
+C0 => 8.IN1
+C0 => 17.IN2
+C0 => 18.IN1
+C0 => 19.IN0
+C0 => 13.IN0
+C0 => 30.IN0
+C0 => 31.IN0
+C0 => 32.IN3
+C0 => 33.IN0
+SUM2 <= 27.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 14.IN0
+A2 => 19.IN2
+A2 => 21.IN1
+A2 => 29.IN0
+A2 => 30.IN1
+B2 => 16.IN0
+B2 => 19.IN1
+B2 => 22.IN0
+B2 => 29.IN1
+B2 => 31.IN1
+C2 <= 36.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|experiment3-ex|expreriment3:inst|7486:inst
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst|7486:inst1
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst|7482:inst5
+SUM1 <= 8.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 3.IN0
+A1 => 15.IN0
+A1 => 20.IN1
+A1 => 38.IN1
+A1 => 39.IN1
+B1 => 3.IN1
+B1 => 11.IN0
+B1 => 20.IN0
+B1 => 38.IN0
+B1 => 39.IN4
+B1 => 39.IN5
+C0 => 8.IN1
+C0 => 17.IN2
+C0 => 18.IN1
+C0 => 19.IN0
+C0 => 13.IN0
+C0 => 30.IN0
+C0 => 31.IN0
+C0 => 32.IN3
+C0 => 33.IN0
+SUM2 <= 27.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 14.IN0
+A2 => 19.IN2
+A2 => 21.IN1
+A2 => 29.IN0
+A2 => 30.IN1
+B2 => 16.IN0
+B2 => 19.IN1
+B2 => 22.IN0
+B2 => 29.IN1
+B2 => 31.IN1
+C2 <= 36.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|experiment3-ex|expreriment3:inst|7486:inst3
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+
+|experiment3-ex|expreriment3:inst|7486:inst2
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+3 => 4.IN1
+
+

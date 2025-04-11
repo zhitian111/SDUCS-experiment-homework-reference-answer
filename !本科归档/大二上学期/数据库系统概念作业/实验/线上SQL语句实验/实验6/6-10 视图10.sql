@@ -1,0 +1,8 @@
+﻿CREATE OR REPLACE VIEW TEST6_10 AS
+    SELECT
+        SUBSTR(NAME, 1, 1) AS SECOND_NAME,
+        COUNT(*)           AS P_COUNT
+    FROM
+        PUB.STUDENT
+    GROUP BY
+        SUBSTR(NAME, 1, 1);

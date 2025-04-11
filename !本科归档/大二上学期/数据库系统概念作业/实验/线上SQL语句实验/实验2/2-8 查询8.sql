@@ -1,0 +1,24 @@
+﻿  CREATE OR REPLACE VIEW TEST2_08 AS WITH CITE AS(
+    SELECT
+        DISTINCT COUNT(PUB.COURSE.CID) AS CNT
+    FROM
+        PUB.COURSE
+)
+    SELECT
+        DISTINCT PUB.STUDENT.SID,
+        PUB.STUDENT.NAME
+    FROM
+        PUB.STUDENT,
+        PUB.STUDENT_COURSE
+    WHERE
+        PUB.STUDENT.SID = PUB.STUDENT_COURSE.SID
+    GROUP BY
+        PUB.STUDENT.SID,
+        PUB.STUDENT.NAME
+    HAVING
+        COUNT(DISTINCT PUB.STUDENT_COURSE.CID) = (
+            SELECT
+                CNT
+            FROM
+                CITE
+        );

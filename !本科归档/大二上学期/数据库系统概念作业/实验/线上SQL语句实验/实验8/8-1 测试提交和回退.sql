@@ -1,0 +1,198 @@
+﻿COMMIT;
+ROLLBACK;
+
+CREATE TABLE TEST8_01(
+    TEST VARCHAR(20),
+    AGE NUMERIC(3)
+);
+
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果1',
+    31
+);
+
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果2',
+    33
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果3',
+    33
+);
+
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果4',
+    29
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果5',
+    33
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果6',
+    33
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果7',
+    29
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果8',
+    29
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果9',
+    19
+);
+INSERT INTO TEST8_01 (
+    TEST,
+    AGE
+) VALUES (
+    '结果10',
+    29
+);
+
+CREATE TABLE TEST8_00 AS
+    SELECT
+        *
+    FROM
+        PUB.TEACHER
+    WHERE
+        AGE = 36;
+
+GRANT ALL ON TEST8_00 TO user202300130183;
+
+--临时账号
+UPDATE TEST8_00
+SET
+    AGE=EXTRACT(
+        YEAR FROM SYSDATE
+    )-1993;
+
+SELECT
+    *
+FROM
+    TEST8_00;
+
+COMMIT;
+
+ROLLBACK;
+
+UPDATE TEST8_00
+SET
+    AGE=AGE+1;
+
+ROLLBACK;
+
+COMMIT;
+
+UPDATE TEST8_00
+SET
+    AGE=AGE+2;
+
+COMMIT;
+
+SELECT
+    *
+FROM
+    TEST8_00;
+
+ROLLBACK;
+
+--主账号
+SELECT
+    *
+FROM
+    USER902300130183.TEST8_00;
+
+--临时账号
+UPDATE TEST8_00
+SET
+    AGE=AGE-2;
+
+UPDATE TEST8_00
+SET
+    AGE=AGE-2;
+
+SELECT
+    *
+FROM
+    TEST8_00;
+
+--主账号
+SELECT
+    *
+FROM
+    USER902300130183.TEST8_00;
+
+COMMIT;
+
+SELECT
+    *
+FROM
+    USER902300130183.TEST8_00;
+
+ROLLBACK;
+
+UPDATE USER9ID.TEST8_00
+SET
+    AGE=AGE-10;
+
+--临时账号
+SELECT
+    *
+FROM
+    TEST8_00;
+
+CREATE TABLE TEST8_05 AS
+    SELECT
+        *
+    FROM
+        TEST8_00;
+
+ROLLBACK;
+
+SELECT
+    *
+FROM
+    USER902300130183.TEST8_00;
+
+--主账号
+SELECT
+    *
+FROM
+    USER902300130183.TEST8_00;
+
+ROLLBACK;
+
+SELECT
+    *
+FROM
+    USER902300130183.TEST8_00;

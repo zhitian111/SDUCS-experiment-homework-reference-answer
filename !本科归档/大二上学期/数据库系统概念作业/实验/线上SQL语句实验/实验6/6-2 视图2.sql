@@ -1,0 +1,32 @@
+﻿CREATE OR REPLACE VIEW TEST6_02 AS
+    SELECT
+        PUB.STUDENT.SID,
+        PUB.STUDENT.NAME,
+        SUM(PUB.STUDENT_COURSE.SCORE) AS SUM_SCORE
+    FROM
+        PUB.STUDENT,
+        PUB.STUDENT_COURSE
+    WHERE
+        PUB.STUDENT.SID = PUB.STUDENT_COURSE.SID
+        AND PUB.STUDENT.DNAME='软件学院'
+        AND PUB.STUDENT.CLASS = '2009'
+    GROUP BY
+        PUB.STUDENT.SID,
+        PUB.STUDENT.NAME
+    UNION
+    ALL
+    SELECT
+        PUB.STUDENT.SID,
+        PUB.STUDENT.NAME,
+        NULL                          AS SUM_SCORE
+    FROM
+        PUB.STUDENT
+    WHERE
+        PUB.STUDENT.DNAME='软件学院'
+        AND PUB.STUDENT.CLASS = '2009'
+        AND PUB.STUDENT.SID NOT IN (
+            SELECT
+                SID
+            FROM
+                PUB.STUDENT_COURSE
+        );

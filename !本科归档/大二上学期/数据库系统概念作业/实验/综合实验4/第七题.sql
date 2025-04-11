@@ -1,0 +1,14 @@
+﻿SELECT
+    COUNT(*) AS CNT
+FROM
+    GROUPS
+    JOIN JOINGROUP
+    ON GROUPS.GID = JOINGROUP.GID
+WHERE
+    GROUPS.GID = '1'
+    AND JOINGROUP.UID IN (
+        SELECT
+            UID
+        FROM
+            USER1_FRIEND
+    );

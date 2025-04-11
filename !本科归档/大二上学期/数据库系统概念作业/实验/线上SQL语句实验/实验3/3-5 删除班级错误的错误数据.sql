@@ -1,0 +1,11 @@
+﻿CREATE TABLE TEST3_05 AS
+    SELECT
+        *
+    FROM
+        PUB.STUDENT_31;
+
+drop table TEST3_05;
+
+DELETE FROM TEST3_05
+WHERE
+    LENGTH(CLASS)>4;

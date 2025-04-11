@@ -1,0 +1,23 @@
+﻿SELECT
+    STORES.NAME,
+    STORES.LEVEL,
+    SUM(ONSELL.PRICE)     AS SM,
+    CNT,
+    AVG(ORDERS.BUYERRATE) AS AV
+FROM
+    STORES,
+    (
+        SELECT
+            COUNT(*) AS CNT
+        FROM
+            ONSELL
+        WHERE
+            ONSELL.SID = 1
+    )      
+    JOIN ONSELL
+    ON STORES.SID = ONSELL.SID
+    JOIN ORDERS
+    ON ONSELL.CID = ORDERS.CID
+    AND STORES.SID = ORDERS.SID
+WHERE
+    STORES.SID = 1;

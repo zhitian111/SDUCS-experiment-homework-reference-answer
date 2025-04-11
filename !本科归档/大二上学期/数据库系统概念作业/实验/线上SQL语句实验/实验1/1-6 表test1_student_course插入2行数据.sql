@@ -1,0 +1,15 @@
+﻿INSERT INTO TEST1_STUDENT_COURSE VALUES(
+    '201800020101',
+    '300001',
+    91.5,
+    '200101',
+    TO_DATE('2009-07-15 09:09:09', 'yyyy-mm-dd hh24:mi:ss')
+);
+
+INSERT INTO TEST1_STUDENT_COURSE VALUES(
+    '201800020101',
+    '300002',
+    92.6,
+    '200102',
+    TO_DATE('2009-07-15 10:10:10', 'yyyy-mm-dd hh24:mi:ss')
+);

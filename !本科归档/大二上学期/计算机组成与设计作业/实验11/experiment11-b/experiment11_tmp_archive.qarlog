@@ -1,0 +1,25 @@
+Quartus II Archive log --	F:/FPGA Tools/experiment11/experiment11_tmp_archive.qarlog
+
+Archive:	F:/FPGA Tools/experiment11/experiment11_tmp_archive.qar
+Date:		Tue Nov 19 09:09:34 2024
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+
+	=========== Files Selected: ===========
+F:/FPGA Tools/experiment11/Waveform.vwf
+F:/FPGA Tools/experiment11/experiment11.bdf
+F:/FPGA Tools/experiment11/experiment11.qpf
+F:/FPGA Tools/experiment11/experiment11.qsf
+F:/FPGA Tools/experiment11/experiment11_qsim.qsf
+F:/FPGA Tools/experiment11/incremental_db/compiled_partitions/experiment11.db_info
+F:/FPGA Tools/experiment11/incremental_db/compiled_partitions/experiment11_qsim.db_info
+f:/fpga tools/quartus ii/quartus/bin64/assignment_defaults.qdf
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Nov 19 09:09:36 2024
+Source archive file:	F:/FPGA Tools/experiment11/experiment11_tmp_archive.qar
+Archive was extracted into	C:/Users/23676/Desktop/
+		 - successfully.

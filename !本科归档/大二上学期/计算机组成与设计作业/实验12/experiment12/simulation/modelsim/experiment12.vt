@@ -1,0 +1,90 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "11/27/2024 16:57:37"
+                                                                                
+// Verilog Test Bench template for design : experiment12
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module experiment12_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clock;
+reg IN1;
+reg IN2;
+reg IN3;
+reg IN4;
+reg mode;
+reg S0;
+reg S1;
+// wires                                               
+wire OUT1;
+wire OUT2;
+wire OUT3;
+wire OUT4;
+wire OUT5;
+wire OUT6;
+wire OUT7;
+wire OUT8;
+
+// assign statements (if any)                          
+experiment12 i1 (
+// port map - connection between master ports and signals/registers   
+	.clock(clock),
+	.IN1(IN1),
+	.IN2(IN2),
+	.IN3(IN3),
+	.IN4(IN4),
+	.mode(mode),
+	.OUT1(OUT1),
+	.OUT2(OUT2),
+	.OUT3(OUT3),
+	.OUT4(OUT4),
+	.OUT5(OUT5),
+	.OUT6(OUT6),
+	.OUT7(OUT7),
+	.OUT8(OUT8),
+	.S0(S0),
+	.S1(S1)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+
