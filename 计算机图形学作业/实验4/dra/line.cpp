@@ -469,7 +469,7 @@ void catmull_clark()
   new_points_tmp.push_back(all_points[0]);
   new_faces.push_back(all_faces[0]);
   new_edges.push_back(all_edges[0]);
-
+  edge_points = edge_avg_points;
   for (auto& i : all_faces)
   {
     if (i.points.size() == 4)
