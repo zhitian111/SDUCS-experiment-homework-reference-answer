@@ -232,8 +232,15 @@ class DecisionNode:
         
         positive_set = DataSet.from_list(positive_features_list, positive_labels_list, self.divided_set.features_names, self.divided_set.labels_names)
         negative_set = DataSet.from_list(negative_features_list, negative_labels_list, self.divided_set.features_names, self.divided_set.labels_names)
+        
         selectable_features = [i for i in self.selectable_features]
+        selectable_features.remove(feature_name) 
+        '''
+        上方的
         selectable_features.remove(feature_name)
+        这一句在标准的决策树算法中是不存在的，
+        这里这样做是为了加快模型收敛速度以及让模型能够将输入的特征全部包含
+        '''
 
         if positive_set.data_count == 0:
             if list(self.divided_set.labels_count.values())[0] > list(self.divided_set.labels_count.values())[1]:
