@@ -24,6 +24,7 @@
 !*.m
 !*.dat
 !*.old
+!*.hpp
 *.ppt
 *.pptx
 *.zip
