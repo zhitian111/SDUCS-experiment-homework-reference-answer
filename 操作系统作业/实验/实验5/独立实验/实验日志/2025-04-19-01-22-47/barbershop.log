@@ -1,0 +1,88 @@
+[ 2025-04-19 01:22:47 ] Pid : 198227, barbershop start running...
+[ 2025-04-19 01:22:47 ] Pid : 198227, customer receiver start running...
+[ 2025-04-19 01:22:47 ] Pid : 198227, cashier receiver start running...
+[ 2025-04-19 01:22:47 ] Pid : 198227, shop running timer start running...
+[ 2025-04-19 01:22:47 ] Pid : 198227, customer mover start running...
+[ 2025-04-19 01:22:47 ] Pid : 198227, cashier mover start running...
+[ 2025-04-19 01:22:48 ] Pid : 198227, key_cnt: 15
+[ 2025-04-19 01:22:48 ] Pid : 198227, customer received and moved to wait room id: 0
+[ 2025-04-19 01:22:48 ] Pid : 198227, current customer count: 2
+[ 2025-04-19 01:22:48 ] Pid : 198227, customer moved to sofa id: 0
+[ 2025-04-19 01:22:49 ] Pid : 198227, key_cnt: 18
+[ 2025-04-19 01:22:49 ] Pid : 198227, customer received and moved to wait room id: 1
+[ 2025-04-19 01:22:49 ] Pid : 198227, current customer count: 4
+[ 2025-04-19 01:22:49 ] Pid : 198227, customer moved to sofa id: 1
+[ 2025-04-19 01:22:49 ] Pid : 198227, customer finished service and moved to cashier id: 0
+[ 2025-04-19 01:22:50 ] Pid : 198227, key_cnt: 21
+[ 2025-04-19 01:22:50 ] Pid : 198227, customer received and moved to wait room id: 2
+[ 2025-04-19 01:22:50 ] Pid : 198227, current customer count: 6
+[ 2025-04-19 01:22:50 ] Pid : 198227, customer moved to sofa id: 2
+[ 2025-04-19 01:22:50 ] Pid : 198227, customer finished service and moved to cashier id: 1
+[ 2025-04-19 01:22:50 ] Pid : 198227, customer paid money id: 0
+[ 2025-04-19 01:22:50 ] Pid : 198227, received money: 3.78751
+[ 2025-04-19 01:22:50 ] Pid : 198227, current money: 3.78751
+[ 2025-04-19 01:22:51 ] Pid : 198227, key_cnt: 24
+[ 2025-04-19 01:22:51 ] Pid : 198227, customer received and moved to wait room id: 3
+[ 2025-04-19 01:22:51 ] Pid : 198227, current customer count: 7
+[ 2025-04-19 01:22:51 ] Pid : 198227, customer moved to sofa id: 3
+[ 2025-04-19 01:22:51 ] Pid : 198227, customer finished service and moved to cashier id: 2
+[ 2025-04-19 01:22:51 ] Pid : 198227, customer paid money id: 1
+[ 2025-04-19 01:22:51 ] Pid : 198227, received money: 0.983091
+[ 2025-04-19 01:22:51 ] Pid : 198227, current money: 4.77061
+[ 2025-04-19 01:22:52 ] Pid : 198227, key_cnt: 27
+[ 2025-04-19 01:22:52 ] Pid : 198227, customer received and moved to wait room id: 4
+[ 2025-04-19 01:22:52 ] Pid : 198227, current customer count: 8
+[ 2025-04-19 01:22:52 ] Pid : 198227, customer moved to sofa id: 4
+[ 2025-04-19 01:22:52 ] Pid : 198227, customer finished service and moved to cashier id: 3
+[ 2025-04-19 01:22:52 ] Pid : 198227, customer paid money id: 2
+[ 2025-04-19 01:22:52 ] Pid : 198227, received money: 8.0968
+[ 2025-04-19 01:22:52 ] Pid : 198227, current money: 12.8674
+[ 2025-04-19 01:22:53 ] Pid : 198227, key_cnt: 30
+[ 2025-04-19 01:22:53 ] Pid : 198227, customer received and moved to wait room id: 5
+[ 2025-04-19 01:22:53 ] Pid : 198227, current customer count: 9
+[ 2025-04-19 01:22:53 ] Pid : 198227, customer moved to sofa id: 5
+[ 2025-04-19 01:22:53 ] Pid : 198227, customer finished service and moved to cashier id: 4
+[ 2025-04-19 01:22:53 ] Pid : 198227, customer paid money id: 3
+[ 2025-04-19 01:22:53 ] Pid : 198227, received money: 5.22709
+[ 2025-04-19 01:22:53 ] Pid : 198227, current money: 18.0945
+[ 2025-04-19 01:22:54 ] Pid : 198227, key_cnt: 33
+[ 2025-04-19 01:22:54 ] Pid : 198227, customer received and moved to wait room id: 6
+[ 2025-04-19 01:22:54 ] Pid : 198227, current customer count: 10
+[ 2025-04-19 01:22:54 ] Pid : 198227, customer moved to sofa id: 6
+[ 2025-04-19 01:22:54 ] Pid : 198227, customer finished service and moved to cashier id: 5
+[ 2025-04-19 01:22:54 ] Pid : 198227, customer paid money id: 4
+[ 2025-04-19 01:22:54 ] Pid : 198227, received money: 2.32432
+[ 2025-04-19 01:22:54 ] Pid : 198227, current money: 20.4188
+[ 2025-04-19 01:22:55 ] Pid : 198227, key_cnt: 36
+[ 2025-04-19 01:22:55 ] Pid : 198227, customer received and moved to wait room id: 7
+[ 2025-04-19 01:22:55 ] Pid : 198227, current customer count: 11
+[ 2025-04-19 01:22:55 ] Pid : 198227, customer moved to sofa id: 7
+[ 2025-04-19 01:22:55 ] Pid : 198227, customer finished service and moved to cashier id: 6
+[ 2025-04-19 01:22:55 ] Pid : 198227, customer paid money id: 5
+[ 2025-04-19 01:22:55 ] Pid : 198227, received money: 9.67805
+[ 2025-04-19 01:22:55 ] Pid : 198227, current money: 30.0969
+[ 2025-04-19 01:22:56 ] Pid : 198227, key_cnt: 39
+[ 2025-04-19 01:22:56 ] Pid : 198227, customer received and moved to wait room id: 8
+[ 2025-04-19 01:22:56 ] Pid : 198227, current customer count: 12
+[ 2025-04-19 01:22:56 ] Pid : 198227, customer moved to sofa id: 8
+[ 2025-04-19 01:22:56 ] Pid : 198227, customer finished service and moved to cashier id: 7
+[ 2025-04-19 01:22:56 ] Pid : 198227, customer paid money id: 6
+[ 2025-04-19 01:22:56 ] Pid : 198227, received money: 6.73323
+[ 2025-04-19 01:22:56 ] Pid : 198227, current money: 36.8301
+[ 2025-04-19 01:22:57 ] Pid : 198227, key_cnt: 42
+[ 2025-04-19 01:22:57 ] Pid : 198227, customer received and moved to wait room id: 9
+[ 2025-04-19 01:22:57 ] Pid : 198227, current customer count: 13
+[ 2025-04-19 01:22:57 ] Pid : 198227, customer moved to sofa id: 9
+[ 2025-04-19 01:22:57 ] Pid : 198227, customer finished service and moved to cashier id: 8
+[ 2025-04-19 01:22:57 ] Pid : 198227, customer paid money id: 7
+[ 2025-04-19 01:22:57 ] Pid : 198227, received money: 13.944
+[ 2025-04-19 01:22:57 ] Pid : 198227, current money: 50.7741
+[ 2025-04-19 01:22:58 ] Pid : 198227, key_cnt: 45
+[ 2025-04-19 01:22:58 ] Pid : 198227, customer received and moved to wait room id: 10
+[ 2025-04-19 01:22:58 ] Pid : 198227, current customer count: 14
+[ 2025-04-19 01:22:58 ] Pid : 198227, customer moved to sofa id: 10
+[ 2025-04-19 01:22:58 ] Pid : 198227, customer finished service and moved to cashier id: 9
+[ 2025-04-19 01:22:58 ] Pid : 198227, customer paid money id: 8
+[ 2025-04-19 01:22:58 ] Pid : 198227, received money: 1.09435
+[ 2025-04-19 01:22:58 ] Pid : 198227, current money: 51.8684
+[ 2025-04-19 01:22:59 ] Pid : 198227, barbershop is closing...

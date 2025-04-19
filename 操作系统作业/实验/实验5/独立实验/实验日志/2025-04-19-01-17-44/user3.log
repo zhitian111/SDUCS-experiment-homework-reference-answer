@@ -1,0 +1,10 @@
+[ 2025-04-19 01:17:44 ] Pid : 194600, spawned
+[ 2025-04-19 01:17:45 ] Pid : 194600, customer_count: 2
+[ 2025-04-19 01:17:45 ] Pid : 194600, capacity available, customer enters
+[ 2025-04-19 01:17:46 ] Pid : 194600, key_cnt: 18
+[ 2025-04-19 01:17:47 ] Pid : 194600, customer is seated
+[ 2025-04-19 01:17:47 ] Pid : 194600, customer is ready to cut hair
+[ 2025-04-19 01:17:48 ] Pid : 194600, customer finished getting hair cut
+[ 2025-04-19 01:17:48 ] Pid : 194600, customer is waiting for payment
+[ 2025-04-19 01:17:49 ] Pid : 194600, customer paid: 11.9914
+[ 2025-04-19 01:17:49 ] Pid : 194600, customer is leaving

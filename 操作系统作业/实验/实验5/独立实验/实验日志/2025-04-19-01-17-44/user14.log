@@ -1,0 +1,4 @@
+[ 2025-04-19 01:17:47 ] Pid : 194645, spawned
+[ 2025-04-19 01:17:48 ] Pid : 194645, customer_count: 7
+[ 2025-04-19 01:17:48 ] Pid : 194645, capacity available, customer enters
+[ 2025-04-19 01:17:56 ] Pid : 194645, barber shop is closed, have to end consumption

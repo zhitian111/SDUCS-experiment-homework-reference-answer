@@ -1,0 +1,120 @@
+[ 2025-04-19 01:22:47 ] Pid : 198243, spawned
+[ 2025-04-19 01:22:47 ] Pid : 198243, customer_count: 0
+[ 2025-04-19 01:22:47 ] Pid : 198243, capacity available, customer enters
+[ 2025-04-19 01:22:48 ] Pid : 198243, key_cnt: 15
+[ 2025-04-19 01:22:48 ] Pid : 198243, customer is seated
+[ 2025-04-19 01:22:48 ] Pid : 198243, customer is ready to cut hair
+[ 2025-04-19 01:22:48 ] Pid : 198251, spawned
+[ 2025-04-19 01:22:48 ] Pid : 198251, customer_count: 2
+[ 2025-04-19 01:22:48 ] Pid : 198251, capacity available, customer enters
+[ 2025-04-19 01:22:49 ] Pid : 198251, key_cnt: 18
+[ 2025-04-19 01:22:49 ] Pid : 198251, customer is seated
+[ 2025-04-19 01:22:49 ] Pid : 198251, customer is ready to cut hair
+[ 2025-04-19 01:22:49 ] Pid : 198243, customer finished getting hair cut
+[ 2025-04-19 01:22:49 ] Pid : 198243, customer is waiting for payment
+[ 2025-04-19 01:22:49 ] Pid : 198259, spawned
+[ 2025-04-19 01:22:49 ] Pid : 198259, customer_count: 4
+[ 2025-04-19 01:22:49 ] Pid : 198259, capacity available, customer enters
+[ 2025-04-19 01:22:50 ] Pid : 198259, key_cnt: 21
+[ 2025-04-19 01:22:50 ] Pid : 198259, customer is seated
+[ 2025-04-19 01:22:50 ] Pid : 198259, customer is ready to cut hair
+[ 2025-04-19 01:22:50 ] Pid : 198243, customer paid: 3.78751
+[ 2025-04-19 01:22:50 ] Pid : 198243, customer is leaving
+[ 2025-04-19 01:22:50 ] Pid : 198267, spawned
+[ 2025-04-19 01:22:50 ] Pid : 198267, customer_count: 5
+[ 2025-04-19 01:22:50 ] Pid : 198267, capacity available, customer enters
+[ 2025-04-19 01:22:51 ] Pid : 198267, key_cnt: 24
+[ 2025-04-19 01:22:51 ] Pid : 198267, customer is seated
+[ 2025-04-19 01:22:51 ] Pid : 198267, customer is ready to cut hair
+[ 2025-04-19 01:22:51 ] Pid : 198251, customer finished getting hair cut
+[ 2025-04-19 01:22:51 ] Pid : 198251, customer is waiting for payment
+[ 2025-04-19 01:22:51 ] Pid : 198251, customer paid: 0.983091
+[ 2025-04-19 01:22:51 ] Pid : 198251, customer is leaving
+[ 2025-04-19 01:22:51 ] Pid : 198275, spawned
+[ 2025-04-19 01:22:51 ] Pid : 198275, customer_count: 6
+[ 2025-04-19 01:22:51 ] Pid : 198275, capacity available, customer enters
+[ 2025-04-19 01:22:52 ] Pid : 198275, key_cnt: 27
+[ 2025-04-19 01:22:52 ] Pid : 198275, customer is seated
+[ 2025-04-19 01:22:52 ] Pid : 198275, customer is ready to cut hair
+[ 2025-04-19 01:22:52 ] Pid : 198259, customer finished getting hair cut
+[ 2025-04-19 01:22:52 ] Pid : 198259, customer is waiting for payment
+[ 2025-04-19 01:22:52 ] Pid : 198259, customer paid: 8.0968
+[ 2025-04-19 01:22:52 ] Pid : 198259, customer is leaving
+[ 2025-04-19 01:22:52 ] Pid : 198283, spawned
+[ 2025-04-19 01:22:52 ] Pid : 198283, customer_count: 7
+[ 2025-04-19 01:22:52 ] Pid : 198283, capacity available, customer enters
+[ 2025-04-19 01:22:53 ] Pid : 198283, key_cnt: 30
+[ 2025-04-19 01:22:53 ] Pid : 198283, customer is seated
+[ 2025-04-19 01:22:53 ] Pid : 198283, customer is ready to cut hair
+[ 2025-04-19 01:22:53 ] Pid : 198267, customer finished getting hair cut
+[ 2025-04-19 01:22:53 ] Pid : 198267, customer is waiting for payment
+[ 2025-04-19 01:22:53 ] Pid : 198267, customer paid: 5.22709
+[ 2025-04-19 01:22:53 ] Pid : 198267, customer is leaving
+[ 2025-04-19 01:22:53 ] Pid : 198291, spawned
+[ 2025-04-19 01:22:53 ] Pid : 198291, customer_count: 8
+[ 2025-04-19 01:22:53 ] Pid : 198291, capacity available, customer enters
+[ 2025-04-19 01:22:54 ] Pid : 198291, key_cnt: 33
+[ 2025-04-19 01:22:54 ] Pid : 198291, customer is seated
+[ 2025-04-19 01:22:54 ] Pid : 198291, customer is ready to cut hair
+[ 2025-04-19 01:22:54 ] Pid : 198275, customer finished getting hair cut
+[ 2025-04-19 01:22:54 ] Pid : 198275, customer is waiting for payment
+[ 2025-04-19 01:22:54 ] Pid : 198275, customer paid: 2.32432
+[ 2025-04-19 01:22:54 ] Pid : 198275, customer is leaving
+[ 2025-04-19 01:22:54 ] Pid : 198299, spawned
+[ 2025-04-19 01:22:54 ] Pid : 198299, customer_count: 9
+[ 2025-04-19 01:22:54 ] Pid : 198299, capacity available, customer enters
+[ 2025-04-19 01:22:55 ] Pid : 198299, key_cnt: 36
+[ 2025-04-19 01:22:55 ] Pid : 198299, customer is seated
+[ 2025-04-19 01:22:55 ] Pid : 198299, customer is ready to cut hair
+[ 2025-04-19 01:22:55 ] Pid : 198283, customer finished getting hair cut
+[ 2025-04-19 01:22:55 ] Pid : 198283, customer is waiting for payment
+[ 2025-04-19 01:22:55 ] Pid : 198283, customer paid: 9.67805
+[ 2025-04-19 01:22:55 ] Pid : 198283, customer is leaving
+[ 2025-04-19 01:22:55 ] Pid : 198307, spawned
+[ 2025-04-19 01:22:55 ] Pid : 198307, customer_count: 10
+[ 2025-04-19 01:22:55 ] Pid : 198307, capacity available, customer enters
+[ 2025-04-19 01:22:56 ] Pid : 198307, key_cnt: 39
+[ 2025-04-19 01:22:56 ] Pid : 198307, customer is seated
+[ 2025-04-19 01:22:56 ] Pid : 198307, customer is ready to cut hair
+[ 2025-04-19 01:22:56 ] Pid : 198291, customer finished getting hair cut
+[ 2025-04-19 01:22:56 ] Pid : 198291, customer is waiting for payment
+[ 2025-04-19 01:22:56 ] Pid : 198291, customer paid: 6.73323
+[ 2025-04-19 01:22:56 ] Pid : 198291, customer is leaving
+[ 2025-04-19 01:22:56 ] Pid : 198315, spawned
+[ 2025-04-19 01:22:56 ] Pid : 198315, customer_count: 11
+[ 2025-04-19 01:22:56 ] Pid : 198315, capacity available, customer enters
+[ 2025-04-19 01:22:57 ] Pid : 198315, key_cnt: 42
+[ 2025-04-19 01:22:57 ] Pid : 198315, customer is seated
+[ 2025-04-19 01:22:57 ] Pid : 198315, customer is ready to cut hair
+[ 2025-04-19 01:22:57 ] Pid : 198299, customer finished getting hair cut
+[ 2025-04-19 01:22:57 ] Pid : 198299, customer is waiting for payment
+[ 2025-04-19 01:22:57 ] Pid : 198299, customer paid: 13.944
+[ 2025-04-19 01:22:57 ] Pid : 198299, customer is leaving
+[ 2025-04-19 01:22:57 ] Pid : 198323, spawned
+[ 2025-04-19 01:22:57 ] Pid : 198323, customer_count: 12
+[ 2025-04-19 01:22:57 ] Pid : 198323, capacity available, customer enters
+[ 2025-04-19 01:22:58 ] Pid : 198323, key_cnt: 45
+[ 2025-04-19 01:22:58 ] Pid : 198323, customer is seated
+[ 2025-04-19 01:22:58 ] Pid : 198323, customer is ready to cut hair
+[ 2025-04-19 01:22:58 ] Pid : 198307, customer finished getting hair cut
+[ 2025-04-19 01:22:58 ] Pid : 198307, customer is waiting for payment
+[ 2025-04-19 01:22:58 ] Pid : 198307, customer paid: 1.09435
+[ 2025-04-19 01:22:58 ] Pid : 198307, customer is leaving
+[ 2025-04-19 01:22:58 ] Pid : 198331, spawned
+[ 2025-04-19 01:22:58 ] Pid : 198331, customer_count: 13
+[ 2025-04-19 01:22:58 ] Pid : 198331, capacity available, customer enters
+[ 2025-04-19 01:22:59 ] Pid : 198315, barber shop is closed, have to end consumption
+[ 2025-04-19 01:22:59 ] Pid : 198323, barber shop is closed, have to end consumption
+[ 2025-04-19 01:22:59 ] Pid : 198331, barber shop is closed, have to end consumption
+[ 2025-04-19 01:22:59 ] Pid : 198339, spawned
+[ 2025-04-19 01:22:59 ] Pid : 198339, customer_count: 13
+[ 2025-04-19 01:22:59 ] Pid : 198339, barber shop is closed, cannot enter
+[ 2025-04-19 01:23:00 ] Pid : 198339, barber shop is closed, have to end consumption
+[ 2025-04-19 01:23:00 ] Pid : 198347, spawned
+[ 2025-04-19 01:23:00 ] Pid : 198347, customer_count: 13
+[ 2025-04-19 01:23:00 ] Pid : 198347, barber shop is closed, cannot enter
+[ 2025-04-19 01:23:01 ] Pid : 198347, barber shop is closed, have to end consumption
+[ 2025-04-19 01:23:01 ] Pid : 198355, spawned
+[ 2025-04-19 01:23:01 ] Pid : 198355, customer_count: 13
+[ 2025-04-19 01:23:01 ] Pid : 198355, barber shop is closed, cannot enter
+[ 2025-04-19 01:23:02 ] Pid : 198355, barber shop is closed, have to end consumption
