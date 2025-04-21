@@ -1,11 +1,13 @@
 
 #include <algorithm>
+#include <cmath>
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
 #include <eigen3/Eigen/Core>
 #include <fstream>
 #include <iostream>
+#include <limits>
 #include <opencv2/core/types.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/opencv.hpp>
@@ -30,13 +32,13 @@ constexpr auto x_min = (WINDOW_WIDTH - FRAMEWORK_WIDTH) / 2;
 class LineSegmentParametricEquation2f
 {
 private:
-  Eigen::Vector2f p0, t;
+  Eigen::Vector2f p0, t, p1;
   float upper_bound, lower_bound;
 
 public:
   LineSegmentParametricEquation2f(const Eigen::Vector2f& p0,
                                   const Eigen::Vector2f& p1)
-      : p0(p0)
+      : p0(p0), p1(p1)
   {
     float dx = p1.x() - p0.x();
     float dy = p1.y() - p0.y();
@@ -49,6 +51,8 @@ public:
   {
     this->p0[0] = p0[0];
     this->p0[1] = p0[1];
+    this->p1[0] = p1[0];
+    this->p1[1] = p1[1];
     float dx = p1[0] - p0[0];
     float dy = p1[1] - p0[1];
     t = Eigen::Vector2f(dy, dx);
@@ -73,6 +77,7 @@ class LineSegmentNormalEquation2f
 private:
   float a, b, c;
   float upper_bound, lower_bound;
+  Eigen::Vector2f p0, p1;
 
 public:
   LineSegmentNormalEquation2f(const Eigen::Vector2f& p0,
@@ -83,6 +88,8 @@ public:
     c = p0[0] * p1[1] - p1[0] * p0[1]; // x1*y2 - x2*y1
     upper_bound = p1.x();
     lower_bound = p0.x();
+    this->p0 = p0;
+    this->p1 = p1;
   }
   float operator()(float s) const
   {
@@ -95,9 +102,12 @@ public:
   float operator()(float x, float y) const
   {
     if (b == 0)
+    {
       return 0;
+    }
     return a * x + b * y + c;
   }
+  float operator[](float s) const { return -(b * s + c) / a; }
   LineSegmentNormalEquation2f(const LineSegmentParametricEquation2f& l)
   {
     Eigen::Vector2f p0 = l.get_p0();
@@ -107,19 +117,29 @@ public:
     c = p0[0] * p1[1] - p1[0] * p0[1];
     upper_bound = l.get_p1().x();
     lower_bound = l.get_p0().x();
+    this->p0 = p0;
+    this->p1 = p1;
   }
   float get_a() const { return a; }
   float get_b() const { return b; }
   float get_c() const { return c; }
-  float get_k() const { return -a / b; }
-  Eigen::Vector2f get_p0() const
+  float get_k() const
   {
-    return Eigen::Vector2f(lower_bound, this->operator()(lower_bound));
+    if (b == 0)
+    {
+      if (a > 0)
+      {
+        return std::numeric_limits<float>::max();
+      }
+      if (a < 0)
+      {
+        return -std::numeric_limits<float>::max();
+      }
+    }
+    return -a / b;
   }
-  Eigen::Vector2f get_p1() const
-  {
-    return Eigen::Vector2f(upper_bound, this->operator()(upper_bound));
-  }
+  Eigen::Vector2f get_p0() const { return p0; }
+  Eigen::Vector2f get_p1() const { return p1; }
 };
 LineSegmentParametricEquation2f Liang_Barsky(Eigen::Vector2f& begin,
                                              Eigen::Vector2f& end)
@@ -195,7 +215,8 @@ LineSegmentParametricEquation2f Liang_Barsky(Eigen::Vector2f& begin,
   yn1 = y_0 + rn1 * p4;
   xn2 = x_0 + rn2 * p2;
   yn2 = y_0 + rn2 * p4;
-
+  std::cout << "xn1: " << xn1 << " yn1: " << yn1 << " xn2: " << xn2
+            << " yn2: " << yn2 << std::endl;
   line = LineSegmentParametricEquation2f(Eigen::Vector2f(xn1, yn1),
                                          Eigen::Vector2f(xn2, yn2));
   return line;
@@ -227,41 +248,72 @@ void draw_line(Mat& img, LineSegmentParametricEquation2f l, Scalar color)
   // y2 = l.get_p1().y();
   // line(img, Point(x1, y1), Point(x2, y2), color, 1);
   auto ll = LineSegmentNormalEquation2f(l);
-  if (ll.get_k() < 0)
-  {
-    ll = LineSegmentNormalEquation2f(l.get_p1(), l.get_p0());
-  }
+  // if (ll.get_k() < 0 && abs(ll.get_k()) != std::numeric_limits<float>::max())
+  // {
+  //   ll = LineSegmentNormalEquation2f(ll.get_p1(), ll.get_p0());
+  // }
+  // if (abs(ll.get_k()) == std::numeric_limits<float>::max())
+  // {
+  //   ll
+  // }
   if (abs(ll.get_k()) > 1)
   {
     int x1, y1, x2, y2;
-    x1 = ll.get_p0().x();
-    y1 = ll.get_p0().y();
-    x2 = ll.get_p1().x();
-    y2 = ll.get_p1().y();
+    x1 = std::round(ll.get_p0().x());
+    y1 = std::round(ll.get_p0().y());
+    x2 = std::round(ll.get_p1().x());
+    y2 = std::round(ll.get_p1().y());
+    if (y1 > y2)
+    {
+      std::swap(y1, y2);
+      std::swap(x1, x2);
+    }
     while (y1 <= y2)
     {
       img.at<Vec3b>(y1, x1) = cv::Vec3b(color[0], color[1], color[2]);
-      auto mid_x = x1 + 0.5;
-      auto q = ll(mid_x, y1 + 1);
-      if (q > mid_x)
+      if (ll.get_k() > 0)
       {
-        y1 = y1 + 1;
-        x1 = x1 + 1;
+        auto mid_x = x1 + 0.5;
+        auto q = ll[y1 + 1];
+        if (q > mid_x)
+        {
+          y1 = y1 + 1;
+          x1 = x1 + 1;
+        }
+        else
+        {
+          y1 = y1 + 1;
+        }
       }
       else
       {
-        y1 = y1 + 1;
+        auto mid_x = x1 - 0.5;
+        auto q = ll[y1 + 1];
+        if (q < mid_x)
+        {
+          y1 = y1 + 1;
+          x1 = x1 - 1;
+        }
+        else
+        {
+          y1 = y1 + 1;
+        }
       }
     }
   }
   else
   {
     int x1, y1, x2, y2;
-    x1 = ll.get_p0().x();
-    y1 = ll.get_p0().y();
-    x2 = ll.get_p1().x();
-    y2 = ll.get_p1().y();
+    x1 = std::round(ll.get_p0().x());
+    y1 = std::round(ll.get_p0().y());
+    x2 = std::round(ll.get_p1().x());
+    y2 = std::round(ll.get_p1().y());
 
+    if (x1 > x2)
+    {
+      std::swap(x1, x2);
+      std::swap(y1, y2);
+    }
     while (x1 <= x2)
     {
       img.at<Vec3b>(y1, x1) = cv::Vec3b(color[0], color[1], color[2]);
