@@ -19,4 +19,4 @@ $(barber_objs): $(barber_srcs) $(hdrs)
 barber: $(barber_objs)
 	g++ -o barber $(barber_objs)
 clean:
-	rm user *.o barbershop 
+	rm user *.o barbershop barber
