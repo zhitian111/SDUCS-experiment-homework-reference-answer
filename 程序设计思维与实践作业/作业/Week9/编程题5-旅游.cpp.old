@@ -1,0 +1,99 @@
+﻿#include <iostream>
+#include <vector>
+#include <queue>
+#include <algorithm>
+#include <string>
+#include <set>
+#include <map>
+#include <stack>
+using namespace std;
+
+class Tarjan
+{
+public:
+    vector<vector<int>> adj;
+    vector<int> LOW;
+    vector<int> DFN;
+    vector<int> color;
+    vector<bool> vis;
+    vector<int> cnt;
+    stack<int> st;
+    int depth;
+    int cnt_num;
+    Tarjan(int n)
+    {
+        adj.resize(n);
+        LOW.resize(n);
+        DFN.resize(n);
+        color.resize(n);
+        vis.resize(n);
+        cnt.resize(n);
+        depth = 0;
+        cnt_num = 0;
+    }
+    void add_edge(int u, int v)
+    {
+        adj[u].push_back(v);    
+    }
+    
+    void tarjan(int n)
+    {
+        DFN[n] = ++depth;
+        LOW[n] = DFN[n];
+        vis[n] = true;
+        st.push(n);
+        for (int i = 0; i < adj[n].size(); i++)
+        {
+            int v = adj[n][i];
+            if (!vis[v])    // 未访问过的点
+            {
+                tarjan(v);
+                LOW[n] = min(LOW[n], LOW[v]);
+            }
+            else if (vis[v])    // 已访问过的点，但未被处理过的点
+            {
+                LOW[n] = min(LOW[n], DFN[v]);
+            }
+        }
+        if (LOW[n] == DFN[n]) // 如果自己和子节点都能到达，则是根节点
+        {
+            color[n] = ++cnt_num;
+            vis[n] = false;
+            while (st.top() != n)
+            {
+                color[st.top()] = cnt_num;
+                vis[st.top()] = false;
+                st.pop();
+            }
+        }
+    }
+};
+
+
+void solve()
+{
+    int n, m;
+    cin >> n >> m;
+
+    Tarjan tarjan(n);
+    for (int i = 0; i < m; i++)
+    {
+        int u, v;
+        cin >> u >> v;
+        tarjan.add_edge(u - 1, v - 1);
+    }
+    tarjan.tarjan(n - 1);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << tarjan.color[i] << " ";
+    }
+    cout << endl;
+
+
+}
+int main()
+{
+    solve();
+    return 0;
+}

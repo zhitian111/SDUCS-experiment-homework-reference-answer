@@ -1,0 +1,175 @@
+﻿#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
+#include <queue>
+#include <iomanip>
+using namespace std;
+
+struct edge
+{
+    int from;
+    int to;
+    double distance;
+    double value;
+};
+class graph
+{
+public:
+    vector<vector<edge>> adj;
+    vector<deque<edge>> rings;
+    vector<int> out_degree;
+    priority_queue<pair<int, int>> out_degree_queue;
+    vector<bool> visited;
+    vector<int> color;
+    int color_count;
+    int start;
+    deque<edge> tour;
+    graph(int n) : adj(n), rings(n), out_degree(n), visited(n, false), color(n, -1), color_count(0)
+    {
+        adj.resize(n);
+        out_degree.resize(n, 0);
+        visited.resize(n, false);
+        color.resize(n, -1);
+    }
+    void add_edge(int from, int to, double distance, double value)
+    {
+        edge e = {from, to, distance, value};
+        adj[from].push_back(e);
+        out_degree[from]++;
+    }
+    void minimize_edges()   // 将不分枝的连续边合成一条边
+    {
+        vector<vector<edge>> new_adj(adj.size());
+        vector<vector<bool>> used(adj.size());
+        for (int i = 0;i < adj.size();i++)
+        {
+            used[i].resize(adj[i].size(), false);
+        }
+
+        for (auto& edges : adj)
+        {
+            for (auto& e : edges)
+            {
+                auto tem = e;
+                while (!adj[tem.to].empty() && adj[tem.to][0].from == e.to && used[tem.to][0] && out_degree[tem.from] == 1)
+                {
+                    tem.distance += adj[tem.to][0].distance;
+                    tem.value += adj[tem.to][0].value;
+                    tem.to = adj[tem.to][0].to;
+                    used[tem.to][0] = true;
+                }
+                new_adj[e.from].push_back(tem);
+            }
+        }
+        adj = new_adj;
+    }
+    
+    void dfs(int u)
+    {
+        visited[u] = true;
+        color[u] = color_count;
+        for (auto e : adj[u])
+        {
+            if (!visited[e.to])
+            {
+                tour.push_back(e);
+                dfs(e.to);
+                tour.pop_back();
+            }
+            if (e.to == start)
+            {
+                tour.push_back(e);
+                rings.push_back(tour);
+                tour.pop_back();
+            }
+        }
+        visited[u] = false;
+    }
+    
+    void build_rings()
+    {
+        auto timer = 0;
+        for (int i = 0;i < out_degree.size();i++)
+        {
+            out_degree_queue.push(make_pair(out_degree[i], i));
+        }
+        rings.clear();
+        while (!out_degree_queue.empty())
+        {
+            auto p = out_degree_queue.top();
+            if (p.first == 0)
+            {
+                out_degree_queue.pop();
+                continue;
+            }
+            if (p.first == 1)
+            {
+                if (color[p.second] != -1)
+                {
+                    out_degree_queue.pop();
+                    continue;
+                }
+            }
+            cout << ++timer << " " << p.first << " " << p.second << endl;
+            start = p.second;
+            color[p.second] = color_count;
+            color_count++;
+            dfs(p.second);
+            out_degree_queue.pop();
+        }
+    }
+};
+
+void solve()
+{
+    int n, m;
+    cin >> n >> m;
+    graph g(n);
+    for (int i = 0;i < m;i++)
+    {
+        int from, to;
+        double distance, value;
+        cin >> from >> to >> value >> distance;
+        g.add_edge(from - 1, to - 1, distance, value);
+    }
+    g.build_rings();
+    for (int i = 0;i < g.rings.size();i++)
+    {
+        cout << "Ring " << i + 1 << ":" << endl;
+        auto ring = g.rings[i];
+        for (auto e : ring)
+        {
+            cout << e.from + 1 << "->" << e.to + 1 << " " << e.distance << " " << e.value << endl;
+        }
+    }
+    for (auto i : g.adj)
+    {
+        for (auto j : i)
+        {
+            cout << j.from + 1 << "->" << j.to + 1 << " " << j.distance << " " << j.value << endl;
+        }
+    }
+    
+    g.build_rings();
+    double ans = 0;
+    for (auto& ring : g.rings)
+    {
+        double sum_weight = 0;
+        double sum_value = 0;
+        for (auto e : ring)
+        {
+            sum_weight += e.distance;
+            sum_value += e.value;
+        }
+        // cout << "Ring weight: " << sum_weight << " Ring value: " << sum_value << endl;
+        // cout << "Ring value/weight: " << sum_value / sum_weight << endl;
+        ans = max(ans, sum_value / sum_weight);
+    }
+    cout << fixed << setprecision(1) << ans << endl;
+}
+int main()
+{
+    solve();
+    return 0;
+}

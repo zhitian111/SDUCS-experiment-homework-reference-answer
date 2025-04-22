@@ -1,0 +1,128 @@
+﻿#include <iostream>
+#include <vector>
+#include <queue>
+#include <limits>
+#include <algorithm>
+#include <set>
+
+using namespace std;
+
+
+auto inf = numeric_limits<int>::max();
+
+
+void solve()
+{
+    size_t n;
+    cin >> n;
+    size_t m;
+    cin >> m;
+    typedef pair<int, int> P;
+    priority_queue<P, vector<P>, greater<P>> up_bound;
+    auto up_unbound = up_bound;
+    auto down_bound = up_bound;
+    auto down_unbound = up_bound;
+    auto equal_bound = up_bound;
+    auto equal_unbound = up_bound;
+    for (size_t i = 0; i < m; i++)
+    {
+        int k, left, right, value;
+        cin >> k >> left >> right >> value;
+        if (k == 1)
+        {
+            up_bound.push(P(left, value));
+            up_unbound.push(P(right, value));
+        }
+        if (k == 2)
+        {
+            down_bound.push(P(left, value));
+            down_unbound.push(P(right, value));
+        }
+        if (k == 3)
+        {
+            up_bound.push(P(left, value - 1));
+            up_unbound.push(P(right, value - 1));
+        }
+        if (k == 4)
+        {
+            down_bound.push(P(left, value + 1));
+            down_unbound.push(P(right, value + 1));
+        }
+        if (k == 5)
+        {
+            equal_bound.push(P(left, value));
+            equal_unbound.push(P(right, value));
+        }
+    }
+    set<int> upset, downset, equalset;
+    upset.insert(inf);
+    downset.insert(-inf);
+    equalset.insert(inf);
+    int upbound;
+    int downbound;
+    int equalbound;
+
+    for (size_t i = 0; i < n; i++)
+    {
+
+        while (!up_bound.empty() && up_bound.top().first == i + 1)
+        {
+            auto node = up_bound.top();
+            up_bound.pop();
+            upset.insert(node.second);
+        }
+        upbound = *upset.begin();
+        cout << upbound << " ";
+        while (!up_unbound.empty() && up_unbound.top().first == i + 1)
+        {
+            auto node = up_unbound.top();
+            up_unbound.pop();
+            upset.erase(node.second);
+        }
+        
+    }
+    cout << endl;
+    for (size_t i = 0; i < n; i++)
+    {
+
+        while (!down_bound.empty() && down_bound.top().first == i + 1)
+        {
+            auto node = down_bound.top();
+            down_bound.pop();
+            downset.insert(node.second);
+        }
+        downbound = *downset.rbegin();
+        cout << downbound << " ";
+        while (!down_unbound.empty() && down_unbound.top().first == i + 1)
+        {
+            auto node = down_unbound.top();
+            down_unbound.pop();
+            downset.erase(node.second);
+        }
+    }
+    cout << endl;
+    for (size_t i = 0; i < n; i++)
+    {
+
+        while (!equal_bound.empty() && equal_bound.top().first == i + 1)
+        {
+            auto node = equal_bound.top();
+            equal_bound.pop();
+            equalset.insert(node.second);
+        }
+        equalbound = *equalset.begin();
+        cout << equalbound << " ";
+        while (!equal_unbound.empty() && equal_unbound.top().first == i + 1)
+        {
+            auto node = equal_unbound.top();
+            equal_unbound.pop();
+            equalset.erase(node.second);
+        }
+    }
+}
+
+int main()
+{
+    solve();
+    return 0;
+}

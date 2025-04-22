@@ -1,0 +1,159 @@
+﻿#include <iostream>
+#include <vector>
+#include <map>
+#include <cstring>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+#define MAX_SIZE 5100
+
+
+class Johnson
+{
+public:
+    
+    int top = 0, cnt, N, M, stamp = 0;
+    vector<vector<int>> V;
+    vector<vector<int>> VC;
+    vector<int> scc;
+    vector<int> visited;
+    vector<int> low;
+    vector<int> dfn;
+    vector<int> stack;
+    vector<int> ins;
+    vector<int> color;
+    map<int, vector<int>> blockedmap;
+    vector<vector<int>> ans;
+    map<pair<int, int>, double> values_map;
+    map<pair<int, int>, double> dist_map;
+    Johnson()
+    {
+        V.resize(MAX_SIZE, vector<int>());
+        VC.resize(MAX_SIZE, vector<int>());
+        scc.resize(MAX_SIZE, 0);
+        visited.resize(MAX_SIZE, 0);
+        low.resize(MAX_SIZE, 0);
+        dfn.resize(MAX_SIZE, 0);
+        stack.resize(MAX_SIZE, 0);
+        ins.resize(MAX_SIZE, 0);
+        color.resize(MAX_SIZE, 0);
+    }
+    
+    void unlock(int u)
+    {
+        ins[u] = 0;
+        if (!blockedmap[u].empty())
+        {
+            for (auto e : blockedmap[u])
+            {
+                if (ins[e]) unlock(e);
+            }
+        }
+        blockedmap[u].clear();
+    }
+    bool Findcycles(int start, int cur)
+    {
+        bool f = false;// 是否找到环
+        stack[++top] = cur;
+        ins[cur] = 1;
+        for (auto e : VC[cur])
+        {
+            if (!visited[e])
+            {
+
+                if (e == start)
+                {
+                    //保存结果
+                    vector<int> path;
+                    for (int i = 1;i <= top;i++)
+                        path.push_back(stack[i]);
+                    ans.push_back(path);
+                    f = true;
+                }
+                else if (!ins[e])
+                {
+                    f = (Findcycles(start, e)) || f;  //次序不能颠倒
+                }
+            }
+
+        }
+        if (f) unlock(cur);
+        else {
+            for (auto e : VC[cur])
+            {
+                if (!visited[e]) blockedmap[e].push_back(cur);
+            }
+        }
+        --top;
+        return f;
+    }
+
+    void solve()
+    {
+        cin >> N >> M;
+        for (int i = 0;i < M;i++)
+        {
+            int a, b;
+            cin >> a >> b;
+            double value, dist;
+            cin >> value >> dist;
+            values_map[make_pair(a, b)] = value;
+            dist_map[make_pair(a, b)] = dist;
+            V[a].push_back(b);
+        }
+
+        //缩点
+        for (int i = 1;i <= N;i++)
+        {
+            for (int j = 0;j < V[i].size();j++)
+            {
+                if (color[i] == color[V[i][j]])
+                {
+                    VC[i].push_back(V[i][j]);
+                }
+            }
+        }
+
+        for (int startindex = 1;startindex <= N;startindex++)
+        {
+            Findcycles(startindex, startindex);
+            visited[startindex] = 1;
+        }
+        // for (int i = 0;i < ans.size();i++)
+        // {
+        //     cout << "Path " << i + 1 << ": ";
+        //     for (int j = 0;j < ans[i].size();j++)
+        //     {
+        //         cout << ans[i][j] << "->";
+        //     }
+        //     cout << ans[i][0] << endl;
+        // }
+        
+        double best_avg = 0;
+        for (int i = 0;i < ans.size();i++)
+        {
+            double all_value = 0;
+            double all_dist = 0;
+            for (int j = 0;j < ans[i].size();j++)
+            {
+                all_value += values_map[make_pair(ans[i][j], ans[i][(j + 1) % ans[i].size()])];
+
+                all_dist += dist_map[make_pair(ans[i][j], ans[i][(j + 1) % ans[i].size()])];
+            }
+            best_avg = max(best_avg, all_value / all_dist);
+        }
+        cout << fixed << setprecision(1) << best_avg << endl;
+    }
+    
+};
+
+void solve()
+{
+    Johnson johnson;
+    johnson.solve();
+}
+int main()
+{
+    solve();
+    return 0;
+}
