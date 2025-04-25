@@ -33,6 +33,14 @@ public:
   {
     return query(r) - query(l - 1);
   }
+  void display()
+  {
+    for (size_t i = 0; i< cnt;i++)
+    {
+      cout << tree[i] << " ";
+    }
+    cout << endl;
+  }
 };
 
 void solve()
