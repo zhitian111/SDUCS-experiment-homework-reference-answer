@@ -41,5 +41,34 @@ public:
     auto color = image_data.at<cv::Vec3b>(v_img, u_img);
     return Eigen::Vector3f(color[0], color[1], color[2]);
   }
+  Eigen::Vector3f getColorBilinear(float u, float v)
+  {
+    auto x = u * width;               // 像素x坐标
+    auto y = (1 - v) * height;        // 像素y坐标
+    int roundx = static_cast<int>(x); // 最近的纹理点x坐标
+    int roundy = static_cast<int>(y); // 最近的纹理点y坐标
+
+    // 两个插值比例
+    float s = x - roundx;
+    float t = y - roundy;
+
+    // 四个相邻纹理点
+    auto p00 = image_data.at<cv::Vec3b>(roundy, roundx);
+    auto p01 =
+        image_data.at<cv::Vec3b>(roundy, std::min(roundx + 1, width - 1));
+    auto p10 =
+        image_data.at<cv::Vec3b>(std::min(roundy + 1, height - 1), roundx);
+    auto p11 = image_data.at<cv::Vec3b>(std::min(roundy + 1, height - 1),
+                                        std::min(roundx + 1, width - 1));
+
+    // 水平方向插值
+    auto px = p00 * (1 - s) + p10 * s;
+    auto py = p01 * (1 - s) + p11 * s;
+
+    // 竖直方向插值
+    auto color = px * (1 - t) + py * t;
+    return Eigen::Vector3f(color[0], color[1], color[2]);
+  }
 };
+
 #endif // RASTERIZER_TEXTURE_H
