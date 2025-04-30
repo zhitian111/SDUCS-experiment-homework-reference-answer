@@ -3,53 +3,75 @@
 #include <vector>
 using namespace std;
 
+template <typename T> inline T lowbit(const T& x) { return x & -x; }
+
+template <typename T> class TreeArray
+{
+private:
+  size_t cnt;
+  vector<T> tree;
+
+public:
+  TreeArray(const long long& n) : cnt(n) { tree.assign(2 * n, T()); }
+  TreeArray(const long long& n, const T& val) : cnt(n)
+  {
+    tree.assign(2 * n, val);
+  }
+  
+  void add(const long long& p, const T& val)
+  {
+    for (long long i = p; i <= cnt; i += lowbit(i))
+    {
+      tree[i] = max(tree[i], val);
+    }
+  }
+  T query(const long long& p) const
+  {
+    T res = T();
+    for (long long i = p; i > 0; i -= lowbit(i))
+    {
+      res = max(res, tree[i]);
+    }
+    return res;
+  }
+  void display()
+  {
+    for (size_t i = 0; i< cnt;i++)
+    {
+      cout << tree[i] << " ";
+    }
+    cout << endl;
+  }
+  void modify(const long long& p, const T& val)
+  {
+    add(p, val);
+  }
+};
+
+
+
+// 树状数组优化的LIS算法
 void solve()
 {
   size_t n;
   cin >> n;
-  vector<size_t> nums(n);
-  for (size_t i = 0; i < n; i++)
+  vector<size_t> a(n + 1);
+  a[0] = 0;
+  size_t tree_size = 0;
+  for (size_t i = 1; i <= n; i++)
   {
-    cin >> nums[i];
+    cin >> a[i];
+    tree_size = max(tree_size, a[i]);
   }
-  vector<size_t> dp(n);
-  vector<size_t> prev;
-  vector<size_t> prev_len;
-  dp[0] = 1;
-  prev.push_back(nums[0]);
-  prev_len.push_back(1);
-  for (size_t i = 1; i < n; i++)
+  
+  // 树状数组的第i项用于维护以i为结尾的上升子序列的最长长度
+  TreeArray<size_t> ta(tree_size + 1);
+  for (size_t i = 1; i <= n; i++)
   {
-    size_t index;
-    size_t max_len = 0;
-    bool new_prev = true;
-    for (size_t j = 0; j < prev.size(); j++)
-    {
-      if (nums[i] > prev[j])
-      {
-        new_prev = false;
-        if (prev_len[j] + 1 > max_len)
-        {
-          max_len = prev_len[j] + 1;
-          index = j;
-        }
-      }
-    }
-    if (new_prev)
-    {
-      prev.push_back(nums[i]);
-      prev_len.push_back(1);
-    }
-    else
-    {
-      prev.push_back(nums[i]);
-      prev_len.push_back(max_len);
-      // prev[index] = nums[i];
-      // prev_len[index] = max_len;
-      dp[i] = max(dp[i], max_len);
-    }
+    auto tem = ta.query(a[i] - 1);
+    ta.modify(a[i],tem + 1);
   }
-  cout << dp[n - 1] << endl;
+  cout << ta.query(tree_size) << endl;
 }
 
 int main()
