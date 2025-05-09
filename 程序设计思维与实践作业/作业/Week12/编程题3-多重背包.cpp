@@ -15,13 +15,15 @@ using namespace std;
 //   return res;
 // }
 
-vector<int> binary_split(const int num)
+vector<long long> binary_split(const int num)
 {
-  vector<int> res;
-  auto tem = num;
-  for (int i = 1; tem > 0; tem -= i, i *= 2)
+  vector<long long> res;
+  long long tem = num;
+  for (long long i = 1; tem > 0; i *= 2)
   {
-    res.push_back(min(tem, i));
+    long long add = min(i, tem);
+    res.push_back(add);
+    tem -= add;
   }
   return res;
 }
@@ -31,48 +33,36 @@ void solve()
   cin >> n >> w;
   struct item
   {
-    int weight;
-    int value;
-    int count;
+    long long weight;
+    long long value;
+    long long count;
   };
   vector<item> items(n);
-  for (int i = 0; i < n; i++)
+  for (long long i = 0; i < n; i++)
   {
     cin >> items[i].weight >> items[i].value >> items[i].count;
   }
   vector<item> items_vec;
-  for (auto i : items)
+  for (auto& i : items)
   {
-    for (auto j : binary_split(i.count))
+    auto splits = binary_split(i.count);
+    for (long long j : splits)
     {
       item it = {i.weight * j, i.value * j, 1};
       items_vec.push_back(it);
     }
   }
-  int dp[w + 10][items_vec.size() + 10];
-  for (int i = 0; i <= w; i++)
+  vector<long long> dp(w + 1, 0);
+  for (long long i = 1; i <= items_vec.size(); ++i)
   {
-    for (int j = 0; j <= items_vec.size(); j++)
+    auto weight = items_vec[i - 1].weight;
+    auto value = items_vec[i - 1].value;
+    for (long long j = w; j >= weight; --j)
     {
-      dp[i][j] = 0;
+      dp[j] = max(dp[j], dp[j - weight] + value);
     }
   }
-  for (int i = 1; i <= w; i++)
-  {
-    for (int j = 1; j <= items_vec.size(); j++)
-    {
-      if (i >= items_vec[j - 1].weight)
-      {
-        dp[i][j] = max(dp[i][j - 1], dp[i - items_vec[j - 1].weight][j - 1] +
-                                         items_vec[j - 1].value);
-      }
-      else
-      {
-        dp[i][j] = dp[i][j - 1];
-      }
-    }
-  }
-  cout << dp[w][items_vec.size()] << endl;
+  cout << dp[w] << endl;
 }
 int main()
 {
