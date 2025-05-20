@@ -1,0 +1,9 @@
+string name
+uint8 age
+uint8 sex
+uint8 SEX_UNKNOWN=0
+uint8 SEX_MALE=1
+uint8 SEX_FEMALE=2
+
+---
+string result
