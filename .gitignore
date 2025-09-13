@@ -27,6 +27,7 @@
 !*.hpp
 !*.msg
 !*.srv
+!*.zsh
 *.ppt
 *.pptx
 *.zip
