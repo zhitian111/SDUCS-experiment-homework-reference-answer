@@ -1,0 +1,928 @@
+{
+    "schema": "https://ihsn.org/schemas/timeseries/1.0.0",
+    "schema_version": "1.0.0",
+    "type": "timeseries",
+    "idno": "77cbce0f-e026-46ba-9c1f-dfe97718cfd2",
+    "changed": "1758066231",
+    "changed_utc": "2025-09-16T19:43:51-04:00",
+    "created": "1718984131",
+    "created_utc": "2024-06-21T11:35:31-04:00",
+    "created_by": "4",
+    "changed_by": "4",
+    "metadata_information": {
+        "idno": "META_WB_PIP_NPOOR_UMIC",
+        "producers": [
+            {
+                "name": "Development Economics Data Group",
+                "abbr": "DECDG",
+                "affiliation": "World Bank"
+            }
+        ],
+        "prod_date": "2024-06-21",
+        "version_statement": {
+            "version_notes": "Updated title formatting for consistency.",
+            "version_date": "2025-03-17",
+            "version": "1.1"
+        },
+        "title": "Metadata for Population living below the poverty line (2017 PPP, $6.85) (million)"
+    },
+    "series_description": {
+        "idno": "WB_PIP_NPOOR_UMIC",
+        "version_statement": {
+            "version": "1",
+            "version_date": "2025-04-17"
+        },
+        "name": "Population living below the poverty line (2017 PPP, $6.85) (million)",
+        "authoring_entity": [
+            {
+                "name": "World Bank",
+                "uri": "https://pip.worldbank.org/"
+            }
+        ],
+        "measurement_unit": "Persons",
+        "database_id": "WB_PIP",
+        "release_calendar": "In a typical year, there are two major updates (March/April and September/October), which bring in new survey data. These updates are documented in What\u2019s New documents (published in the Global Poverty Monitoring Technical Notes series)",
+        "alternate_identifiers": [
+            {
+                "identifier": "PIP database indicator ID",
+                "name": "WB.PIP.npoor.UMIC",
+                "database": "WB.PIP"
+            },
+            {
+                "identifier": "PIP dataset variable name ",
+                "name": "pop_in_poverty"
+            }
+        ],
+        "definition_short": "Population living below the poverty line (2017 PPP, $6.85) (million)",
+        "definition_long": "Number of people, in millions, living on less than 6.85 a day at 2017 PPP is calculated by multiplying the poverty rate and the population. As a result of revisions in PPP exchange rates, poverty rates for individual countries cannot be compared with poverty rates reported in earlier editions.\n\nPlease refer to: https://datanalytics.worldbank.org/PIP-Methodology/.",
+        "periodicity": "Annual",
+        "methodology": "Please refer to: https://datanalytics.worldbank.org/PIP-Methodology/",
+        "methodology_references": [
+            {
+                "source": "Poverty and Inequality Platform Methodology Handbook",
+                "uri": "https://datanalytics.worldbank.org/PIP-Methodology/"
+            }
+        ],
+        "aggregation_method_references": [
+            {
+                "source": "Poverty and Inequality Platform Methodology Handbook",
+                "uri": "https://datanalytics.worldbank.org/PIP-Methodology/non-technical-summary.html#step-2-constructing-welfare-aggregates"
+            }
+        ],
+        "limitation": "PIP extrapolations and interpolations require additional assumptions, namely that (a) growth in household income or consumption can be approximated by growth in national accounts and (b) all parts of the distribution grow at the same rate. Given these assumptions, users are cautioned against using reference-year estimates for comparing a country\u2019s poverty trend over time. For that purpose, users should rely on the survey-year estimates and are advised to take into account breaks in survey comparability. Because extrapolating and interpolating require full welfare distributions, for a country to feature in PIP, it is not sufficient that it has an international poverty rate at a survey year, it must have unit record data or grouped data. For more details on the methodology and types of input data accepted by PIP, please visit the PIP Methodology Handbook and the Global Poverty Monitoring Technical Notes.",
+        "quality": "In a typical year, there are two major updates (March/April and September/October), which bring in new survey data. These updates are documented in What\u2019s New documents (published in the Global Poverty Monitoring Technical Notes series). When necessary, intermediate updates are made to correct errors as soon as possible. Updates are documented here: https://worldbank.github.io/PIP_data_updates/.",
+        "time_periods": [
+            {
+                "start": "1963",
+                "end": "2023"
+            }
+        ],
+        "license": [
+            {
+                "name": "CC0",
+                "uri": "https://creativecommons.org/publicdomain/zero/1.0/"
+            }
+        ],
+        "topics": [
+            {
+                "id": "P3",
+                "name": "Prosperity",
+                "vocabulary": "WB Practice Groups"
+            },
+            {
+                "id": "P3_000004",
+                "name": "Poverty",
+                "parent_id": "P3",
+                "vocabulary": "Data360 Topic L1"
+            },
+            {
+                "id": "P3_000020",
+                "name": "Poverty",
+                "parent_id": "P3_000004",
+                "vocabulary": "Data360 Topic L2"
+            }
+        ],
+        "sources": [
+            {
+                "name": "Poverty and Inequality Platform",
+                "organization": "World Bank (WB)",
+                "uri": "https://pip.worldbank.org/",
+                "datasets": [
+                    {
+                        "title": "Source Data Collection Methodology by Country",
+                        "uri": "https://pip.worldbank.org/data-source"
+                    }
+                ]
+            }
+        ],
+        "title": "Population living below the poverty line (2017 PPP, $6.85) (million)",
+        "definition_references": [
+            {
+                "uri": "https://datanalytics.worldbank.org/PIP-Methodology/"
+            }
+        ],
+        "languages": [
+            {
+                "name": "English",
+                "code": "EN"
+            }
+        ],
+        "dimensions": [
+            {
+                "label": "Welfare type"
+            },
+            {
+                "label": "Geographic area",
+                "description": "Country/economy, Region"
+            },
+            {
+                "label": "Year"
+            },
+            {
+                "label": "Residential area",
+                "description": "Total, Urban, Rural"
+            }
+        ],
+        "ref_country": [
+            {
+                "name": "Angola",
+                "code": "AGO"
+            },
+            {
+                "name": "Albania",
+                "code": "ALB"
+            },
+            {
+                "name": "United Arab Emirates",
+                "code": "ARE"
+            },
+            {
+                "name": "Argentina",
+                "code": "ARG"
+            },
+            {
+                "name": "Armenia",
+                "code": "ARM"
+            },
+            {
+                "name": "Australia",
+                "code": "AUS"
+            },
+            {
+                "name": "Austria",
+                "code": "AUT"
+            },
+            {
+                "name": "Azerbaijan",
+                "code": "AZE"
+            },
+            {
+                "name": "Burundi",
+                "code": "BDI"
+            },
+            {
+                "name": "Belgium",
+                "code": "BEL"
+            },
+            {
+                "name": "Benin",
+                "code": "BEN"
+            },
+            {
+                "name": "Burkina Faso",
+                "code": "BFA"
+            },
+            {
+                "name": "Bangladesh",
+                "code": "BGD"
+            },
+            {
+                "name": "Bulgaria",
+                "code": "BGR"
+            },
+            {
+                "name": "Bosnia and Herzegovina",
+                "code": "BIH"
+            },
+            {
+                "name": "Belarus",
+                "code": "BLR"
+            },
+            {
+                "name": "Belize",
+                "code": "BLZ"
+            },
+            {
+                "name": "Bolivia",
+                "code": "BOL"
+            },
+            {
+                "name": "Brazil",
+                "code": "BRA"
+            },
+            {
+                "name": "Bhutan",
+                "code": "BTN"
+            },
+            {
+                "name": "Botswana",
+                "code": "BWA"
+            },
+            {
+                "name": "Central African Republic",
+                "code": "CAF"
+            },
+            {
+                "name": "Canada",
+                "code": "CAN"
+            },
+            {
+                "name": "Switzerland",
+                "code": "CHE"
+            },
+            {
+                "name": "Chile",
+                "code": "CHL"
+            },
+            {
+                "name": "China",
+                "code": "CHN"
+            },
+            {
+                "name": "C\u00c3\u00b4te d\u00e2\u0080\u0099Ivoire",
+                "code": "CIV"
+            },
+            {
+                "name": "Cameroon",
+                "code": "CMR"
+            },
+            {
+                "name": "Congo, Dem. Rep.",
+                "code": "COD"
+            },
+            {
+                "name": "Congo, Rep.",
+                "code": "COG"
+            },
+            {
+                "name": "Colombia",
+                "code": "COL"
+            },
+            {
+                "name": "Comoros",
+                "code": "COM"
+            },
+            {
+                "name": "Cabo Verde",
+                "code": "CPV"
+            },
+            {
+                "name": "Costa Rica",
+                "code": "CRI"
+            },
+            {
+                "name": "Cyprus",
+                "code": "CYP"
+            },
+            {
+                "name": "Czechia",
+                "code": "CZE"
+            },
+            {
+                "name": "Germany",
+                "code": "DEU"
+            },
+            {
+                "name": "Djibouti",
+                "code": "DJI"
+            },
+            {
+                "name": "Denmark",
+                "code": "DNK"
+            },
+            {
+                "name": "Dominican Republic",
+                "code": "DOM"
+            },
+            {
+                "name": "Algeria",
+                "code": "DZA"
+            },
+            {
+                "name": "Ecuador",
+                "code": "ECU"
+            },
+            {
+                "name": "Egypt, Arab Rep.",
+                "code": "EGY"
+            },
+            {
+                "name": "Spain",
+                "code": "ESP"
+            },
+            {
+                "name": "Estonia",
+                "code": "EST"
+            },
+            {
+                "name": "Ethiopia",
+                "code": "ETH"
+            },
+            {
+                "name": "Finland",
+                "code": "FIN"
+            },
+            {
+                "name": "Fiji",
+                "code": "FJI"
+            },
+            {
+                "name": "France",
+                "code": "FRA"
+            },
+            {
+                "name": "Micronesia, Fed. Sts.",
+                "code": "FSM"
+            },
+            {
+                "name": "Gabon",
+                "code": "GAB"
+            },
+            {
+                "name": "United Kingdom",
+                "code": "GBR"
+            },
+            {
+                "name": "Georgia",
+                "code": "GEO"
+            },
+            {
+                "name": "Ghana",
+                "code": "GHA"
+            },
+            {
+                "name": "Guinea",
+                "code": "GIN"
+            },
+            {
+                "name": "Gambia, The",
+                "code": "GMB"
+            },
+            {
+                "name": "Guinea-Bissau",
+                "code": "GNB"
+            },
+            {
+                "name": "Greece",
+                "code": "GRC"
+            },
+            {
+                "name": "Grenada",
+                "code": "GRD"
+            },
+            {
+                "name": "Guatemala",
+                "code": "GTM"
+            },
+            {
+                "name": "Guyana",
+                "code": "GUY"
+            },
+            {
+                "name": "Honduras",
+                "code": "HND"
+            },
+            {
+                "name": "Croatia",
+                "code": "HRV"
+            },
+            {
+                "name": "Haiti",
+                "code": "HTI"
+            },
+            {
+                "name": "Hungary",
+                "code": "HUN"
+            },
+            {
+                "name": "Indonesia",
+                "code": "IDN"
+            },
+            {
+                "name": "India",
+                "code": "IND"
+            },
+            {
+                "name": "Ireland",
+                "code": "IRL"
+            },
+            {
+                "name": "Iran, Islamic Rep.",
+                "code": "IRN"
+            },
+            {
+                "name": "Iraq",
+                "code": "IRQ"
+            },
+            {
+                "name": "Iceland",
+                "code": "ISL"
+            },
+            {
+                "name": "Israel",
+                "code": "ISR"
+            },
+            {
+                "name": "Italy",
+                "code": "ITA"
+            },
+            {
+                "name": "Jamaica",
+                "code": "JAM"
+            },
+            {
+                "name": "Jordan",
+                "code": "JOR"
+            },
+            {
+                "name": "Japan",
+                "code": "JPN"
+            },
+            {
+                "name": "Kazakhstan",
+                "code": "KAZ"
+            },
+            {
+                "name": "Kenya",
+                "code": "KEN"
+            },
+            {
+                "name": "Kyrgyz Republic",
+                "code": "KGZ"
+            },
+            {
+                "name": "Kiribati",
+                "code": "KIR"
+            },
+            {
+                "name": "Korea, Rep.",
+                "code": "KOR"
+            },
+            {
+                "name": "Lao PDR",
+                "code": "LAO"
+            },
+            {
+                "name": "Lebanon",
+                "code": "LBN"
+            },
+            {
+                "name": "Liberia",
+                "code": "LBR"
+            },
+            {
+                "name": "St. Lucia",
+                "code": "LCA"
+            },
+            {
+                "name": "Sri Lanka",
+                "code": "LKA"
+            },
+            {
+                "name": "Lesotho",
+                "code": "LSO"
+            },
+            {
+                "name": "Lithuania",
+                "code": "LTU"
+            },
+            {
+                "name": "Luxembourg",
+                "code": "LUX"
+            },
+            {
+                "name": "Latvia",
+                "code": "LVA"
+            },
+            {
+                "name": "Morocco",
+                "code": "MAR"
+            },
+            {
+                "name": "Moldova",
+                "code": "MDA"
+            },
+            {
+                "name": "Madagascar",
+                "code": "MDG"
+            },
+            {
+                "name": "Maldives",
+                "code": "MDV"
+            },
+            {
+                "name": "Mexico",
+                "code": "MEX"
+            },
+            {
+                "name": "Marshall Islands",
+                "code": "MHL"
+            },
+            {
+                "name": "North Macedonia",
+                "code": "MKD"
+            },
+            {
+                "name": "Mali",
+                "code": "MLI"
+            },
+            {
+                "name": "Malta",
+                "code": "MLT"
+            },
+            {
+                "name": "Myanmar",
+                "code": "MMR"
+            },
+            {
+                "name": "Montenegro",
+                "code": "MNE"
+            },
+            {
+                "name": "Mongolia",
+                "code": "MNG"
+            },
+            {
+                "name": "Mozambique",
+                "code": "MOZ"
+            },
+            {
+                "name": "Mauritania",
+                "code": "MRT"
+            },
+            {
+                "name": "Mauritius",
+                "code": "MUS"
+            },
+            {
+                "name": "Malawi",
+                "code": "MWI"
+            },
+            {
+                "name": "Malaysia",
+                "code": "MYS"
+            },
+            {
+                "name": "Namibia",
+                "code": "NAM"
+            },
+            {
+                "name": "Niger",
+                "code": "NER"
+            },
+            {
+                "name": "Nigeria",
+                "code": "NGA"
+            },
+            {
+                "name": "Nicaragua",
+                "code": "NIC"
+            },
+            {
+                "name": "Netherlands",
+                "code": "NLD"
+            },
+            {
+                "name": "Norway",
+                "code": "NOR"
+            },
+            {
+                "name": "Nepal",
+                "code": "NPL"
+            },
+            {
+                "name": "Nauru",
+                "code": "NRU"
+            },
+            {
+                "name": "Pakistan",
+                "code": "PAK"
+            },
+            {
+                "name": "Panama",
+                "code": "PAN"
+            },
+            {
+                "name": "Peru",
+                "code": "PER"
+            },
+            {
+                "name": "Philippines",
+                "code": "PHL"
+            },
+            {
+                "name": "Papua New Guinea",
+                "code": "PNG"
+            },
+            {
+                "name": "Poland",
+                "code": "POL"
+            },
+            {
+                "name": "Portugal",
+                "code": "PRT"
+            },
+            {
+                "name": "Paraguay",
+                "code": "PRY"
+            },
+            {
+                "name": "West Bank and Gaza",
+                "code": "PSE"
+            },
+            {
+                "name": "Qatar",
+                "code": "QAT"
+            },
+            {
+                "name": "Romania",
+                "code": "ROU"
+            },
+            {
+                "name": "Russian Federation",
+                "code": "RUS"
+            },
+            {
+                "name": "Rwanda",
+                "code": "RWA"
+            },
+            {
+                "name": "Sudan",
+                "code": "SDN"
+            },
+            {
+                "name": "Senegal",
+                "code": "SEN"
+            },
+            {
+                "name": "Solomon Islands",
+                "code": "SLB"
+            },
+            {
+                "name": "Sierra Leone",
+                "code": "SLE"
+            },
+            {
+                "name": "El Salvador",
+                "code": "SLV"
+            },
+            {
+                "name": "Serbia",
+                "code": "SRB"
+            },
+            {
+                "name": "South Sudan",
+                "code": "SSD"
+            },
+            {
+                "name": "S\u00c3\u00a3o Tom\u00c3\u00a9 and Pr\u00c3\u00adncipe",
+                "code": "STP"
+            },
+            {
+                "name": "Suriname",
+                "code": "SUR"
+            },
+            {
+                "name": "Slovak Republic",
+                "code": "SVK"
+            },
+            {
+                "name": "Slovenia",
+                "code": "SVN"
+            },
+            {
+                "name": "Sweden",
+                "code": "SWE"
+            },
+            {
+                "name": "Eswatini",
+                "code": "SWZ"
+            },
+            {
+                "name": "Seychelles",
+                "code": "SYC"
+            },
+            {
+                "name": "Syrian Arab Republic",
+                "code": "SYR"
+            },
+            {
+                "name": "Chad",
+                "code": "TCD"
+            },
+            {
+                "name": "Togo",
+                "code": "TGO"
+            },
+            {
+                "name": "Thailand",
+                "code": "THA"
+            },
+            {
+                "name": "Tajikistan",
+                "code": "TJK"
+            },
+            {
+                "name": "Turkmenistan",
+                "code": "TKM"
+            },
+            {
+                "name": "Timor-Leste",
+                "code": "TLS"
+            },
+            {
+                "name": "Tonga",
+                "code": "TON"
+            },
+            {
+                "name": "Trinidad and Tobago",
+                "code": "TTO"
+            },
+            {
+                "name": "Tunisia",
+                "code": "TUN"
+            },
+            {
+                "name": "T\u00c3\u00bcrkiye",
+                "code": "TUR"
+            },
+            {
+                "name": "Tuvalu",
+                "code": "TUV"
+            },
+            {
+                "name": "Taiwan, China",
+                "code": "TWN"
+            },
+            {
+                "name": "Tanzania",
+                "code": "TZA"
+            },
+            {
+                "name": "Uganda",
+                "code": "UGA"
+            },
+            {
+                "name": "Ukraine",
+                "code": "UKR"
+            },
+            {
+                "name": "Uruguay",
+                "code": "URY"
+            },
+            {
+                "name": "United States",
+                "code": "USA"
+            },
+            {
+                "name": "Uzbekistan",
+                "code": "UZB"
+            },
+            {
+                "name": "Venezuela, RB",
+                "code": "VEN"
+            },
+            {
+                "name": "Vietnam",
+                "code": "VNM"
+            },
+            {
+                "name": "Vanuatu",
+                "code": "VUT"
+            },
+            {
+                "name": "Samoa",
+                "code": "WSM"
+            },
+            {
+                "name": "Kosovo",
+                "code": "XKX"
+            },
+            {
+                "name": "Yemen, Rep.",
+                "code": "YEM"
+            },
+            {
+                "name": "South Africa",
+                "code": "ZAF"
+            },
+            {
+                "name": "Zambia",
+                "code": "ZMB"
+            },
+            {
+                "name": "Zimbabwe",
+                "code": "ZWE"
+            }
+        ],
+        "geographic_units": [
+            {
+                "name": "East Asia & Pacific",
+                "code": "EAS",
+                "type": "Region"
+            },
+            {
+                "name": "Europe & Central Asia",
+                "code": "ECS",
+                "type": "Region"
+            },
+            {
+                "name": "Latin America & Caribbean",
+                "code": "LCN",
+                "type": "Region"
+            },
+            {
+                "name": "Middle East & North Africa",
+                "code": "MEA",
+                "type": "Region"
+            },
+            {
+                "name": "South Asia",
+                "code": "SAS",
+                "type": "Region"
+            },
+            {
+                "name": "Sub-Saharan Africa",
+                "code": "SSF",
+                "type": "Region"
+            },
+            {
+                "name": "World",
+                "code": "WLD",
+                "type": "Income Groups"
+            },
+            {
+                "name": "Fragile and conflict affected situations",
+                "code": "FCS",
+                "type": "Other Areas"
+            },
+            {
+                "name": "High income",
+                "code": "HIC",
+                "type": "Income Groups"
+            },
+            {
+                "name": "IDA total",
+                "code": "IDA",
+                "type": "Other Areas"
+            },
+            {
+                "name": "Low income",
+                "code": "LIC",
+                "type": "Income Groups"
+            },
+            {
+                "name": "Lower middle income",
+                "code": "LMC",
+                "type": "Income Groups"
+            },
+            {
+                "name": "Low & middle income",
+                "code": "LMY",
+                "type": "Other Areas"
+            },
+            {
+                "name": "Upper middle income",
+                "code": "UMC",
+                "type": "Income Groups"
+            }
+        ],
+        "confidentiality_status": "PU"
+    },
+    "tags": [
+        {
+            "tag_group": "feature-dataset-profile",
+            "tag": "WB_PIP"
+        },
+        {
+            "tag_group": "feature-dataset-profile-chart",
+            "tag": "Bar Chart"
+        },
+        {
+            "tag_group": "feature-topic-profile",
+            "tag": "P3_000004"
+        }
+    ],
+    "additional": {
+        "visualization": {
+            "chart_type": [
+                {
+                    "chart_types": "pie"
+                },
+                {
+                    "chart_types": "stackedBar"
+                }
+            ]
+        }
+    }
+}

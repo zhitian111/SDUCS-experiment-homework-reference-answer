@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title>可视化技术实验1结果</title>
+
+</head>
+
+<body>
+    <div class="content_block">
+        <h1>可视化技术实验1结果</h1>
+        <div class="graph_block">
+            <svg id="graph"></svg>
+            <script type="module" src="./source_code.js"></script>
+        </div>
+    </div>
+</body>
+
+
+<style>
+    body {
+        background: linear-gradient(to top right, #09e92e, #05f1e9);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content_block .context_block {
+        background-color: rgba(255, 255, 255, 0.7);
+        height: auto;
+        margin: 0;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        border: 1px solid #808080;
+    }
+
+    .content_block {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: auto;
+        margin: 0;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        justify-items: center;
+        /* align-items: center;*/
+        border: 1px solid #808080;
+    }
+
+    .content_block .graph_block {
+        background-color: rgba(255, 255, 255, 0.7);
+        height: auto;
+        margin: 0;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        border: 1px solid #ff2f0abe;
+    }
+
+    .tooltip {
+        position: absolute;
+        background-color: rgba(255,255,255,0.4);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        opacity: 0;
+        /* 初始隐藏 */
+        transition: opacity 0.2s;
+    }
+
+    /* 确保坐标轴可见 */
+    .x-axis,
+    .y-axis {
+        fill: none;
+    }
+
+    .x-axis text,
+    .y-axis text {
+        fill: black;
+    }
+
+    .x-axis path,
+    .y-axis path,
+    .x-axis line,
+    .y-axis line {
+        fill:none
+    }
+</style>

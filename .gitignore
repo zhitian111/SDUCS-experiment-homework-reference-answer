@@ -28,6 +28,12 @@
 !*.msg
 !*.srv
 !*.zsh
+!*.csv
+!*.bat
+!*.fish
+!*.bash
+!*.js
+!*.rs
 *.ppt
 *.pptx
 *.zip
@@ -58,6 +64,8 @@ CMakeFiles/
 **/tem/
 **/tem
 !*.sql
+!package.json
+!package_lock.json
 !/!本科归档/大二上学期/计算机组成与设计作业/实验3/experiment3/**
 !/!本科归档/大二上学期/计算机组成与设计作业/实验2/experiment2/**
 !/!本科归档/大二上学期/计算机组成与设计作业/实验3/experiment3-ex/**
@@ -76,3 +84,4 @@ CMakeFiles/
 !/!本科归档/大二上学期/计算机组成与设计作业/实验14/experiment14/**
 !/!本科归档/大二上学期/计算机组成与设计作业/创新实验/外设链接部分的实验/quartus文件/**
 !/!本科归档/大二上学期/计算机组成与设计作业/创新实验/原码移位乘法/**
+node_modules/
