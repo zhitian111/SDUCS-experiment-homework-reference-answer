@@ -1,0 +1,14 @@
+{
+  "name": "@d3/world-choropleth/2",
+  "main": "efb515a6067e5f18@503.js",
+  "version": "503.0.0",
+  "homepage": "https://observablehq.com/@d3/world-choropleth/2",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
