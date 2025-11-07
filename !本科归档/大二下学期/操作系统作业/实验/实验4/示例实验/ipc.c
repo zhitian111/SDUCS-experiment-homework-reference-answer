@@ -98,6 +98,7 @@ int set_sem(key_t sem_key, int sem_val, int sem_flg)
 {
   int sem_id;
   Sem_uns sem_arg;
+  sem_arg.val = sem_val;
   if ((sem_id = get_ipc_id("/proc/sysvipc/sem", sem_key)) < 0)
   {
     if ((sem_id = semget(sem_key, 1, sem_flg)) < 0)

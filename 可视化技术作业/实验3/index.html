@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>可视化技术实验3结果</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+<div class="content_block">
+    <h1>可视化技术实验3结果</h1>
+    <div class="button_block">
+        <button onclick="show2D('pca_2d')">PCA 2D</button>
+        <button onclick="show2D('tsne_2d')">t-SNE 2D</button>
+        <button onclick="show3D('pca_3d')">PCA 3D</button>
+        <button onclick="show3D('tsne_3d')">t-SNE 3D</button>
+        <label>球大小: 
+            <input id="sizeSlider" type="range" min="0.2" max="3" step="0.1" value="1" oninput="updateSphereSize(this.value)">
+        </label>
+    </div>
+    <div class="graph_block">
+        <svg id="graph2d" width="600" height="600" style="display:block"></svg>
+        <div id="graph3d" style="width:600px;height:600px;display:none;"></div>
+    </div>
+</div>
+
+<style>
+body {
+    background: linear-gradient(to top right, #09e92e, #05f1e9);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_block {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #808080;
+}
+.content_block .graph_block {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ff2f0abe;
+}
+.button_block button {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #05f1e9;
+    cursor: pointer;
+}
+.button_block button:hover { background-color: #09e92e; }
+</style>
+
+<script>
+let irisData;
+const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+// 加载 JSON 数据
+d3.json("iris_vis.json").then(function(data) {
+    irisData = data;
+    show2D('pca_2d'); // 默认显示 PCA 2D
+});
+
+//////////////////////////
+// 2D 可视化
+//////////////////////////
+function show2D(type) {
+    document.getElementById('graph2d').style.display = 'block';
+    document.getElementById('graph3d').style.display = 'none';
+
+    const dataset = irisData[type];
+    const targetNames = irisData.target_names;
+    const width = 600, height = 600;
+    const margin = {top: 20, right: 20, bottom: 40, left: 40};
+    const svg = d3.select("#graph2d");
+    svg.selectAll("*").remove();
+
+    const xScale = d3.scaleLinear()
+        .domain(d3.extent(dataset, d => d.x)).nice()
+        .range([margin.left, width - margin.right]);
+
+    const yScale = d3.scaleLinear()
+        .domain(d3.extent(dataset, d => d.y)).nice()
+        .range([height - margin.bottom, margin.top]);
+
+    svg.selectAll("circle")
+        .data(dataset)
+        .enter()
+        .append("circle")
+        .attr("cx", d => xScale(d.x))
+        .attr("cy", d => yScale(d.y))
+        .attr("r", 6)
+        .attr("fill", d => color(d.label))
+        .attr("stroke", "black")
+        .attr("stroke-width", 0.5)
+        .append("title")
+        .text(d => targetNames[d.label]);
+
+    svg.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(xScale));
+
+    svg.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(yScale));
+}
+
+//////////////////////////
+// 3D 可视化
+//////////////////////////
+let scene, camera, renderer, controls;
+
+function addInfiniteAxes(length = 100) {
+    const origin = new THREE.Vector3(0,0,0);
+
+    // X 轴 红色
+    const dirX = new THREE.Vector3(1,0,0);
+    const arrowX = new THREE.ArrowHelper(dirX, origin, length, 0xff0000, 2, 1);
+    scene.add(arrowX);
+
+    // Y 轴 绿色
+    const dirY = new THREE.Vector3(0,1,0);
+    const arrowY = new THREE.ArrowHelper(dirY, origin, length, 0x00ff00, 2, 1);
+    scene.add(arrowY);
+
+    // Z 轴 蓝色
+    const dirZ = new THREE.Vector3(0,0,1);
+    const arrowZ = new THREE.ArrowHelper(dirZ, origin, length, 0x0000ff, 2, 1);
+    scene.add(arrowZ);
+}
+
+function show3D(type) {
+    document.getElementById('graph2d').style.display = 'none';
+    document.getElementById('graph3d').style.display = 'block';
+
+    const dataset = irisData[type];
+
+    if (!scene) {
+        scene = new THREE.Scene();
+
+        camera = new THREE.PerspectiveCamera(75, 600/600, 0.1, 1000);
+        camera.position.z = 50;
+
+        renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+        renderer.setSize(600, 600);
+        document.getElementById("graph3d").appendChild(renderer.domElement);
+
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        addInfiniteAxes(100); // 无限延长坐标轴 + 箭头
+    } else {
+        for(let i = scene.children.length-1; i>=0; i--){
+            if(!(scene.children[i] instanceof THREE.ArrowHelper)){
+                scene.remove(scene.children[i]);
+            }
+        }
+    }
+
+    const scale = parseFloat(document.getElementById('sizeSlider').value);
+
+    dataset.forEach(d => {
+        const geometry = new THREE.SphereGeometry(0.5, 16, 16);
+        const material = new THREE.MeshBasicMaterial({color: color(d.label)});
+        const sphere = new THREE.Mesh(geometry, material);
+        sphere.position.set(d.x*2, d.y*2, d.z*2);
+        sphere.scale.set(scale, scale, scale);
+        scene.add(sphere);
+    });
+
+    const animate = function () {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+    };
+    animate();
+}
+
+// 滑块控制球大小
+function updateSphereSize(scale) {
+    if (!scene) return;
+    scene.traverse(obj => {
+        if (obj instanceof THREE.Mesh && !(obj instanceof THREE.ArrowHelper)) {
+            obj.scale.set(scale, scale, scale);
+        }
+    });
+}
+</script>
+</body>
+</html>
