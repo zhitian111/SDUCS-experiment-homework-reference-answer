@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Normal Graph</title>
+<style>
+    html, body { margin: 0; height: 100%; background:#1a1b26; }
+    #main { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<div id="main"></div>
+
+<!-- 普通 ECharts，不需要 echarts-gl -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<!-- 导入数据 -->
+<script src="graph_data_small.js"></script>
+
+<script>
+
+// ========== feature 差值函数 ==========
+function featureDiff(a, b) {
+    const A = a.feature;
+    const B = b.feature;
+    let sum = 0;
+    for (let i = 0; i < A.length; i++) {
+        sum += (A[i] - B[i]) ** 2;
+    }
+    return Math.sqrt(sum).toFixed(2);
+}
+
+
+// ========== 自动连通子图上色（简单 DFS） ==========
+function connectedComponents(nodes, edges) {
+    const adj = new Map();
+    nodes.forEach(n => adj.set(n.id, []));
+
+    edges.forEach(e => {
+        adj.get(e.source).push(e.target);
+        adj.get(e.target).push(e.source);
+    });
+
+    const visited = new Set();
+    const comps = [];
+
+    for (const n of nodes) {
+        if (!visited.has(n.id)) {
+            const stack = [n.id];
+            const comp = [];
+            visited.add(n.id);
+
+            while (stack.length) {
+                const cur = stack.pop();
+                comp.push(cur);
+                for (const nx of adj.get(cur)) {
+                    if (!visited.has(nx)) {
+                        visited.add(nx);
+                        stack.push(nx);
+                    }
+                }
+            }
+            comps.push(comp);
+        }
+    }
+    return comps;
+}
+
+// Tokyonight 配色
+const colors = ["#7aa2f7", "#bb9af7", "#9ece6a", "#e0af68", "#f7768e", "#7dcfff"];
+const comps = connectedComponents(nodes, edges);
+const colorMap = new Map();
+comps.forEach((group, idx) => {
+    const c = colors[idx % colors.length];
+    group.forEach(id => colorMap.set(id, c));
+});
+
+// ========== 转成 ECharts 普通 graph 数据 ==========
+const ecNodes = nodes.map(n => ({
+    id: n.id + "",
+    name: n.name,
+    value: 1,
+    symbolSize: 30,            // 节点大小
+    draggable: true,           // <<< 节点可拖动
+    itemStyle: {
+        color: colorMap.get(n.id)
+    },
+    label: {
+        show: true,
+        color: "#c0caf5",
+        fontSize: 12
+    },
+    feature: n.feature
+}));
+
+const ecEdges = edges.map(e => {
+    const n1 = nodes.find(n => n.id === e.source);
+    const n2 = nodes.find(n => n.id === e.target);
+
+    return {
+        source: e.source + "",
+        target: e.target + "",
+        label: {
+            show: true,
+            color: "#c0caf5",
+            fontSize: 11,
+            formatter: featureDiff(n1, n2)
+        },
+        featureDiff: featureDiff(n1, n2)
+    };
+});
+
+// ========== 渲染 ==========
+const chart = echarts.init(document.getElementById("main"));
+
+chart.setOption({
+    backgroundColor: "#1a1b26",
+
+    tooltip: {
+        trigger: "item",
+        backgroundColor: "rgba(30,32,40,0.9)",
+        borderColor: "#7aa2f7",
+        borderWidth: 1,
+        padding: 10,
+        textStyle: { color: "#c0caf5" },
+
+        formatter: function (params) {
+            // 节点悬浮信息
+            if (params.dataType === "node") {
+                const d = params.data;
+                return `
+                    <div style="font-size:14px;color:#7aa2f7;margin-bottom:6px">
+                        节点：${d.name}
+                    </div>
+                    <div>ID：${d.id}</div>
+                    <div>特征值：${d.feature.join(", ")}</div>
+                `;
+            }
+
+            // 边悬浮信息
+            if (params.dataType === "edge") {
+                const d = params.data;
+                return `
+                    <div style="font-size:14px;color:#7dcfff;margin-bottom:6px">
+                        边：${d.source} — ${d.target}
+                    </div>
+                    <div>Feature 差值：${d.featureDiff}</div>
+                `;
+            }
+        }
+    },
+
+    series: [{
+        type: "graph",
+        layout: "force",
+
+        data: ecNodes,
+        edges: ecEdges,
+
+        roam: true,             // 可缩放拖动画布
+        force: {
+            repulsion: 500,
+            gravity: 0.1,
+            edgeLength: 150
+        },
+
+        label: { show: true },
+        edgeLabel: { show: true },
+
+        emphasis: {
+            focus: "adjacency",
+        }
+    }]
+});
+</script>
+
+</body>
+</html>
