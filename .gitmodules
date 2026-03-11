@@ -1,3 +1,6 @@
 [submodule "可视化技术作业/大作业"]
 	path = 可视化技术作业/大作业
 	url = git@github.com:zhitian111/VisualizationGroupWork.git
+[submodule "认知科学与类脑计算作业/大作业"]
+	path = 认知科学与类脑计算作业/大作业
+	url = git@github.com:zhitian111/Not-a-Diagnosis.git
