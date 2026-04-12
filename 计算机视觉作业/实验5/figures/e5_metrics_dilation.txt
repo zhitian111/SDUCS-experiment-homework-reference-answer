@@ -1,0 +1,5 @@
+variant=dilation
+iou=0.381693
+f1=0.552501
+precision=0.468562
+recall=0.673076

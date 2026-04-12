@@ -1,0 +1,5 @@
+variant=skip
+iou=0.399594
+f1=0.571014
+precision=0.505212
+recall=0.656523

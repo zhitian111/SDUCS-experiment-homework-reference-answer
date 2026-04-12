@@ -1,0 +1,5 @@
+PSNR_vs_OpenCV_sigma1	64.7744
+kernel_size_formula	floor(6*sigma-1)
+sigma	1.0	k	5
+time_separable_ms	15.5657
+time_full2d_ms	22.5215

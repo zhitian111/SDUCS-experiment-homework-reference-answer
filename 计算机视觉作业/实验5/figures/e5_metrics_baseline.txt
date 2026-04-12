@@ -1,0 +1,5 @@
+variant=baseline
+iou=0.379375
+f1=0.550068
+precision=0.466484
+recall=0.670144

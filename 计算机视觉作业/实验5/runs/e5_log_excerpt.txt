@@ -1,0 +1,35 @@
+=== baseline ===
+variant=baseline device=cuda batch_size=8 train_n=500 val_n=100 params=961409 resume_from_epoch_done=0 target_epoch=30
+epoch 1: train_loss=0.6425 val_iou=0.1481 val_f1=0.2580 time=5.7s
+epoch 2: train_loss=0.4502 val_iou=0.0670 val_f1=0.1255 time=5.5s
+...
+epoch 26: train_loss=0.1838 val_iou=0.3516 val_f1=0.5203 time=5.7s
+epoch 27: train_loss=0.1746 val_iou=0.3405 val_f1=0.5081 time=5.7s
+epoch 28: train_loss=0.1756 val_iou=0.3759 val_f1=0.5464 time=5.6s
+epoch 29: train_loss=0.1695 val_iou=0.2700 val_f1=0.4252 time=5.6s
+epoch 30: train_loss=0.1619 val_iou=0.3794 val_f1=0.5501 time=5.7s
+json: best_val_iou=0.37937280535697937 params=961409 mean_epoch_sec=5.619794240000003
+
+=== dilation ===
+variant=dilation device=cuda batch_size=8 train_n=500 val_n=100 params=961409 resume_from_epoch_done=0 target_epoch=30
+epoch 1: train_loss=0.6386 val_iou=0.1549 val_f1=0.2682 time=5.9s
+epoch 2: train_loss=0.4506 val_iou=0.1590 val_f1=0.2743 time=5.6s
+...
+epoch 26: train_loss=0.1846 val_iou=0.3597 val_f1=0.5290 time=5.2s
+epoch 27: train_loss=0.1764 val_iou=0.3817 val_f1=0.5525 time=5.3s
+epoch 28: train_loss=0.1859 val_iou=0.3459 val_f1=0.5140 time=5.3s
+epoch 29: train_loss=0.1726 val_iou=0.1832 val_f1=0.3097 time=5.4s
+epoch 30: train_loss=0.1698 val_iou=0.3613 val_f1=0.5308 time=5.6s
+json: best_val_iou=0.38168463110923767 params=961409 mean_epoch_sec=5.484711313333302
+
+=== skip ===
+variant=skip device=cuda batch_size=8 train_n=500 val_n=100 params=1155137 resume_from_epoch_done=0 target_epoch=30
+epoch 1: train_loss=0.5286 val_iou=0.1992 val_f1=0.3322 time=6.4s
+epoch 2: train_loss=0.3757 val_iou=0.1124 val_f1=0.2021 time=6.2s
+...
+epoch 26: train_loss=0.1893 val_iou=0.3752 val_f1=0.5457 time=5.9s
+epoch 27: train_loss=0.1783 val_iou=0.2692 val_f1=0.4242 time=6.0s
+epoch 28: train_loss=0.1987 val_iou=0.3996 val_f1=0.5710 time=5.9s
+epoch 29: train_loss=0.1809 val_iou=0.3648 val_f1=0.5345 time=5.9s
+epoch 30: train_loss=0.1703 val_iou=0.3612 val_f1=0.5307 time=6.1s
+json: best_val_iou=0.3995952010154724 params=1155137 mean_epoch_sec=5.945750343333369
