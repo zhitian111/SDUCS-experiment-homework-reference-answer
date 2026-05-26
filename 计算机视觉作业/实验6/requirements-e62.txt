@@ -1,0 +1,8 @@
+# 实验6.2 额外依赖（在你自己的 venv 中安装）
+opencv-contrib-python>=4.8
+numpy>=1.26,<2.0
+matplotlib>=3.8
+torch>=2.0
+torchvision>=0.15
+# SuperPoint 仅在 kornia 0.7.x 中提供；0.8+ 已移除
+kornia>=0.7.1,<0.8

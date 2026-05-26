@@ -1,0 +1,11 @@
+# 实验7：LightGlue 特征匹配（在独立 venv 中安装）
+opencv-contrib-python>=4.8
+numpy>=1.26,<2.0
+matplotlib>=3.8
+# 2.12+ 在「基于 Anaconda 的 venv」上可能触发 c10.dll WinError 1114，建议 2.5.1 CPU
+torch>=2.5.1,<2.6
+torchvision>=0.20.1,<0.21
+# 实验7 使用 kornia 内置 LightGlue（0.8+ 含 ALIKED；SuperPoint 可回退实验6 vendor）
+kornia>=0.8,<0.9
+packaging>=23.0
+# 可选：官方包（GitHub 不通时用 安装LightGlue-镜像.ps1）

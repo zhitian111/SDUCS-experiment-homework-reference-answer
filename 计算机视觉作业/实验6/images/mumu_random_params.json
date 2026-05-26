@@ -1,0 +1,12 @@
+{
+  "source": "F:\\Homework\\计算机视觉作业\\mumu.jpg",
+  "output": "F:\\Homework\\计算机视觉作业\\实验6\\images\\mumu_random.jpg",
+  "seed": null,
+  "angle_deg": -11.99,
+  "scale": 0.921,
+  "tx_px": -38.2,
+  "ty_px": -71.9,
+  "brightness_alpha": 0.851,
+  "brightness_beta": -12.0,
+  "gaussian_blur": null
+}

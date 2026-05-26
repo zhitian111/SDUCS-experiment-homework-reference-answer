@@ -1,0 +1,3 @@
+﻿# 实验8：实时平面跟踪（在独立 venv 中安装）
+opencv-contrib-python>=4.8
+numpy>=1.26,<2.0
